@@ -1,0 +1,27 @@
+text,occurrences,dataset,model,label,length,tokenizer,token_length
+Mary,134078,bAbi,en_core_web_sm,PERSON,4,EleutherAI/gpt-j-6B,1
+Sandra,104148,bAbi,en_core_web_sm,PERSON,6,EleutherAI/gpt-j-6B,2
+John,105021,bAbi,en_core_web_sm,PERSON,4,EleutherAI/gpt-j-6B,1
+Daniel,46253,bAbi,en_core_web_sm,PERSON,6,EleutherAI/gpt-j-6B,1
+Daniel,9269,bAbi,en_core_web_sm,ORG,6,EleutherAI/gpt-j-6B,1
+Daniel,336,bAbi,en_core_web_sm,GPE,6,EleutherAI/gpt-j-6B,1
+Daniel,924,bAbi,en_core_web_sm,NORP,6,EleutherAI/gpt-j-6B,1
+Bill,29134,bAbi,en_core_web_sm,PERSON,4,EleutherAI/gpt-j-6B,1
+Fred,9285,bAbi,en_core_web_sm,PERSON,4,EleutherAI/gpt-j-6B,1
+Julie,11994,bAbi,en_core_web_sm,PERSON,5,EleutherAI/gpt-j-6B,2
+Winona,2750,bAbi,en_core_web_sm,ORG,6,EleutherAI/gpt-j-6B,2
+Jessica,2750,bAbi,en_core_web_sm,PRODUCT,7,EleutherAI/gpt-j-6B,1
+Gertrude,2750,bAbi,en_core_web_sm,PERSON,8,EleutherAI/gpt-j-6B,4
+the red square,112,bAbi,en_core_web_sm,LOC,14,EleutherAI/gpt-j-6B,3
+yesterday,4330,bAbi,en_core_web_sm,DATE,9,EleutherAI/gpt-j-6B,2
+this morning,3826,bAbi,en_core_web_sm,TIME,12,EleutherAI/gpt-j-6B,2
+Yesterday,4100,bAbi,en_core_web_sm,DATE,9,EleutherAI/gpt-j-6B,1
+this evening,1162,bAbi,en_core_web_sm,TIME,12,EleutherAI/gpt-j-6B,2
+this afternoon,2922,bAbi,en_core_web_sm,TIME,14,EleutherAI/gpt-j-6B,2
+Bernhard,13142,bAbi,en_core_web_sm,ORG,8,EleutherAI/gpt-j-6B,2
+Brian,19814,bAbi,en_core_web_sm,PERSON,5,EleutherAI/gpt-j-6B,1
+Julius,19775,bAbi,en_core_web_sm,ORG,6,EleutherAI/gpt-j-6B,2
+Jason,2768,bAbi,en_core_web_sm,PERSON,5,EleutherAI/gpt-j-6B,1
+Yann,2742,bAbi,en_core_web_sm,PERSON,4,EleutherAI/gpt-j-6B,2
+Antoine,251,bAbi,en_core_web_sm,ORG,7,EleutherAI/gpt-j-6B,2
+Jeff,16627,bAbi,en_core_web_sm,PERSON,4,EleutherAI/gpt-j-6B,1
