@@ -38,6 +38,7 @@ class QuestionAnswerItem():
     context: str
     question: str
     answer: str
+    task: int
     prediction: str = field(default=None)
     context_entities: List[Entity] = field(default=None)
     question_entities: List[Entity] = field(default=None)

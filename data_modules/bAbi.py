@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING
 from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
+from functools import reduce
 
 if TYPE_CHECKING:
     from typing import List, Union
@@ -104,6 +105,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
                  num_workers: int = 0,
                  prompt_augmentation: str = None,
                  entity_augmentation: str = None,
+                 task: int = None,
                  train_path: str = None,
                  validation_path: str = None,
                  test_path: str = None):
@@ -115,6 +117,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.num_workers = num_workers
         self.prompt_augmentation = prompt_augmentation
         self.entity_augmentation = entity_augmentation
+        self.task = task
         self.train_path = train_path
         self.validation_path = validation_path
         self.test_path = test_path
@@ -129,7 +132,34 @@ class bAbIDataModule(QuestionAnswerDataModule):
         # QuestionAnswerDataModule.initialize_demonstrations
         # TODO create bAbIDataset using demonstrations and self.tokenizer and other
         # initial arguments passed during initialization.
-        pass
+        fpath = 'data/bAbI tasks_1-20_v1-2/en-valid-10k/qa' + str(self.task) + '_' + fpath + '.txt'
+        file = open(fpath)
+        # extracting story, question and answers as string (sentences)
+        lines = file.readlines()
+        data = []
+        story = []
+        for line in lines:
+            nid, line = line.split(' ', 1)
+            nid = int(nid)
+            if nid == 1:
+                # reset story when line ID=1 (start of new story)
+                story = []
+            if '\t' in line:
+                # this line is tab separated Q, A & support fact ID
+                q, a, supporting = line.split('\t')
+                # Provide all the sub-stories till this question
+                substory = [x for x in story if x]
+                # A story ends and is appended to global story data-set
+                data.append((substory, q, a, self.task))
+                story.append('')
+            else:
+                # this line is a sentence of story
+                story.append(line)
+        # lambda func to flatten the list of sentences into one list
+        flatten = lambda data: reduce(lambda x, y: x + y, data)
+        # creating list of dataclasses for each task
+        data = [QuestionAnswerItem(flatten(story).replace('\n', ' '), q, answer, task) for story, q, answer, task in data]
+        return data
 
     def setup(self, stage=None):
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
@@ -140,3 +170,4 @@ class bAbIDataModule(QuestionAnswerDataModule):
 
         if stage in (None, "test"):
             self.datasets["test"] = self.parse(self.test_path)
+        #return self.datasets     # This is for debuging
