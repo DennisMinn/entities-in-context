@@ -5,6 +5,9 @@ from pytorch_lightning import LightningDataModule
 from dataclasses import dataclass, field
 from data_modules.entities import Entity
 
+CONTEXT = 'context: '
+QUESTION = 'question: '
+NEXT_LINE = '\n'
 
 @dataclass
 class QuestionAnswerItem():
@@ -58,9 +61,11 @@ class QuestionAnswerItem():
             demonstrations (str):
                 Demonstrations/Examples for the model to use as a template.
         '''
-        # TODO format question_answer_item to a string
-        # TODO append QA string to demonstrations
-        pass
+        # format question_answer_item to a string
+        qa_item_string = CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE
+
+        # append QA string to demonstrations
+        return demonstrations + qa_item_string
 
     @staticmethod
     def replace_entity(question_answer_item, entity):

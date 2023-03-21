@@ -84,13 +84,15 @@ class bAbIDataset(QuestionAnswerDataset):
             batch (List[bAbIItem]):
                 Subset of bAbI dataset
         '''
-        # TODO call QuestionAnswerItem.format() to convert bAbIItems to strings
-        # TODO call self.tokenizer to convert string to input for model
-        # return {
-        #   "batch": batch,
-        #   "BatchEncoding": batch_encoding
-        # }
-        pass
+        # call QuestionAnswerItem.format() to convert bAbIItems to strings
+        formatted_batch = [item.format(item, self.demonstrations) for item in batch]
+
+        # call self.tokenizer to convert string to input for model
+        batch_encoding = self.tokenizer(formatted_batch, padding='max_length', return_tensors='pt')
+        return {
+          "batch": batch,
+          "BatchEncoding": batch_encoding
+        }
 
     @staticmethod
     def entity_statistics(self, fpath):
