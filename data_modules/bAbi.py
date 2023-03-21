@@ -57,9 +57,9 @@ class bAbIItem(QuestionAnswerItem):
 class bAbIDataset(QuestionAnswerDataset):
     def __init__(self,
                  demonstrations: str,
-                 bAbI_items: List[bAbIItem],
-                 tokenizer: PreTrainedTokenizerFast,
-                 entity_dataframe: DataFrame,
+                 bAbI_items: "List[bAbIItem]",
+                 tokenizer: "PreTrainedTokenizerFast",
+                 entity_dataframe: "DataFrame",
                  entity_augmentation: str,
                  prompt_augmentation: str):
 
@@ -76,7 +76,7 @@ class bAbIDataset(QuestionAnswerDataset):
     def __len__(self) -> int:
         return len(self.bAbI_items)
 
-    def collate_fn(self, batch: List[bAbIItem]) -> dict[str, Union[List[bAbIItem], BatchEncoding]]:
+    def collate_fn(self, batch: "List[bAbIItem]") -> "dict[str, Union[List[bAbIItem], BatchEncoding]]":
         '''
         Coalesces and formats list of bAbI items for model prediction
 
