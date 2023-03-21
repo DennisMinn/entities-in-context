@@ -56,14 +56,13 @@ class bAbIItem(QuestionAnswerItem):
 
 class bAbIDataset(QuestionAnswerDataset):
     def __init__(self,
-                 demonstrations: str,
                  bAbI_items: "List[bAbIItem]",
                  tokenizer: "PreTrainedTokenizerFast",
                  entity_dataframe: "DataFrame",
                  entity_augmentation: str,
                  prompt_augmentation: str):
 
-        self.demonstrations = demonstrations
+        self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
         self.tokenizer = tokenizer
         self.entity_dataframe = entity_dataframe
@@ -124,9 +123,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.validation_path = validation_path
         self.test_path = test_path
 
-        self.demonstrations = None
-
-    def parse(self, fpath) -> bAbIDataset:
+    def parse(self, fpath) -> bAbIDataset: # [bAbiItem]
         # TODO read data from text file
         # TODO create list of bAbIItem from read data
         # TODO select demonstrations from list

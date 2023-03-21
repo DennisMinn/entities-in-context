@@ -1,6 +1,5 @@
 from typing import TYPE_CHECKING
 import torch
-from transformers import AutoModel, AutoTokenizer
 from pytorch_lightning import LightningModule
 from model.metrics import accuracy
 
@@ -13,31 +12,32 @@ if TYPE_CHECKING:
 class QuestionAnswerModel(LightningModule):
     def __init__(self, model_name: str):
         super().__init__()
-        self.model = AutoModel.from_pretrained(model_name)
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        if "flan-t5" in model_name:
+            from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+            self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        elif "gpt-j" in model_name:
+            from transformers import AutoModelForCausalLM, AutoTokenizer
+            self.model = AutoModelForCausalLM.from_pretrained(model_name)
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def forward(self, inputs: BatchEncoding) -> torch.Tensor:
-        '''
+        """
         Generates tokens for question answer
 
         Args:
             inputs (BatchEncoding):
                 Output from transformer tokenizer
-        '''
+        """
         # generate tokens
-        input_ids = inputs.input_ids
-
-        gen_tokens = self.model.generate(
-            input_ids,
-            do_sample=True,
-            temperature=0.9,
-            max_length=100,
-        )
+        gen_tokens = self.model.generate(inputs.input_ids)
 
         return gen_tokens
 
-    def training_step(self, batch: dict[str, Union[List[bAbIItem], BatchEncoding]], batch_index: int):
-        '''
+    def training_step(
+        self, batch: dict[str, Union[List[bAbIItem], BatchEncoding]], batch_index: int
+    ):
+        """
         One iteration of training loop
 
         Args:
@@ -45,7 +45,7 @@ class QuestionAnswerModel(LightningModule):
                 Output of bAbIDataset.collate_fn
             batch_index (int):
                 Index of subset
-        '''
+        """
         with torch.no_grad():
             # generate tokens
             gen_tokens = self.forward(batch["BatchEncoding"])
@@ -68,8 +68,10 @@ class QuestionAnswerModel(LightningModule):
 
             return metrics
 
-    def validation_step(self, batch: dict[str, Union[List[bAbIItem], BatchEncoding]], batch_index: int):
-        '''
+    def validation_step(
+        self, batch: dict[str, Union[List[bAbIItem], BatchEncoding]], batch_index: int
+    ):
+        """
         One iteration of validation loop
 
         Args:
@@ -77,7 +79,7 @@ class QuestionAnswerModel(LightningModule):
                 Output of bAbIDataset.collate_fn
             batch_index (int):
                 Index of subset
-        '''
+        """
         # generate tokens
         gen_tokens = self.forward(batch["BatchEncoding"])
 
