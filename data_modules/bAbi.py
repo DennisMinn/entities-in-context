@@ -60,8 +60,10 @@ class bAbIDataset(QuestionAnswerDataset):
                  tokenizer: "PreTrainedTokenizerFast",
                  entity_dataframe: "DataFrame",
                  entity_augmentation: str,
-                 prompt_augmentation: str):
+                 prompt_augmentation: str,
+                 num_demonstrations: int):
 
+        self.num_demonstrations = num_demonstrations
         self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
         self.tokenizer = tokenizer

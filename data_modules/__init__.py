@@ -77,15 +77,13 @@ class QuestionAnswerItem():
 
 class QuestionAnswerDataset(Dataset):
 
-    def initialize_demonstrations(question_answer_items: List[QuestionAnswerItem]):
+    def initialize_demonstrations(self, question_answer_items: List[QuestionAnswerItem]):
         # repeatedly call QuestionAnswerItem demonstrations until
         # demonstation string is formed
         demonstrations = ""
-        number_of_demonstrations = K
-        while number_of_demonstrations>0:
+        for _ in range(self.num_demonstrations):
             question_answer_item = question_answer_items.pop(random.randrange(len(question_answer_items)))
             demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
-            number_of_demonstrations -= 1
         return demonstrations
 
 
