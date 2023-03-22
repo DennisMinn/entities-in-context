@@ -4,7 +4,13 @@ from torch.utils.data import Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
 from dataclasses import dataclass, field
 from data_modules.entities import Entity
+import random
 
+CONTEXT = 'context: '
+QUESTION = 'question: '
+ANSWER = 'answer: '
+NEXT_LINE = '\n'
+K=5
 
 @dataclass
 class QuestionAnswerItem():
@@ -57,9 +63,11 @@ class QuestionAnswerItem():
             demonstrations (str):
                 Demonstrations/Examples for the model to use as a template.
         '''
-        # TODO format question_answer_item to a string
-        # TODO append QA string to demonstrations
-        pass
+        # format question_answer_item to a string
+        qa_item_string = CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER
+
+        # append QA string to demonstrations
+        return demonstrations + qa_item_string
 
     @staticmethod
     def replace_entity(question_answer_item, entity):
@@ -67,6 +75,17 @@ class QuestionAnswerItem():
 
 
 class QuestionAnswerDataset(Dataset):
+
+    def initialize_demonstrations(self, question_answer_items: List[QuestionAnswerItem]):
+        # repeatedly call QuestionAnswerItem demonstrations until
+        # demonstation string is formed
+        demonstrations = ""
+        for _ in range(self.num_demonstrations):
+            question_answer_item = question_answer_items.pop(random.randrange(len(question_answer_items)))
+            demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
+        return demonstrations
+
+
     @abstractmethod
     def collate_fn(self, batch: List[QuestionAnswerItem]) -> dict:
         '''
@@ -88,12 +107,6 @@ class QuestionAnswerDataModule(LightningDataModule):
     @abstractmethod
     def parse(self, fpath: str) -> QuestionAnswerDataset:
         raise NotImplementedError
-
-    def initialize_demonstrations(question_answer_items: List[QuestionAnswerItem]):
-        # TODO repeatedly call QuestionAnswerItem demonstrations until
-        # demonstation string is formed
-        # TODO assign self.demonstrations to demo-string
-        pass
 
     def train_dataloader(self):
         return DataLoader(

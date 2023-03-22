@@ -41,14 +41,15 @@ class bAbIItem(QuestionAnswerItem):
 
 class bAbIDataset(QuestionAnswerDataset):
     def __init__(self,
-                 demonstrations: str,
                  bAbI_items: "List[bAbIItem]",
                  tokenizer: "PreTrainedTokenizerFast",
-                 entity_dataframe: "DataFrame",
-                 entity_augmentation: str,
-                 prompt_augmentation: str):
+                 entity_dataframe: "DataFrame" = None,
+                 entity_augmentation: str = None,
+                 prompt_augmentation: str = None,
+                 num_demonstrations: int = 5):
 
-        self.demonstrations = demonstrations
+        self.num_demonstrations = num_demonstrations
+        self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
         self.tokenizer = tokenizer
         self.entity_dataframe = entity_dataframe
@@ -69,13 +70,15 @@ class bAbIDataset(QuestionAnswerDataset):
             batch (List[bAbIItem]):
                 Subset of bAbI dataset
         '''
-        # TODO call QuestionAnswerItem.format() to convert bAbIItems to strings
-        # TODO call self.tokenizer to convert string to input for model
-        # return {
-        #   "batch": batch,
-        #   "BatchEncoding": batch_encoding
-        # }
-        pass
+        # call QuestionAnswerItem.format() to convert bAbIItems to strings
+        formatted_batch = [item.format(item, self.demonstrations) for item in batch]
+
+        # call self.tokenizer to convert string to input for model
+        batch_encoding = self.tokenizer(formatted_batch, padding='max_length', return_tensors='pt')
+        return {
+          "batch": batch,
+          "BatchEncoding": batch_encoding
+        }
 
     @staticmethod
     def entity_statistics(self, fpath):
@@ -105,9 +108,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.validation_path = validation_path
         self.test_path = test_path
 
-        self.demonstrations = None
-
-    def parse(self, fpath) -> bAbIDataset:
+    def parse(self, fpath) -> bAbIDataset: # [bAbiItem]
         # TODO read data from text file
         # TODO create list of bAbIItem from read data
         # TODO select demonstrations from list
