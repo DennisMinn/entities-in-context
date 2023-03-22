@@ -115,7 +115,7 @@ class QuestionAnswerDataModule(LightningDataModule):
             num_workers=self.num_workers,
             shuffle=True,
             pin_memory=True,
-            collate_fn=self.datatsets["train"].collate_fn
+            collate_fn=self.datasets["train"].collate_fn
         )
 
     def validation_dataloader(self):
@@ -125,7 +125,7 @@ class QuestionAnswerDataModule(LightningDataModule):
             num_workers=self.num_workers,
             shuffle=False,
             pin_memory=True,
-            collate_fn=self.datatsets["validation"].collate_fn
+            collate_fn=self.datasets["validation"].collate_fn
         )
 
     def test_dataloader(self):
@@ -135,5 +135,5 @@ class QuestionAnswerDataModule(LightningDataModule):
             num_workers=self.num_workers,
             shuffle=True,
             pin_memory=True,
-            collate_fn=self.datatsets["test"].collate_fn
+            collate_fn=self.datasets["test"].collate_fn
         )

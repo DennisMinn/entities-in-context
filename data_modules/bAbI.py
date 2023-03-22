@@ -86,6 +86,7 @@ class bAbIDataset(QuestionAnswerDataset):
 
 
 class bAbIDataModule(QuestionAnswerDataModule):
+    # TODO remove default values for some arguments
     def __init__(self,
                  model_name: str,
                  batch_size: int,
@@ -108,16 +109,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.validation_path = validation_path
         self.test_path = test_path
 
-    def parse(self, fpath) -> bAbIDataset: # [bAbiItem]
-        # TODO read data from text file
-        # TODO create list of bAbIItem from read data
-        # TODO select demonstrations from list
-        # TODO format and assign self.demonstrations to string using
-        # QuestionAnswerDataModule.initialize_demonstrations
-        # TODO create bAbIDataset using demonstrations and self.tokenizer and other
-        # initial arguments passed during initialization.
-        # fpath = 'data/bAbI tasks_1-20_v1-2/en-valid-10k/qa' + str(self.task) + '_' + fpath + '.txt'
-
+    def parse(self, fpath) -> "List[bAbIDataset]":
         with open(fpath) as f:
             lines = f.readlines()
 
@@ -132,7 +124,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
                 # this line is tab separated Q, A & support fact ID
                 q, a, supporting = line.split('\t')
                 # Provide all the sub-stories till this question
-                substory = [x for x in story]
+                substory = [x for x in story if story]
                 # A story ends and is appended to global story data-set
                 data.append((substory, q, a))
                 story.append('')
@@ -147,10 +139,38 @@ class bAbIDataModule(QuestionAnswerDataModule):
 
     def setup(self, stage=None):
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-        self.datasets = {}
-        if stage in (None, "fit"):
-            self.datasets["train"] = self.parse(self.train_path)
-            self.datasets["validation"] = self.parse(self.validation_path)
 
-        if stage in (None, "test"):
-            self.datasets["test"] = self.parse(self.test_path)
+        self.data = {}
+        self.data["train"] = self.parse(self.train_path)
+        self.data["validation"] = self.parse(self.validation_path)
+        self.data["test"] = self.parse(self.test_path)
+
+        self.datasets = {}
+        self.datasets["train"] = bAbIDataset(
+            bAbI_items=self.data["train"],
+            tokenizer=self.tokenizer,
+            entity_dataframe=None,
+            entity_augmentation=self.entity_augmentation,
+            prompt_augmentation=self.prompt_augmentation,
+            num_demonstrations=self.num_demonstrations
+        )
+
+        self.datasets["validation"] = bAbIDataset(
+            bAbI_items=self.data["validation"],
+            tokenizer=self.tokenizer,
+            entity_dataframe=None,
+            entity_augmentation=self.entity_augmentation,
+            prompt_augmentation=self.prompt_augmentation,
+            num_demonstrations=0
+        )
+        self.datasets["validation"].demonstrations = self.datasets["train"].demonstrations
+
+        self.datasets["test"] = bAbIDataset(
+            bAbI_items=self.data["test"],
+            tokenizer=self.tokenizer,
+            entity_dataframe=None,
+            entity_augmentation=self.entity_augmentation,
+            prompt_augmentation=self.prompt_augmentation,
+            num_demonstrations=0
+        )
+        self.datasets["test"].demonstrations = self.datasets["train"].demonstrations
