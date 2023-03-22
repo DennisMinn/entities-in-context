@@ -58,10 +58,10 @@ class bAbIDataset(QuestionAnswerDataset):
     def __init__(self,
                  bAbI_items: "List[bAbIItem]",
                  tokenizer: "PreTrainedTokenizerFast",
-                 entity_dataframe: "DataFrame",
-                 entity_augmentation: str,
-                 prompt_augmentation: str,
-                 num_demonstrations: int):
+                 entity_dataframe: "DataFrame" = None,
+                 entity_augmentation: str = None,
+                 prompt_augmentation: str = None,
+                 num_demonstrations: int = 5):
 
         self.num_demonstrations = num_demonstrations
         self.demonstrations = self.initialize_demonstrations(bAbI_items)
