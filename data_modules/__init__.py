@@ -10,7 +10,8 @@ CONTEXT = 'context: '
 QUESTION = 'question: '
 ANSWER = 'answer: '
 NEXT_LINE = '\n'
-K=5
+K = 5
+
 
 @dataclass
 class QuestionAnswerItem():
@@ -85,7 +86,6 @@ class QuestionAnswerDataset(Dataset):
             demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
         return demonstrations
 
-
     @abstractmethod
     def collate_fn(self, batch: List[QuestionAnswerItem]) -> dict:
         '''
@@ -113,12 +113,12 @@ class QuestionAnswerDataModule(LightningDataModule):
             self.datasets["train"],
             batch_size=self.batch_size,
             num_workers=self.num_workers,
-            shuffle=True,
+            shuffle=False,
             pin_memory=True,
             collate_fn=self.datasets["train"].collate_fn
         )
 
-    def validation_dataloader(self):
+    def val_dataloader(self):
         return DataLoader(
             self.datasets["validation"],
             batch_size=self.batch_size,
@@ -133,7 +133,7 @@ class QuestionAnswerDataModule(LightningDataModule):
             self.datasets["test"],
             batch_size=self.batch_size,
             num_workers=self.num_workers,
-            shuffle=True,
+            shuffle=False,
             pin_memory=True,
             collate_fn=self.datasets["test"].collate_fn
         )

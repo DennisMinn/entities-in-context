@@ -1,7 +1,6 @@
 from typing import TYPE_CHECKING
 import torch
 from pytorch_lightning import LightningModule
-from model.metrics import accuracy
 
 if TYPE_CHECKING:
     from typing import List, Union
@@ -21,7 +20,7 @@ class QuestionAnswerModel(LightningModule):
             self.model = AutoModelForCausalLM.from_pretrained(model_name)
             self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    def forward(self, inputs: BatchEncoding) -> torch.Tensor:
+    def forward(self, inputs: "BatchEncoding") -> "torch.Tensor":
         """
         Generates tokens for question answer
 
@@ -34,43 +33,10 @@ class QuestionAnswerModel(LightningModule):
 
         return gen_tokens
 
-    def training_step(
-        self, batch: dict[str, Union[List[bAbIItem], BatchEncoding]], batch_index: int
-    ):
-        """
-        One iteration of training loop
-
-        Args:
-            batch (dict[str, Union[List[bAbIItem], BatchEncoding]]):
-                Output of bAbIDataset.collate_fn
-            batch_index (int):
-                Index of subset
-        """
-        with torch.no_grad():
-            # generate tokens
-            gen_tokens = self.forward(batch["BatchEncoding"])
-
-            # decode tokens
-            gen_text = self.tokenizer.batch_decode(gen_tokens)
-
-            # calculate accuracy
-            babi_items = batch["batch"]
-            labels = [item.answer for item in babi_items]
-            metrics = {
-                "accuracy": accuracy(labels, gen_text),
-            }
-
-            # TODO: calculate f1 score
-            # TODO: calculate recall
-            # update bAbIItem prediction attribute
-            for idx, item in enumerate(babi_items):
-                item.prediction = gen_text[idx]
-
-            return metrics
-
-    def validation_step(
-        self, batch: dict[str, Union[List[bAbIItem], BatchEncoding]], batch_index: int
-    ):
+    def validation_step(self,
+                        batch: "dict[str, Union[List[bAbIItem], BatchEncoding]]",
+                        batch_index: int,
+                        dataset_index: int):
         """
         One iteration of validation loop
 
@@ -84,19 +50,13 @@ class QuestionAnswerModel(LightningModule):
         gen_tokens = self.forward(batch["BatchEncoding"])
 
         # decode tokens
-        gen_text = self.tokenizer.batch_decode(gen_tokens)
+        gen_text = self.tokenizer.batch_decode(gen_tokens, skip_special_tokens=True)
 
         # calculate accuracy
         babi_items = batch["batch"]
-        labels = [item.answer for item in babi_items]
-        metrics = {
-            "accuracy": accuracy(labels, gen_text),
-        }
 
-        # TODO: calculate f1 score
-        # TODO: calculate recall
         # update bAbIItem prediction attribute
         for idx, item in enumerate(babi_items):
             item.prediction = gen_text[idx]
 
-        return metrics
+        return babi_items

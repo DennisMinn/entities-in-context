@@ -74,7 +74,11 @@ class bAbIDataset(QuestionAnswerDataset):
         formatted_batch = [item.format(item, self.demonstrations) for item in batch]
 
         # call self.tokenizer to convert string to input for model
-        batch_encoding = self.tokenizer(formatted_batch, padding='max_length', return_tensors='pt')
+        batch_encoding = self.tokenizer(formatted_batch,
+                                        padding='max_length',
+                                        max_length=512,
+                                        truncation=True,
+                                        return_tensors='pt')
         return {
           "batch": batch,
           "BatchEncoding": batch_encoding
