@@ -10,7 +10,7 @@ if __name__ == "__main__":
     model = QuestionAnswerModel("google/flan-t5-small")
     logger = QuestionAnswerLogger()
 
-    trainer = pl.Trainer(max_epochs=1, callbacks=[logger])
+    trainer = pl.Trainer(max_epochs=1, callbacks=[logger], accelerator="auto")
 
     for i in range(1, 21, 1):
         datamodule = bAbIDataModule(
@@ -30,4 +30,4 @@ if __name__ == "__main__":
         validation_dataloader = trainer.datamodule.val_dataloader()
         test_dataloader = trainer.datamodule.test_dataloader()
 
-        trainer.validate(model=model, dataloaders=[validation_dataloader, validation_dataloader, validation_dataloader])
+        trainer.validate(model=model, dataloaders=[train_dataloader, validation_dataloader, test_dataloader])
