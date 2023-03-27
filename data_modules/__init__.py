@@ -81,8 +81,8 @@ class QuestionAnswerDataset(Dataset):
         # repeatedly call QuestionAnswerItem demonstrations until
         # demonstation string is formed
         demonstrations = ""
-        for _ in range(self.num_demonstrations):
-            question_answer_item = question_answer_items.pop(random.randrange(len(question_answer_items)))
+        for idx in self.demonstration_indices:
+            question_answer_item = question_answer_items[idx]
             demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
         return demonstrations
 
