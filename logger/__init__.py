@@ -23,6 +23,7 @@ def calculate_accuracy(data):
 
 class QuestionAnswerLogger(Callback):
     def setup(self, trainer, pl_module, stage):
+        return
         self.run = wandb.init(project=PROJECT_NAME, name=timestamp())
 
     def on_validation_batch_end(self,
@@ -33,6 +34,7 @@ class QuestionAnswerLogger(Callback):
                                 batch_idx,
                                 dataloader_idx):
 
+        print(batch_idx, dataloader_idx)
         stage = index2stage[dataloader_idx]
         data = trainer.datamodule.data[stage]
         batch_size = trainer.datamodule.batch_size
@@ -41,6 +43,7 @@ class QuestionAnswerLogger(Callback):
         data[start:end] = outputs
 
     def on_validation_end(self, trainer, pl_module):
+        return
         # Logging Demonstrations
         demonstrations = wandb.Table(
             data=[[trainer.datamodule.datasets["train"].demonstrations]],
