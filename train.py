@@ -23,10 +23,10 @@ if __name__ == "__main__":
 
     trainer = pl.Trainer(max_epochs=1, callbacks=[logger], accelerator="auto")
 
-    for i in range(1, 21, 1):
+    for i in range(1, 11, 1):
         datamodule = bAbIDataModule(
             model_name="google/flan-t5-small",
-            batch_size=2,
+            batch_size=5,
             demonstration_indices=SELECTED_INDICES[i],
             train_path=f"data/bAbI tasks_1-20_v1-2/en-valid/qa{i}_train.txt",
             validation_path=f"data/bAbI tasks_1-20_v1-2/en-valid/qa{i}_valid.txt",
