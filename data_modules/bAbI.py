@@ -46,9 +46,9 @@ class bAbIDataset(QuestionAnswerDataset):
                  entity_dataframe: "DataFrame" = None,
                  entity_augmentation: str = None,
                  prompt_augmentation: str = None,
-                 num_demonstrations: int = 5):
+                 demonstration_indices: list = []):
 
-        self.num_demonstrations = num_demonstrations
+        self.demonstration_indices = demonstration_indices
         self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
         self.tokenizer = tokenizer
@@ -94,7 +94,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
     def __init__(self,
                  model_name: str,
                  batch_size: int,
-                 num_demonstrations: int = 2,
+                 demonstration_indices: list = [],
                  num_workers: int = 0,
                  prompt_augmentation: str = None,
                  entity_augmentation: str = None,
@@ -105,7 +105,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
         super().__init__()
         self.model_name = model_name
         self.batch_size = batch_size
-        self.num_demonstrations = num_demonstrations
+        self.demonstration_indices = demonstration_indices
         self.num_workers = num_workers
         self.prompt_augmentation = prompt_augmentation
         self.entity_augmentation = entity_augmentation
@@ -156,7 +156,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
             entity_dataframe=None,
             entity_augmentation=self.entity_augmentation,
             prompt_augmentation=self.prompt_augmentation,
-            num_demonstrations=self.num_demonstrations
+            demonstration_indices=self.demonstration_indices
         )
 
         self.datasets["validation"] = bAbIDataset(
@@ -165,7 +165,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
             entity_dataframe=None,
             entity_augmentation=self.entity_augmentation,
             prompt_augmentation=self.prompt_augmentation,
-            num_demonstrations=0
+            demonstration_indices=[]
         )
         self.datasets["validation"].demonstrations = self.datasets["train"].demonstrations
 
@@ -175,6 +175,6 @@ class bAbIDataModule(QuestionAnswerDataModule):
             entity_dataframe=None,
             entity_augmentation=self.entity_augmentation,
             prompt_augmentation=self.prompt_augmentation,
-            num_demonstrations=0
+            demonstration_indices=[]
         )
         self.datasets["test"].demonstrations = self.datasets["train"].demonstrations
