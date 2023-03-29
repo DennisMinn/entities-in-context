@@ -1,4 +1,7 @@
 from typing import TYPE_CHECKING
+import os
+from itertools import repeat
+from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
 from functools import reduce
@@ -8,6 +11,8 @@ if TYPE_CHECKING:
     from pandas import DataFrame
     from torch import BatchEncoding
     from transformers import PreTrainedTokenizerFast
+
+NUM_TASKS = 10
 
 
 class bAbIItem(QuestionAnswerItem):
@@ -75,7 +80,7 @@ class bAbIDataset(QuestionAnswerDataset):
 
         # call self.tokenizer to convert string to input for model
         batch_encoding = self.tokenizer(formatted_batch,
-                                        padding='max_length',
+                                        padding='longest',
                                         max_length=512,
                                         truncation=True,
                                         return_tensors='pt')
@@ -98,9 +103,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
                  num_workers: int = 0,
                  prompt_augmentation: str = None,
                  entity_augmentation: str = None,
-                 train_path: str = None,
-                 validation_path: str = None,
-                 test_path: str = None):
+                 data_directory: str = None):
 
         super().__init__()
         self.model_name = model_name
@@ -109,9 +112,11 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.num_workers = num_workers
         self.prompt_augmentation = prompt_augmentation
         self.entity_augmentation = entity_augmentation
-        self.train_path = train_path
-        self.validation_path = validation_path
-        self.test_path = test_path
+        self.data_directory = data_directory
+
+        self.datasets = {}
+        for stage in ["train", "validation", "test"]:
+            self.datasets[stage] = list(repeat([], NUM_TASKS))
 
     def parse(self, fpath) -> "List[bAbIDataset]":
         with open(fpath) as f:
@@ -141,40 +146,84 @@ class bAbIDataModule(QuestionAnswerDataModule):
         data = [bAbIItem(flatten(story).replace('\n', ' '), q, answer) for story, q, answer in data]
         return data
 
+    def load_tasks(self, stage=None):
+        if stage == "validation":
+            stage = "valid"
+
+        datasets = []
+        for task_index in range(NUM_TASKS):
+            task_path = os.path.join(self.data_directory, f"qa{task_index+1}_{stage}.txt")
+            data = self.parse(task_path)
+
+            dataset = bAbIDataset(
+                bAbI_items=data,
+                tokenizer=self.tokenizer,
+                entity_dataframe=None,
+                entity_augmentation=self.entity_augmentation,
+                prompt_augmentation=self.prompt_augmentation,
+                num_demonstrations=self.num_demonstrations if stage == "train" else 0
+            )
+
+            datasets.append(dataset)
+
+        return datasets
+
     def setup(self, stage=None):
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
 
-        self.data = {}
-        self.data["train"] = self.parse(self.train_path)
-        self.data["validation"] = self.parse(self.validation_path)
-        self.data["test"] = self.parse(self.test_path)
-
         self.datasets = {}
-        self.datasets["train"] = bAbIDataset(
-            bAbI_items=self.data["train"],
-            tokenizer=self.tokenizer,
-            entity_dataframe=None,
-            entity_augmentation=self.entity_augmentation,
-            prompt_augmentation=self.prompt_augmentation,
-            num_demonstrations=self.num_demonstrations
-        )
+        self.datasets["train"] = self.load_tasks("train")
 
-        self.datasets["validation"] = bAbIDataset(
-            bAbI_items=self.data["validation"],
-            tokenizer=self.tokenizer,
-            entity_dataframe=None,
-            entity_augmentation=self.entity_augmentation,
-            prompt_augmentation=self.prompt_augmentation,
-            num_demonstrations=0
-        )
-        self.datasets["validation"].demonstrations = self.datasets["train"].demonstrations
+        if stage in ("validate", None):
+            self.datasets["validation"] = self.load_tasks("validation")
 
-        self.datasets["test"] = bAbIDataset(
-            bAbI_items=self.data["test"],
-            tokenizer=self.tokenizer,
-            entity_dataframe=None,
-            entity_augmentation=self.entity_augmentation,
-            prompt_augmentation=self.prompt_augmentation,
-            num_demonstrations=0
-        )
-        self.datasets["test"].demonstrations = self.datasets["train"].demonstrations
+            for task_index in range(NUM_TASKS):
+                self.datasets["validation"][task_index].demonstrations = self.datasets["train"][task_index].demonstrations
+
+        if stage in ("test", None):
+            self.datasets["test"] = self.load_tasks("test")
+
+            for task_index in range(NUM_TASKS):
+                self.datasets["test"][task_index].demonstrations = self.datasets["train"][task_index].demonstrations
+
+    def train_dataloader(self):
+        dataloaders = []
+        for task in self.datasets["train"]:
+            dataloaders.append(DataLoader(
+                task,
+                batch_size=self.batch_size,
+                num_workers=self.num_workers,
+                shuffle=False,
+                pin_memory=True,
+                collate_fn=task.collate_fn
+            ))
+
+        return dataloaders
+
+    def val_dataloader(self):
+        dataloaders = []
+        for task in self.datasets["validation"]:
+            dataloaders.append(DataLoader(
+                task,
+                batch_size=self.batch_size,
+                num_workers=self.num_workers,
+                shuffle=False,
+                pin_memory=True,
+                collate_fn=task.collate_fn
+            ))
+
+        return dataloaders
+
+    def test_dataloader(self):
+        dataloaders = []
+        for task in self.datasets["test"]:
+            dataloaders.append(DataLoader(
+                task,
+                batch_size=self.batch_size,
+                num_workers=self.num_workers,
+                shuffle=False,
+                pin_memory=True,
+                collate_fn=task.collate_fn
+            ))
+
+        return dataloaders

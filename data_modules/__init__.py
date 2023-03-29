@@ -74,6 +74,9 @@ class QuestionAnswerItem():
     def replace_entity(question_answer_item, entity):
         pass
 
+    def logging(self):
+        return [self.context, self.question, self.answer, self.prediction]
+
 
 class QuestionAnswerDataset(Dataset):
 
