@@ -1,5 +1,4 @@
 import wandb
-from itertools import repeat
 from data_modules.bAbI import NUM_TASKS
 from logger import QuestionAnswerLogger, calculate_accuracy
 
@@ -11,7 +10,7 @@ class bAbILogger(QuestionAnswerLogger):
         super().__init__()
         self.outputs = {}
         for stage in ["train", "validation", "test"]:
-            self.outputs[stage] = list(repeat([], NUM_TASKS))
+            self.outputs[stage] = [[] for _ in range(NUM_TASKS)]
 
     def on_validation_batch_end(self,
                                 trainer,

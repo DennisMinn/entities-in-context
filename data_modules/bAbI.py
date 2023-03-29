@@ -1,6 +1,5 @@
 from typing import TYPE_CHECKING
 import os
-from itertools import repeat
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
@@ -116,7 +115,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
 
         self.datasets = {}
         for stage in ["train", "validation", "test"]:
-            self.datasets[stage] = list(repeat([], NUM_TASKS))
+            self.datasets[stage] = [[] for _ in range(NUM_TASKS)]
 
     def parse(self, fpath) -> "List[bAbIDataset]":
         with open(fpath) as f:
