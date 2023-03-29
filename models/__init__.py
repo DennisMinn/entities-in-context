@@ -60,3 +60,31 @@ class QuestionAnswerModel(LightningModule):
             item.prediction = gen_text[idx]
 
         return babi_items
+
+    def test_step(self,
+                  batch: "dict[str, Union[List[bAbIItem], BatchEncoding]]",
+                  batch_index: int,
+                  dataset_index: int):
+        """
+        One iteration of validation loop
+
+        Args:
+            batch (dict[str, Union[List[bAbIItem], BatchEncoding]]):
+                Output of bAbIDataset.collate_fn
+            batch_index (int):
+                Index of subset
+        """
+        # generate tokens
+        gen_tokens = self.forward(batch["BatchEncoding"])
+
+        # decode tokens
+        gen_text = self.tokenizer.batch_decode(gen_tokens, skip_special_tokens=True)
+
+        # calculate accuracy
+        babi_items = batch["batch"]
+
+        # update bAbIItem prediction attribute
+        for idx, item in enumerate(babi_items):
+            item.prediction = gen_text[idx]
+
+        return babi_items

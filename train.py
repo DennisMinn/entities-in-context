@@ -19,4 +19,4 @@ if __name__ == "__main__":
     logger = bAbILogger()
 
     trainer = pl.Trainer(max_epochs=1, callbacks=[logger], accelerator="auto")
-    trainer.validate(model=model, datamodule=datamodule)
+    trainer.test(model=model, datamodule=datamodule)
