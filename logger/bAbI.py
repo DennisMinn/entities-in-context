@@ -1,6 +1,6 @@
 import wandb
 from data_modules.bAbI import NUM_TASKS
-from logger import QuestionAnswerLogger, calculate_accuracy
+from logger import QuestionAnswerLogger, calculate_accuracy, calculate_f1
 
 NUM_SAMPLES = 100
 
@@ -37,6 +37,9 @@ class bAbILogger(QuestionAnswerLogger):
             accuracy = calculate_accuracy(task_outputs)
             wandb.log({f"validation/task{task_index+1}/accuracy": accuracy})
 
+            f1 = calculate_f1(task_outputs)
+            wandb.log({f"validation/task{task_index+1}/f1": f1})
+
             # Logging Demonstrations
             demonstrations = wandb.Table(
                 data=[[trainer.datamodule.datasets["train"][task_index].demonstrations]],
@@ -56,6 +59,9 @@ class bAbILogger(QuestionAnswerLogger):
         for task_index, task_outputs in enumerate(self.outputs["test"]):
             accuracy = calculate_accuracy(task_outputs)
             wandb.log({f"test/task{task_index+1}/accuracy": accuracy})
+
+            f1 = calculate_f1(task_outputs)
+            wandb.log({f"test/task{task_index+1}/f1": f1})
 
             # Logging Demonstrations
             demonstrations = wandb.Table(
