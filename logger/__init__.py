@@ -40,9 +40,6 @@ def normalize_text(s):
 
     return white_space_fix(remove_articles(remove_punc(lower(s))))
 
-def compute_exact_match(prediction, truth):
-    return int(normalize_text(prediction) == normalize_text(truth))
-
 def compute_f1(prediction, truth):
     pred_tokens = normalize_text(prediction).split()
     truth_tokens = normalize_text(truth).split()
