@@ -10,7 +10,7 @@ if __name__ == "__main__":
     datamodule = bAbIDataModule(
             model_name="google/flan-t5-small",
             batch_size=5,
-            num_demonstrations=5,
+            demonstration_indices=[[0, 1, 2], [0, 1, 2], [0, 1, 2]],
             data_directory="data/bAbI tasks_1-20_v1-2/en-valid",
             entities_metadata_fpath="data/entities_metadata.csv",
             entity_augmentation="demographics_Michael",

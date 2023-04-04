@@ -47,7 +47,7 @@ class bAbILogger(QuestionAnswerLogger):
             wandb.log({f"validation/task{task_index}/accuracy": accuracy})
 
             f1 = calculate_f1(task_outputs)
-            wandb.log({f"validation/task{task_index+1}/f1": f1})
+            wandb.log({f"validation/task{task_index}/f1": f1})
 
             # Logging Demonstrations
             demonstrations = wandb.Table(
@@ -75,7 +75,7 @@ class bAbILogger(QuestionAnswerLogger):
             wandb.log({f"test/task{task_index}/accuracy": accuracy})
 
             f1 = calculate_f1(task_outputs)
-            wandb.log({f"test/task{task_index+1}/f1": f1})
+            wandb.log({f"test/task{task_index}/f1": f1})
 
             # Logging Demonstrations
             demonstrations = wandb.Table(
