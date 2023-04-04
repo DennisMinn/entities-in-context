@@ -70,9 +70,14 @@ class QuestionAnswerItem():
         # append QA string to demonstrations
         return demonstrations + qa_item_string
 
-    @staticmethod
-    def replace_entity(question_answer_item, entity):
-        pass
+    def replace_entity(self, replacement_entity):
+        if len(self.question_entities) or len(self.answer_entities):
+            entities = self.question_entities + self.answer_entities
+            entity = entities[0]
+
+            self.context = self.context.replace(entity.text, replacement_entity.text)
+            self.question = self.question.replace(entity.text, replacement_entity.text)
+            self.answer = self.answer.replace(entity.text, replacement_entity.text)
 
     def logging(self):
         return [self.context, self.question, self.answer, self.prediction]
@@ -93,6 +98,18 @@ class QuestionAnswerDataset(Dataset):
             demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
 
         return demonstrations
+
+    def initialize_replacement_entity(self):
+        if self.entity_augmentation is None:
+            return None
+
+        if "demographics" in self.entity_augmentation:
+            entity_text = self.entity_augmentation.split("_")[-1]
+            entities_dataframe = self.entities_dataframe.entity.filter(dataset="first_name_demographics")
+            replacement_entity = entities_dataframe.entity.entities[entity_text]
+            return replacement_entity
+
+        raise Exception("Unlisted entity augmentation")
 
     @abstractmethod
     def collate_fn(self, batch: List[QuestionAnswerItem]) -> dict:

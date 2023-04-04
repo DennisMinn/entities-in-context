@@ -66,10 +66,14 @@ class bAbIDataset(QuestionAnswerDataset):
         self.tokenizer = tokenizer
         self.entities_dataframe = entities_dataframe
         self.entity_augmentation = entity_augmentation
+        self.replacement_entity = self.initialize_replacement_entity()
         self.prompt_augmentation = prompt_augmentation
         self.task = task
 
     def __getitem__(self, index: int) -> bAbIItem:
+        if self.entity_augmentation is not None:
+            self.bAbI_items[index].replace_entity(self.replacement_entity)
+
         return self.bAbI_items[index]
 
     def __len__(self) -> int:
