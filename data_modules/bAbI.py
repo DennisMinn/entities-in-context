@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from transformers import PreTrainedTokenizerFast
 
 CONTEXT_START = "1"
-NUM_TASKS = 10
+NUM_TASKS = 20
 
 
 class bAbIItem(QuestionAnswerItem):
@@ -52,6 +52,7 @@ class bAbIDataset(QuestionAnswerDataset):
     def __init__(self,
                  bAbI_items: "List[bAbIItem]",
                  tokenizer: "PreTrainedTokenizerFast",
+                 task: int,
                  entities_dataframe: "DataFrame" = None,
                  entity_augmentation: str = None,
                  prompt_augmentation: str = None,
@@ -64,6 +65,7 @@ class bAbIDataset(QuestionAnswerDataset):
         self.entities_dataframe = entities_dataframe
         self.entity_augmentation = entity_augmentation
         self.prompt_augmentation = prompt_augmentation
+        self.task = task
 
     def __getitem__(self, index: int) -> bAbIItem:
         return self.bAbI_items[index]
@@ -89,6 +91,7 @@ class bAbIDataset(QuestionAnswerDataset):
                                         truncation=True,
                                         return_tensors='pt')
         return {
+          "task": self.task,
           "batch": batch,
           "BatchEncoding": batch_encoding
         }
@@ -98,6 +101,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
     def __init__(self,
                  model_name: str,
                  batch_size: int,
+                 tasks: "List[int]",
                  data_directory: str,
                  entities_metadata_fpath: str,
                  num_demonstrations: int = 2,
@@ -113,12 +117,14 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.prompt_augmentation = prompt_augmentation
         self.entity_augmentation = entity_augmentation
         self.data_directory = data_directory
+        self.tasks = tasks
 
         self.entities_dataframe = pd.read_csv(entities_metadata_fpath)
 
         self.datasets = {}
-        for stage in ["train", "validation", "test"]:
-            self.datasets[stage] = [[] for _ in range(NUM_TASKS)]
+        self.datasets["train"] = []
+        self.datasets["validation"] = []
+        self.datasets["test"] = []
 
     def parse(self, fpath) -> "List[bAbIItem]":
         # TODO Optimize parse
@@ -166,13 +172,13 @@ class bAbIDataModule(QuestionAnswerDataModule):
             stage = "valid"
 
         datasets = []
-        tasks_progress_bar = tqdm(total=NUM_TASKS, desc=f"Loading tasks for {stage} dataset.")
-        for task_index in range(NUM_TASKS):
-            task_path = os.path.join(self.data_directory, f"qa{task_index+1}_{stage}.txt")
+        for task_index in self.tasks:
+            task_path = os.path.join(self.data_directory, f"qa{task_index}_{stage}.txt")
             data = self.parse(task_path)
 
             dataset = bAbIDataset(
                 bAbI_items=data,
+                task=task_index,
                 tokenizer=self.tokenizer,
                 entities_dataframe=self.entities_dataframe,
                 entity_augmentation=self.entity_augmentation,
@@ -181,9 +187,6 @@ class bAbIDataModule(QuestionAnswerDataModule):
             )
 
             datasets.append(dataset)
-            tasks_progress_bar.update(1)
-
-        tasks_progress_bar.close()
 
         return datasets
 
@@ -196,13 +199,13 @@ class bAbIDataModule(QuestionAnswerDataModule):
         if stage in ("validate", None):
             self.datasets["validation"] = self.load_tasks("validation")
 
-            for task_index in range(NUM_TASKS):
+            for task_index in range(len(self.tasks)):
                 self.datasets["validation"][task_index].demonstrations = self.datasets["train"][task_index].demonstrations
 
         if stage in ("test", None):
             self.datasets["test"] = self.load_tasks("test")
 
-            for task_index in range(NUM_TASKS):
+            for task_index in range(len(self.tasks)):
                 self.datasets["test"][task_index].demonstrations = self.datasets["train"][task_index].demonstrations
 
     def train_dataloader(self):

@@ -12,12 +12,13 @@ if __name__ == "__main__":
             batch_size=5,
             num_demonstrations=5,
             data_directory="data/bAbI tasks_1-20_v1-2/en-valid",
-            entities_metadata_fpath = "data/entities_metadata.csv"
+            entities_metadata_fpath="data/entities_metadata.csv",
+            tasks=[1, 4, 5]
     )
 
     datamodule.setup()
 
     logger = bAbILogger()
 
-    trainer = pl.Trainer(max_epochs=1, accelerator="auto")
-    trainer.test(model=model, datamodule=datamodule)
+    trainer = pl.Trainer(max_epochs=1, callbacks=[logger], accelerator="auto")
+    trainer.validate(model=model, datamodule=datamodule)
