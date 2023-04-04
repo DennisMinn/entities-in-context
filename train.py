@@ -13,6 +13,7 @@ if __name__ == "__main__":
             num_demonstrations=5,
             data_directory="data/bAbI tasks_1-20_v1-2/en-valid",
             entities_metadata_fpath="data/entities_metadata.csv",
+            entity_augmentation="demographics_Michael",
             tasks=[1, 4, 5]
     )
 
