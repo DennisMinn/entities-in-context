@@ -81,12 +81,17 @@ class QuestionAnswerItem():
 class QuestionAnswerDataset(Dataset):
 
     def initialize_demonstrations(self, question_answer_items: List[QuestionAnswerItem]):
-        # repeatedly call QuestionAnswerItem demonstrations until
-        # demonstation string is formed
         demonstrations = ""
-        for _ in range(self.num_demonstrations):
-            question_answer_item = question_answer_items.pop(random.randrange(len(question_answer_items)))
+        if self.num_demonstrations != -1:
+            demonstration_indices = [random.randrange(len(question_answer_items))
+                                     for _ in range(self.num_demonstrations)]
+        elif self.demonstration_indices is not None:
+            demonstration_indices = self.demonstration_indices
+
+        for index in demonstration_indices:
+            question_answer_item = question_answer_items[index]
             demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
+
         return demonstrations
 
     @abstractmethod

@@ -56,9 +56,11 @@ class bAbIDataset(QuestionAnswerDataset):
                  entities_dataframe: "DataFrame" = None,
                  entity_augmentation: str = None,
                  prompt_augmentation: str = None,
-                 num_demonstrations: int = 5):
+                 num_demonstrations: int = -1,
+                 demonstration_indices: "List[int]" = None):
 
         self.num_demonstrations = num_demonstrations
+        self.demonstration_indices = demonstration_indices
         self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
         self.tokenizer = tokenizer
@@ -104,7 +106,8 @@ class bAbIDataModule(QuestionAnswerDataModule):
                  tasks: "List[int]",
                  data_directory: str,
                  entities_metadata_fpath: str,
-                 num_demonstrations: int = 2,
+                 num_demonstrations: int = -1,
+                 demonstration_indices: "List[List[int]]" = None,
                  num_workers: int = 0,
                  prompt_augmentation: str = None,
                  entity_augmentation: str = None):
@@ -113,6 +116,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.model_name = model_name
         self.batch_size = batch_size
         self.num_demonstrations = num_demonstrations
+        self.demonstration_indices = demonstration_indices
         self.num_workers = num_workers
         self.prompt_augmentation = prompt_augmentation
         self.entity_augmentation = entity_augmentation
@@ -172,9 +176,14 @@ class bAbIDataModule(QuestionAnswerDataModule):
             stage = "valid"
 
         datasets = []
-        for task_index in self.tasks:
+        for dataset_index, task_index in enumerate(self.tasks):
             task_path = os.path.join(self.data_directory, f"qa{task_index}_{stage}.txt")
             data = self.parse(task_path)
+
+            if self.demonstration_indices is not None:
+                demonstration_indices = self.demonstration_indices[dataset_index]
+            else:
+                demonstration_indices = None
 
             dataset = bAbIDataset(
                 bAbI_items=data,
@@ -183,7 +192,8 @@ class bAbIDataModule(QuestionAnswerDataModule):
                 entities_dataframe=self.entities_dataframe,
                 entity_augmentation=self.entity_augmentation,
                 prompt_augmentation=self.prompt_augmentation,
-                num_demonstrations=self.num_demonstrations if stage == "train" else 0
+                num_demonstrations=self.num_demonstrations,
+                demonstration_indices=demonstration_indices
             )
 
             datasets.append(dataset)
