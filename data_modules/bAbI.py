@@ -50,12 +50,15 @@ class bAbIDataset(QuestionAnswerDataset):
                  entity_dataframe: "DataFrame" = None,
                  entity_augmentation: str = None,
                  prompt_augmentation: str = None,
-                 num_demonstrations: int = 5):
+                 num_demonstrations: int = 5,
+                 max_demonstrations_token_length: int = 400
+                 ):
 
         self.num_demonstrations = num_demonstrations
+        self.max_demonstrations_token_length = max_demonstrations_token_length
+        self.tokenizer = tokenizer
         self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
-        self.tokenizer = tokenizer
         self.entity_dataframe = entity_dataframe
         self.entity_augmentation = entity_augmentation
         self.prompt_augmentation = prompt_augmentation
@@ -99,6 +102,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
                  model_name: str,
                  batch_size: int,
                  num_demonstrations: int = 2,
+                 max_demonstrations_token_length: int = 400,
                  num_workers: int = 0,
                  prompt_augmentation: str = None,
                  entity_augmentation: str = None,
@@ -108,6 +112,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.model_name = model_name
         self.batch_size = batch_size
         self.num_demonstrations = num_demonstrations
+        self.max_demonstrations_token_length = max_demonstrations_token_length
         self.num_workers = num_workers
         self.prompt_augmentation = prompt_augmentation
         self.entity_augmentation = entity_augmentation
@@ -154,14 +159,18 @@ class bAbIDataModule(QuestionAnswerDataModule):
             task_path = os.path.join(self.data_directory, f"qa{task_index+1}_{stage}.txt")
             data = self.parse(task_path)
 
-            dataset = bAbIDataset(
-                bAbI_items=data,
-                tokenizer=self.tokenizer,
-                entity_dataframe=None,
-                entity_augmentation=self.entity_augmentation,
-                prompt_augmentation=self.prompt_augmentation,
-                num_demonstrations=self.num_demonstrations if stage == "train" else 0
-            )
+            try:
+                dataset = bAbIDataset(
+                    bAbI_items=data,
+                    tokenizer=self.tokenizer,
+                    entity_dataframe=None,
+                    entity_augmentation=self.entity_augmentation,
+                    prompt_augmentation=self.prompt_augmentation,
+                    num_demonstrations=self.num_demonstrations if stage == "train" else 0,
+                    max_demonstrations_token_length=self.max_demonstrations_token_length
+                )
+            except Exception:
+                raise Exception("Could not initialize the demonstrations within the specified token length for task index ", task_index)
 
             datasets.append(dataset)
 

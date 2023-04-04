@@ -11,6 +11,7 @@ QUESTION = 'question: '
 ANSWER = 'answer: '
 NEXT_LINE = '\n'
 K = 5
+NUM_OF_DEMONSTRATIONS_TRIES = 50
 
 
 @dataclass
@@ -84,9 +85,19 @@ class QuestionAnswerDataset(Dataset):
         # repeatedly call QuestionAnswerItem demonstrations until
         # demonstation string is formed
         demonstrations = ""
-        for _ in range(self.num_demonstrations):
-            question_answer_item = question_answer_items.pop(random.randrange(len(question_answer_items)))
-            demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
+        initialization_successful = False
+        for _ in range(NUM_OF_DEMONSTRATIONS_TRIES):
+            for _ in range(self.num_demonstrations):
+                random_index = random.randrange(len(question_answer_items))
+                question_answer_item = question_answer_items[random_index]
+                demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
+            tokenized_demonstrations = self.tokenizer(demonstrations, return_tensors='pt')
+            tokenized_demonstrations_len = len(tokenized_demonstrations['input_ids'][0])
+            if tokenized_demonstrations_len <= self.max_demonstrations_token_length:
+                initialization_successful = True
+                break
+        if not initialization_successful:
+            raise Exception("Could not initialize the demonstrations within the specified token length")
         return demonstrations
 
     @abstractmethod
