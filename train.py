@@ -19,10 +19,10 @@ SELECTED_INDICES =  {1: [25, 175, 225, 40, 61, 82],
 
 if __name__ == "__main__":
 
-    model = QuestionAnswerModel("google/flan-t5-small")
+    model = QuestionAnswerModel("google/flan-t5-base")
 
     datamodule = bAbIDataModule(
-            model_name="google/flan-t5-small",
+            model_name="google/flan-t5-base",
             batch_size=5,
             demonstration_indices=list(SELECTED_INDICES.values()),
             data_directory="data/bAbI tasks_1-20_v1-2/en-valid",
