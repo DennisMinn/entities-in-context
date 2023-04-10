@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 from functools import reduce
 from pytorch_lightning.callbacks import Callback
@@ -69,8 +70,8 @@ def calculate_f1(data):
     return f1
 
 class QuestionAnswerLogger(Callback):
-    def setup(self, trainer, pl_module, stage):
-        self.run = wandb.init(project=PROJECT_NAME, name=timestamp())
-
     def teardown(self, trainer, pl_module, stage):
+        with open("data/runs.json", "a") as f:
+            f.write(json.dumps(self.run) + "\n")
+
         wandb.finish()

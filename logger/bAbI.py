@@ -10,10 +10,34 @@ class bAbILogger(QuestionAnswerLogger):
         if stage == "validate":
             stage = "validation"
 
-        self.run = wandb.init(project=PROJECT_NAME, name=timestamp())
+        datamodule = trainer.datamodule
+
+        run_name = ""
+        if datamodule.entity_augmentation is not None:
+            run_name += f"{datamodule.entity_augmentation}_"
+        if datamodule.prompt_augmentation is not None:
+            run_name += f"{datamodule.prompt_augmentation}_"
+        run_name += timestamp()
+
+        self.run = {
+            "name": run_name,
+            "dataset": "bAbI",
+            "model_name": datamodule.model_name,
+            "batch_size": datamodule.batch_size,
+            "tasks": datamodule.tasks,
+            "data_directory": datamodule.data_directory,
+            "num_demonstrations": datamodule.num_demonstrations,
+            "demonstration_indices": datamodule.demonstration_indices,
+            "num_workers": datamodule.num_workers,
+            "prompt_augmentation": datamodule.prompt_augmentation,
+            "entity_augmentation": datamodule.entity_augmentation
+        }
+
+        wandb.init(name=run_name, config=self.run)
+        self.run["id"] = wandb.run.id
 
         self.outputs = {}
-        tasks = trainer.datamodule.datasets[stage]
+        tasks = datamodule.datasets[stage]
         self.outputs[stage] = [[] for _ in range(len(tasks))]
 
     def on_validation_batch_end(self,
@@ -42,27 +66,28 @@ class bAbILogger(QuestionAnswerLogger):
                 continue
 
             task_index = trainer.datamodule.datasets["validation"][dataloader_index].task
-
             accuracy = calculate_accuracy(task_outputs)
-            wandb.log({f"validation/task{task_index}/accuracy": accuracy})
-
             f1 = calculate_f1(task_outputs)
-            wandb.log({f"validation/task{task_index}/f1": f1})
+            recorded_outputs = [item.logging() for item in task_outputs[:NUM_SAMPLES]]
 
-            # Logging Demonstrations
             demonstrations = wandb.Table(
                 data=[[trainer.datamodule.datasets["train"][dataloader_index].demonstrations]],
                 columns=["demonstrations"]
             )
-            wandb.log({f"validation/task{task_index}/demonstrations": demonstrations})
-
-            # Logging Data
-            recorded_outputs = [item.logging() for item in task_outputs[:NUM_SAMPLES]]
             outputs_table = wandb.Table(
                 data=recorded_outputs,
                 columns=["context", "question", "answer", "predictions"]
             )
+
+            wandb.log({f"validation/task{task_index}/accuracy": accuracy})
+            wandb.log({f"validation/task{task_index}/f1": f1})
+            wandb.log({f"validation/task{task_index}/demonstrations": demonstrations})
             wandb.log({f"validation/task{task_index}/data": outputs_table})
+
+            self.run[f"task{task_index}"] = {
+                "accuracy": accuracy,
+                "f1": f1,
+            }
 
     def on_test_end(self, trainer, pl_module):
         for dataloader_index, task_outputs in enumerate(self.outputs["test"]):
