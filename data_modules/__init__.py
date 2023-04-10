@@ -106,7 +106,7 @@ class QuestionAnswerDataset(Dataset):
 
         if "demographics" in self.entity_augmentation:
             entity_text = self.entity_augmentation.split("_")[-1]
-            entities_dataframe = self.entities_dataframe.entity.filter(dataset="first_name_demographics")
+            entities_dataframe = self.entities_dataframe.entity.filter(dataset="demographics")
             replacement_entity = entities_dataframe.entity.entities[entity_text]
             return replacement_entity
 
