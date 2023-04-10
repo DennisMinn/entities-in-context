@@ -33,7 +33,7 @@ class bAbILogger(QuestionAnswerLogger):
             "entity_augmentation": datamodule.entity_augmentation
         }
 
-        wandb.init(name=run_name, config=self.run)
+        wandb.init(project=PROJECT_NAME, name=run_name, config=self.run)
         self.run["id"] = wandb.run.id
 
         self.outputs = {}
