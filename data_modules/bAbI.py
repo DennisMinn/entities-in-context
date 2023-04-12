@@ -57,14 +57,16 @@ class bAbIDataset(QuestionAnswerDataset):
                  entity_augmentation: str = None,
                  prompt_augmentation: str = None,
                  num_demonstrations: int = -1,
+                 max_demonstrations_token_length: int = 400,
                  demonstration_indices: "List[int]" = None):
 
         self.task = task
         self.num_demonstrations = num_demonstrations
+        self.max_demonstrations_token_length = max_demonstrations_token_length
+        self.tokenizer = tokenizer
         self.demonstration_indices = demonstration_indices
         self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
-        self.tokenizer = tokenizer
         self.entities_dataframe = entities_dataframe
         self.entity_augmentation = entity_augmentation
         self.replacement_entity = self.initialize_replacement_entity()
@@ -111,6 +113,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
                  data_directory: str,
                  entities_metadata_fpath: str,
                  num_demonstrations: int = -1,
+                 max_demonstrations_token_length: int = 400,
                  demonstration_indices: "List[List[int]]" = None,
                  num_workers: int = 0,
                  prompt_augmentation: str = None,
@@ -120,6 +123,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.model_name = model_name
         self.batch_size = batch_size
         self.num_demonstrations = num_demonstrations
+        self.max_demonstrations_token_length = max_demonstrations_token_length
         self.demonstration_indices = demonstration_indices
         self.num_workers = num_workers
         self.prompt_augmentation = prompt_augmentation
@@ -187,17 +191,20 @@ class bAbIDataModule(QuestionAnswerDataModule):
             else:
                 num_demonstrations = -1
                 demonstration_indices = None
-
-            dataset = bAbIDataset(
-                bAbI_items=data,
-                task=task_index,
-                tokenizer=self.tokenizer,
-                entities_dataframe=self.entities_dataframe,
-                entity_augmentation=self.entity_augmentation,
-                prompt_augmentation=self.prompt_augmentation,
-                num_demonstrations=num_demonstrations,
-                demonstration_indices=demonstration_indices
-            )
+            try:
+                dataset = bAbIDataset(
+                    bAbI_items=data,
+                    task=task_index,
+                    tokenizer=self.tokenizer,
+                    entities_dataframe=self.entities_dataframe,
+                    entity_augmentation=self.entity_augmentation,
+                    prompt_augmentation=self.prompt_augmentation,
+                    num_demonstrations=num_demonstrations,
+                    max_demonstrations_token_length=self.max_demonstrations_token_length,
+                    demonstration_indices=demonstration_indices
+                )
+            except Exception:
+                raise Exception("Could not initialize the demonstrations within the specified token length for task index ", task_index)
 
             datasets.append(dataset)
 
