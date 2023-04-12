@@ -8,6 +8,7 @@ from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
 from data_modules.entities import NER_MODEL_NAME, Entity
 from tqdm.auto import tqdm
+from data_modules.constants import QUERY, BOTH
 
 if TYPE_CHECKING:
     from typing import List, Union
@@ -65,15 +66,15 @@ class bAbIDataset(QuestionAnswerDataset):
         self.max_demonstrations_token_length = max_demonstrations_token_length
         self.tokenizer = tokenizer
         self.demonstration_indices = demonstration_indices
-        self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
         self.entities_dataframe = entities_dataframe
         self.entity_augmentation = entity_augmentation
         self.replacement_entity = self.initialize_replacement_entity()
         self.prompt_augmentation = prompt_augmentation
+        self.demonstrations = self.initialize_demonstrations(bAbI_items)
 
     def __getitem__(self, index: int) -> bAbIItem:
-        if self.entity_augmentation is not None:
+        if self.prompt_augmentation in [QUERY, BOTH]:
             self.bAbI_items[index].replace_entity(self.replacement_entity)
 
         return self.bAbI_items[index]
