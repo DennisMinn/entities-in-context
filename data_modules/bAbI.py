@@ -1,9 +1,13 @@
 from typing import TYPE_CHECKING
 import os
+import pandas as pd
+from collections import defaultdict
+import spacy
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
-from functools import reduce
+from data_modules.entities import NER_MODEL_NAME, Entity
+from tqdm.auto import tqdm
 
 if TYPE_CHECKING:
     from typing import List, Union
@@ -11,7 +15,8 @@ if TYPE_CHECKING:
     from torch import BatchEncoding
     from transformers import PreTrainedTokenizerFast
 
-NUM_TASKS = 10
+CONTEXT_START = "1"
+NUM_TASKS = 20
 
 
 class bAbIItem(QuestionAnswerItem):
@@ -47,23 +52,30 @@ class bAbIDataset(QuestionAnswerDataset):
     def __init__(self,
                  bAbI_items: "List[bAbIItem]",
                  tokenizer: "PreTrainedTokenizerFast",
-                 entity_dataframe: "DataFrame" = None,
+                 task: int,
+                 entities_dataframe: "DataFrame" = None,
                  entity_augmentation: str = None,
                  prompt_augmentation: str = None,
-                 num_demonstrations: int = 5,
-                 max_demonstrations_token_length: int = 400
-                 ):
+                 num_demonstrations: int = -1,
+                 max_demonstrations_token_length: int = 400,
+                 demonstration_indices: "List[int]" = None):
 
+        self.task = task
         self.num_demonstrations = num_demonstrations
         self.max_demonstrations_token_length = max_demonstrations_token_length
         self.tokenizer = tokenizer
+        self.demonstration_indices = demonstration_indices
         self.demonstrations = self.initialize_demonstrations(bAbI_items)
         self.bAbI_items = bAbI_items
-        self.entity_dataframe = entity_dataframe
+        self.entities_dataframe = entities_dataframe
         self.entity_augmentation = entity_augmentation
+        self.replacement_entity = self.initialize_replacement_entity()
         self.prompt_augmentation = prompt_augmentation
 
     def __getitem__(self, index: int) -> bAbIItem:
+        if self.entity_augmentation is not None:
+            self.bAbI_items[index].replace_entity(self.replacement_entity)
+
         return self.bAbI_items[index]
 
     def __len__(self) -> int:
@@ -87,87 +99,109 @@ class bAbIDataset(QuestionAnswerDataset):
                                         truncation=True,
                                         return_tensors='pt')
         return {
+          "task": self.task,
           "batch": batch,
           "BatchEncoding": batch_encoding
         }
 
-    @staticmethod
-    def entity_statistics(self, fpath):
-        pass
-
 
 class bAbIDataModule(QuestionAnswerDataModule):
-    # TODO remove default values for some arguments
     def __init__(self,
                  model_name: str,
                  batch_size: int,
-                 num_demonstrations: int = 2,
+                 tasks: "List[int]",
+                 data_directory: str,
+                 entities_metadata_fpath: str,
+                 num_demonstrations: int = -1,
                  max_demonstrations_token_length: int = 400,
+                 demonstration_indices: "List[List[int]]" = None,
                  num_workers: int = 0,
                  prompt_augmentation: str = None,
-                 entity_augmentation: str = None,
-                 data_directory: str = None):
+                 entity_augmentation: str = None):
 
         super().__init__()
         self.model_name = model_name
         self.batch_size = batch_size
         self.num_demonstrations = num_demonstrations
         self.max_demonstrations_token_length = max_demonstrations_token_length
+        self.demonstration_indices = demonstration_indices
         self.num_workers = num_workers
         self.prompt_augmentation = prompt_augmentation
         self.entity_augmentation = entity_augmentation
         self.data_directory = data_directory
+        self.tasks = tasks
+
+        self.entities_dataframe = pd.read_csv(entities_metadata_fpath)
 
         self.datasets = {}
-        for stage in ["train", "validation", "test"]:
-            self.datasets[stage] = [[] for _ in range(NUM_TASKS)]
+        self.datasets["train"] = []
+        self.datasets["validation"] = []
+        self.datasets["test"] = []
 
-    def parse(self, fpath) -> "List[bAbIDataset]":
+    def parse(self, fpath) -> "List[bAbIItem]":
+        # TODO Optimize parse
+        bAbI_entities = self.entities_dataframe.entity.filter(dataset="bAbI")
+        bAbI_entities = bAbI_entities.entity.aggregate()
+
         with open(fpath) as f:
             lines = f.readlines()
 
-        data = []
-        story = []
+        bAbI_items = []
+
+        context = ''
+        context_entities = set()
+
         for line in lines:
-            nid, line = line.split(' ', 1)
-            if nid == "1":
-                # reset story when line ID=1 (start of new story)
-                story.clear()
-            if '\t' in line:
-                # this line is tab separated Q, A & support fact ID
-                q, a, supporting = line.split('\t')
-                # Provide all the sub-stories till this question
-                substory = [x for x in story if story]
-                # A story ends and is appended to global story data-set
-                data.append((substory, q, a))
-                story.append('')
+            line_id, text = line.split(' ', 1)
+            if line_id == CONTEXT_START:
+                context = ''
+                context_entities = set()
+
+            if '\t' in text:
+                question, answer, _ = text.split('\t')
+                question_entities = bAbI_entities.entity.annotate(question)
+                answer_entities = bAbI_entities.entity.annotate(answer)
+
+                bAbI_item = bAbIItem(
+                    context=context,
+                    question=question,
+                    answer=answer,
+                    context_entities=context_entities,
+                    question_entities=question_entities,
+                    answer_entities=answer_entities
+                )
+
+                bAbI_items.append(bAbI_item)
+
             else:
-                # this line is a sentence of story
-                story.append(line)
-        # lambda func to flatten the list of sentences into one list
-        flatten = lambda data: reduce(lambda x, y: x + y, data)
-        # creating list of dataclasses for each task
-        data = [bAbIItem(flatten(story).replace('\n', ' '), q, answer) for story, q, answer in data]
-        return data
+                context += text
+                context_entities = context_entities.union(bAbI_entities.entity.annotate(text))
+
+        return bAbI_items
 
     def load_tasks(self, stage=None):
-        if stage == "validation":
-            stage = "valid"
-
         datasets = []
-        for task_index in range(NUM_TASKS):
-            task_path = os.path.join(self.data_directory, f"qa{task_index+1}_{stage}.txt")
+        for dataset_index, task_index in enumerate(self.tasks):
+            task_path = os.path.join(self.data_directory, f"qa{task_index}_{stage}.txt")
             data = self.parse(task_path)
 
+            if stage == "train":
+                num_demonstrations = self.num_demonstrations
+                demonstration_indices = self.demonstration_indices[dataset_index] if self.demonstration_indices else None
+            else:
+                num_demonstrations = -1
+                demonstration_indices = None
             try:
                 dataset = bAbIDataset(
                     bAbI_items=data,
+                    task=task_index,
                     tokenizer=self.tokenizer,
-                    entity_dataframe=None,
+                    entities_dataframe=self.entities_dataframe,
                     entity_augmentation=self.entity_augmentation,
                     prompt_augmentation=self.prompt_augmentation,
-                    num_demonstrations=self.num_demonstrations if stage == "train" else 0,
-                    max_demonstrations_token_length=self.max_demonstrations_token_length
+                    num_demonstrations=num_demonstrations,
+                    max_demonstrations_token_length=self.max_demonstrations_token_length,
+                    demonstration_indices=demonstration_indices
                 )
             except Exception:
                 raise Exception("Could not initialize the demonstrations within the specified token length for task index ", task_index)
@@ -183,15 +217,15 @@ class bAbIDataModule(QuestionAnswerDataModule):
         self.datasets["train"] = self.load_tasks("train")
 
         if stage in ("validate", None):
-            self.datasets["validation"] = self.load_tasks("validation")
+            self.datasets["validation"] = self.load_tasks("valid")
 
-            for task_index in range(NUM_TASKS):
+            for task_index in range(len(self.tasks)):
                 self.datasets["validation"][task_index].demonstrations = self.datasets["train"][task_index].demonstrations
 
         if stage in ("test", None):
             self.datasets["test"] = self.load_tasks("test")
 
-            for task_index in range(NUM_TASKS):
+            for task_index in range(len(self.tasks)):
                 self.datasets["test"][task_index].demonstrations = self.datasets["train"][task_index].demonstrations
 
     def train_dataloader(self):
@@ -235,3 +269,54 @@ class bAbIDataModule(QuestionAnswerDataModule):
             ))
 
         return dataloaders
+
+    @staticmethod
+    def entity_statistics(data_dir, tokenizer_name):
+        # Log all entity occurrences
+        ner_model = spacy.load(NER_MODEL_NAME)
+        tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+        entity_occurrences = defaultdict(int)
+
+        file_names = os.listdir(data_dir)
+        tasks_progress_bar = tqdm(total=len(file_names), desc="Gathering bAbI entity statistics")
+
+        for file_name in file_names:
+            fpath = os.path.join(data_dir, file_name)
+            with open(fpath, "r") as f:
+                lines = f.readlines()
+
+            for line in lines:
+                if "\t" in line:
+                    continue
+
+                line_id, text = line.split(" ", 1)
+                annotations = ner_model(text)
+
+                for entity in annotations.ents:
+                    text, label = str(entity), entity.label_
+                    entity_occurrences[(text, label)] += 1
+
+            tasks_progress_bar.update(1)
+
+        tasks_progress_bar.close()
+
+        # Create entity metadata
+        entities_metadata = []
+        for entity, occurrences in entity_occurrences.items():
+            text, label = entity
+            length = len(text)
+            token_length = len(tokenizer(text).tokens())
+            entity_metadata = Entity(
+                text=text,
+                occurrences=occurrences,
+                label=label,
+                model=NER_MODEL_NAME,
+                tokenizer=tokenizer_name,
+                length=length,
+                token_length=token_length,
+                dataset="bAbI"
+            )
+
+            entities_metadata.append(entity_metadata)
+
+        return entities_metadata
