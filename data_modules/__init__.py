@@ -6,12 +6,7 @@ from dataclasses import dataclass, field
 from data_modules.entities import Entity
 import random
 
-CONTEXT = 'context: '
-QUESTION = 'question: '
-ANSWER = 'answer: '
-NEXT_LINE = '\n'
-K = 5
-NUM_OF_DEMONSTRATIONS_TRIES = 50
+from constants import DEMONSTRATIONS, BOTH, CONTEXT, QUESTION, ANSWER, NEXT_LINE, NUM_OF_DEMONSTRATIONS_TRIES
 
 
 @dataclass
@@ -100,6 +95,8 @@ class QuestionAnswerDataset(Dataset):
         for _ in range(NUM_OF_DEMONSTRATIONS_TRIES):
             for index in demonstration_indices:
                 question_answer_item = question_answer_items[index]
+                if self.prompt_augmentation in [DEMONSTRATIONS, BOTH]:
+                    question_answer_item.replace_entity(self.replacement_entity)
                 demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
             tokenized_demonstrations = self.tokenizer(demonstrations, return_tensors='pt')
             tokenized_demonstrations_len = len(tokenized_demonstrations['input_ids'][0])
