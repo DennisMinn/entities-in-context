@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
 from data_modules.entities import NER_MODEL_NAME, Entity
 from tqdm.auto import tqdm
-from constants import QUERY, BOTH
+from data_modules.constants import QUERY, BOTH
 
 if TYPE_CHECKING:
     from typing import List, Union

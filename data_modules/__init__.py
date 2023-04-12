@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from data_modules.entities import Entity
 import random
 
-from constants import DEMONSTRATIONS, BOTH, CONTEXT, QUESTION, ANSWER, NEXT_LINE, NUM_OF_DEMONSTRATIONS_TRIES
+from data_modules.constants import DEMONSTRATIONS, BOTH, CONTEXT, QUESTION, ANSWER, NEXT_LINE, NUM_OF_DEMONSTRATIONS_TRIES
 
 
 @dataclass
