@@ -213,6 +213,8 @@ class bAbIDataModule(QuestionAnswerDataModule):
 
     def setup(self, stage=None):
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        if self.tokenizer.pad_token is None:
+            self.tokenizer.add_special_tokens({"pad_token": "[PAD]"})
 
         self.datasets = {}
         self.datasets["train"] = self.load_tasks("train")
