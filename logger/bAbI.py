@@ -37,12 +37,12 @@ class bAbILogger(QuestionAnswerLogger):
         self.run["id"] = wandb.run.id
 
         self.outputs = {}
-        self.task_prediction_negative_likelihood = {}
-        self.task_target_negative_likelihood = {}
+        self.task_prediction_perplexity = {}
+        self.task_target_perplexity = {}
         tasks = datamodule.datasets[stage]
         self.outputs[stage] = [[] for _ in range(len(tasks))]
-        self.task_prediction_negative_likelihood[stage] = [0 for _ in range(len(tasks))]
-        self.task_target_negative_likelihood[stage] = [0 for _ in range(len(tasks))]
+        self.task_prediction_perplexity[stage] = [0 for _ in range(len(tasks))]
+        self.task_target_perplexity[stage] = [0 for _ in range(len(tasks))]
         self.tmp = None
 
     def on_validation_batch_end(self,
@@ -53,10 +53,10 @@ class bAbILogger(QuestionAnswerLogger):
                                 batch_index,
                                 dataloader_index):
 
-        bAbI_items, prediction_negative_likelihood, target_negative_likelihood = outputs
+        bAbI_items, prediction_perplexity, target_perplexity = outputs
         self.outputs["validation"][dataloader_index] += bAbI_items
-        self.task_prediction_negative_likelihood["validation"][dataloader_index] += sum(prediction_negative_likelihood)
-        self.task_target_negative_likelihood["validation"][dataloader_index] += sum(target_negative_likelihood)
+        self.task_prediction_perplexity["validation"][dataloader_index] += sum(prediction_perplexity)
+        self.task_target_perplexity["validation"][dataloader_index] += sum(target_perplexity)
 
     def on_test_batch_end(self,
                           trainer,
@@ -79,8 +79,8 @@ class bAbILogger(QuestionAnswerLogger):
             accuracy = calculate_accuracy(bAbI_items)
             f1 = calculate_f1(bAbI_items)
 
-            prediction_negative_likelihood = self.task_prediction_negative_likelihood["validation"][dataloader_index] / n
-            target_negative_likelihood = self.task_target_negative_likelihood["validation"][dataloader_index] / n
+            prediction_perplexity = self.task_prediction_perplexity["validation"][dataloader_index] / n
+            target_perplexity = self.task_target_perplexity["validation"][dataloader_index] / n
 
             recorded_outputs = [item.logging() for item in bAbI_items[:NUM_SAMPLES]]
 
@@ -95,16 +95,16 @@ class bAbILogger(QuestionAnswerLogger):
 
             wandb.log({f"validation/task{task_index}/accuracy": accuracy})
             wandb.log({f"validation/task{task_index}/f1": f1})
-            wandb.log({f"validation/task{task_index}/prediction_negative_likelihood": prediction_negative_likelihood})
-            wandb.log({f"validation/task{task_index}/target_negative_likelihood": target_negative_likelihood})
+            wandb.log({f"validation/task{task_index}/prediction_perplexity": prediction_perplexity})
+            wandb.log({f"validation/task{task_index}/target_perplexity": target_perplexity})
             wandb.log({f"validation/task{task_index}/demonstrations": demonstrations})
             wandb.log({f"validation/task{task_index}/data": outputs_table})
 
             self.run[f"task{task_index}"] = {
                 "accuracy": accuracy,
                 "f1": f1,
-                "prediction_negative_likelihood": prediction_negative_likelihood,
-                "target_negative_likelihood": target_negative_likelihood,
+                "prediction_perplexity": prediction_perplexity,
+                "target_perplexity": target_perplexity,
             }
 
     def on_test_end(self, trainer, pl_module):

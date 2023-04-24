@@ -55,8 +55,8 @@ class QuestionAnswerModel(LightningModule):
         # calculate accuracy
         babi_items = batch["batch"]
         babi_prompts = batch["formatted_batch"]
-        prediction_negative_likelihoods = []
-        target_negative_likelihoods = []
+        prediction_perplexities = []
+        target_perplexities = []
 
         # update bAbIItem prediction attribute
         for idx, item in enumerate(babi_items):
@@ -66,18 +66,18 @@ class QuestionAnswerModel(LightningModule):
             prediction = babi_items[idx].prediction
             target = babi_items[idx].answer
 
-            prediction_negative_likelihoods.append(
-                self.calculate_negative_likelihood(prompt, prediction)
+            prediction_perplexities.append(
+                self.calculate_perplexity(prompt, prediction)
             )
 
-            target_negative_likelihoods.append(
-                self.calculate_negative_likelihood(prompt, target)
+            target_perplexities.append(
+                self.calculate_perplexity(prompt, target)
             )
 
         return (
             babi_items,
-            prediction_negative_likelihoods,
-            target_negative_likelihoods
+            prediction_perplexities,
+            target_perplexities
         )
 
     def test_step(self,
@@ -108,12 +108,15 @@ class QuestionAnswerModel(LightningModule):
 
         return babi_items
 
-    def calculate_negative_likelihood(self, prompt, target):
+    def calculate_perplexity(self, prompt, target):
         prompt_length = len(self.tokenizer.encode(prompt))
         text = prompt + target
         input_ids = self.tokenizer.encode(text, return_tensors="pt").to(self.device)
         target_ids = input_ids.clone()
-        target_ids[:, :prompt_length - 1] = -100
+        target_ids[:, :prompt_length] = -100
 
-        loss = self.model(input_ids, labels=target_ids).loss
-        return loss.item()
+        with torch.no_grad():
+            negative_log_likelihood = self.model(input_ids, labels=target_ids).loss
+            perplexity = torch.exp(negative_log_likelihood)
+
+        return perplexity.item()
