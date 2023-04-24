@@ -46,8 +46,7 @@ class QuestionAnswerItem():
     question_entities: List[Entity] = field(default=None)
     answer_entities: List[Entity] = field(default=None)
 
-    @staticmethod
-    def format(question_answer_item: "QuestionAnswerItem", demonstrations: str = "") -> str:
+    def format(self, demonstrations: str = "", include_answer: bool = True) -> str:
         '''
         Concatenates `QuestionAnswerItem.context` and
         `QuestionAnswerItem.question` with demonstrations for in-context
@@ -60,55 +59,57 @@ class QuestionAnswerItem():
             demonstrations (str):
                 Demonstrations/Examples for the model to use as a template.
         '''
-        # format question_answer_item to a string
-        qa_item_string = CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER
+        if include_answer:
+            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.answer + NEXT_LINE
+        else:
+            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER
 
-        # append QA string to demonstrations
-        return demonstrations + qa_item_string
+        return demonstrations + query
 
     def replace_entity(self, replacement_entity):
         if len(self.question_entities) or len(self.answer_entities):
             entities = self.question_entities + self.answer_entities
             entity = entities[0]
 
-            self.context = self.context.replace(entity.text, replacement_entity.text)
-            self.question = self.question.replace(entity.text, replacement_entity.text)
-            self.answer = self.answer.replace(entity.text, replacement_entity.text)
+            context = self.context.replace(entity.text, replacement_entity.text)
+            question = self.question.replace(entity.text, replacement_entity.text)
+            answer = self.answer.replace(entity.text, replacement_entity.text)
+
+            return QuestionAnswerItem(context, question, answer)
+        else:
+            raise Exception("No entities present")
 
     def logging(self):
         return [self.context, self.question, self.answer, self.prediction]
 
 
 class QuestionAnswerDataset(Dataset):
-
     def initialize_demonstrations(self, question_answer_items: List[QuestionAnswerItem]):
-        demonstrations = ""
-        if self.num_demonstrations != -1:
-            demonstration_indices = [random.randrange(len(question_answer_items))
-                                     for _ in range(self.num_demonstrations)]
-        elif self.demonstration_indices is not None:
-            demonstration_indices = self.demonstration_indices
-        else:
+        if self.demonstration_indices is None and self.num_demonstrations == -1:
             return None
-        
-        initialization_successful = False
+
+        # Apply prompt augmentation
+        if self.prompt_augmentation in [DEMONSTRATIONS, BOTH]:
+            question_answer_items = [item.replace_entity(self.replacement_entity) for item in question_answer_items]
+
+        # Initialize using specified demonstration indices
+        if self.demonstration_indices is not None:
+            k = self.num_demonstrations if self.num_demonstrations != -1 else len(self.demonstration_indices)
+            demonstration_indices = self.demonstration_indices[:k]
+            demonstrations = [question_answer_items[index] for index in demonstration_indices]
+            demonstrations = "".join([item.format() for item in demonstrations])
+            return demonstrations
+
+        # Initialize by randomly sampling dataset
         for _ in range(NUM_OF_DEMONSTRATIONS_TRIES):
-            for index in demonstration_indices:
-                question_answer_item = question_answer_items[index]
-                if self.prompt_augmentation in [DEMONSTRATIONS, BOTH]:
-                    question_answer_item.replace_entity(self.replacement_entity)
-                demonstrations = demonstrations + CONTEXT + question_answer_item.context + NEXT_LINE + QUESTION + question_answer_item.question + NEXT_LINE + ANSWER + question_answer_item.answer + NEXT_LINE
-            tokenized_demonstrations = self.tokenizer(demonstrations, return_tensors='pt')
-            tokenized_demonstrations_len = len(tokenized_demonstrations['input_ids'][0])
-            if tokenized_demonstrations_len <= self.max_demonstrations_token_length:
-                initialization_successful = True
-                break
-            else:
-                demonstration_indices = [random.randrange(len(question_answer_items))
-                                     for _ in range(self.num_demonstrations)]
-        if not initialization_successful:
-            raise Exception("Could not initialize the demonstrations within the specified token length")
-        return demonstrations
+            demonstrations = random.sample(question_answer_items, self.num_demonstrations)
+            demonstrations = "".join([item.format() for item in demonstrations])
+
+            num_tokens = len(self.tokenize.encode(demonstrations))
+            if num_tokens <= self.max_demonstrations_token_length:
+                return demonstrations
+
+        raise Exception("Could not initialize the demonstrations within the specified token length")
 
     def initialize_replacement_entity(self):
         if self.entity_augmentation is None:

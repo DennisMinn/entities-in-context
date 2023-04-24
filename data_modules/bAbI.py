@@ -75,9 +75,9 @@ class bAbIDataset(QuestionAnswerDataset):
 
     def __getitem__(self, index: int) -> bAbIItem:
         if self.prompt_augmentation in [QUERY, BOTH]:
-            self.bAbI_items[index].replace_entity(self.replacement_entity)
-
-        return self.bAbI_items[index]
+            return self.bAbI_items[index].replace_entity(self.replacement_entity)
+        else:
+            return self.bAbI_items[index]
 
     def __len__(self) -> int:
         return len(self.bAbI_items)
@@ -91,12 +91,12 @@ class bAbIDataset(QuestionAnswerDataset):
                 Subset of bAbI dataset
         '''
         # call QuestionAnswerItem.format() to convert bAbIItems to strings
-        formatted_batch = [item.format(item, self.demonstrations) for item in batch]
+        formatted_batch = [item.format(self.demonstrations, include_answer=False) for item in batch]
 
         # call self.tokenizer to convert string to input for model
         batch_encoding = self.tokenizer(formatted_batch,
                                         padding='longest',
-                                        max_length=512,
+                                        max_length=self.tokenizer.model_max_length,
                                         truncation=True,
                                         return_tensors='pt')
         return {
