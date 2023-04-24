@@ -77,7 +77,7 @@ class QuestionAnswerItem():
 
             return QuestionAnswerItem(context, question, answer)
         else:
-            raise Exception("No entities present")
+            return QuestionAnswerItem(self.context, self.question, self.answer)
 
     def logging(self):
         return [self.context, self.question, self.answer, self.prediction]
