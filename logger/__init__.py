@@ -3,6 +3,7 @@ from datetime import datetime
 from functools import reduce
 from pytorch_lightning.callbacks import Callback
 import wandb
+import os
 
 PROJECT_NAME = "Entities In Context"
 
@@ -71,7 +72,14 @@ def calculate_f1(data):
 
 class QuestionAnswerLogger(Callback):
     def teardown(self, trainer, pl_module, stage):
-        with open("data/runs.json", "a") as f:
-            f.write(json.dumps(self.run) + "\n")
+        if not os.path.isfile(self.file_name):
+            with open(self.file_name, "x") as f:
+                run_list = list([])
+        else:
+            with open(self.file_name, "r") as f:
+                run_list = list(json.load(f))
+        run_list.append(self.run)
+        with open(self.file_name, "w") as f:
+            json.dump(run_list, f, indent=2, separators=(',',': '))
 
         wandb.finish()

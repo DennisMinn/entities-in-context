@@ -6,6 +6,9 @@ NUM_SAMPLES = 100
 
 
 class bAbILogger(QuestionAnswerLogger):
+    def __init__(self, file_name):
+        self.file_name = file_name
+
     def setup(self, trainer, pl_module, stage):
         if stage == "validate":
             stage = "validation"

@@ -14,11 +14,10 @@ class QuestionAnswerModel(LightningModule):
         if "flan-t5" in model_name:
             from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
             self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        elif "gpt-j" in model_name:
+        elif "gpt-j" in model_name or "gpt-neo-1.3B" in model_name:
             from transformers import AutoModelForCausalLM, AutoTokenizer
             self.model = AutoModelForCausalLM.from_pretrained(model_name)
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def forward(self, inputs: "BatchEncoding") -> "torch.Tensor":
         """
