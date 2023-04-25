@@ -54,12 +54,31 @@ class QuestionAnswerModel(LightningModule):
 
         # calculate accuracy
         babi_items = batch["batch"]
+        babi_prompts = batch["formatted_batch"]
+        prediction_negative_likelihoods = []
+        target_negative_likelihoods = []
 
         # update bAbIItem prediction attribute
         for idx, item in enumerate(babi_items):
             item.prediction = gen_text[idx]
 
-        return babi_items
+            prompt = babi_prompts[idx]
+            prediction = babi_items[idx].prediction
+            target = babi_items[idx].answer
+
+            prediction_negative_likelihoods.append(
+                self.calculate_negative_likelihood(prompt, prediction)
+            )
+
+            target_negative_likelihoods.append(
+                self.calculate_negative_likelihood(prompt, target)
+            )
+
+        return (
+            babi_items,
+            prediction_negative_likelihoods,
+            target_negative_likelihoods
+        )
 
     def test_step(self,
                   batch: "dict[str, Union[List[bAbIItem], BatchEncoding]]",
@@ -88,3 +107,13 @@ class QuestionAnswerModel(LightningModule):
             item.prediction = gen_text[idx]
 
         return babi_items
+
+    def calculate_negative_likelihood(self, prompt, target):
+        prompt_length = len(self.tokenizer.encode(prompt))
+        text = prompt + target
+        input_ids = self.tokenizer.encode(text, return_tensors="pt").to(self.device)
+        target_ids = input_ids.clone()
+        target_ids[:, :prompt_length - 1] = -100
+
+        loss = self.model(input_ids, labels=target_ids).loss
+        return loss.item()

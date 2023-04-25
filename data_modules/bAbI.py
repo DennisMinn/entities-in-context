@@ -100,9 +100,10 @@ class bAbIDataset(QuestionAnswerDataset):
                                         truncation=True,
                                         return_tensors='pt')
         return {
-          "task": self.task,
-          "batch": batch,
-          "BatchEncoding": batch_encoding
+            "task": self.task,
+            "batch": batch,
+            "formatted_batch": formatted_batch,
+            "BatchEncoding": batch_encoding
         }
 
 

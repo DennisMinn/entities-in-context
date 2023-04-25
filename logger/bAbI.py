@@ -37,8 +37,13 @@ class bAbILogger(QuestionAnswerLogger):
         self.run["id"] = wandb.run.id
 
         self.outputs = {}
+        self.task_prediction_negative_likelihood = {}
+        self.task_target_negative_likelihood = {}
         tasks = datamodule.datasets[stage]
         self.outputs[stage] = [[] for _ in range(len(tasks))]
+        self.task_prediction_negative_likelihood[stage] = [0 for _ in range(len(tasks))]
+        self.task_target_negative_likelihood[stage] = [0 for _ in range(len(tasks))]
+        self.tmp = None
 
     def on_validation_batch_end(self,
                                 trainer,
@@ -48,7 +53,10 @@ class bAbILogger(QuestionAnswerLogger):
                                 batch_index,
                                 dataloader_index):
 
-        self.outputs["validation"][dataloader_index] += outputs
+        bAbI_items, prediction_negative_likelihood, target_negative_likelihood = outputs
+        self.outputs["validation"][dataloader_index] += bAbI_items
+        self.task_prediction_negative_likelihood["validation"][dataloader_index] += sum(prediction_negative_likelihood)
+        self.task_target_negative_likelihood["validation"][dataloader_index] += sum(target_negative_likelihood)
 
     def on_test_batch_end(self,
                           trainer,
@@ -61,14 +69,20 @@ class bAbILogger(QuestionAnswerLogger):
         self.outputs["test"][dataloader_index] += outputs
 
     def on_validation_end(self, trainer, pl_module):
-        for dataloader_index, task_outputs in enumerate(self.outputs["validation"]):
-            if len(task_outputs) == 0:
+        for dataloader_index, bAbI_items in enumerate(self.outputs["validation"]):
+            if len(bAbI_items) == 0:
                 continue
 
+            n = len(bAbI_items)
+
             task_index = trainer.datamodule.datasets["validation"][dataloader_index].task
-            accuracy = calculate_accuracy(task_outputs)
-            f1 = calculate_f1(task_outputs)
-            recorded_outputs = [item.logging() for item in task_outputs[:NUM_SAMPLES]]
+            accuracy = calculate_accuracy(bAbI_items)
+            f1 = calculate_f1(bAbI_items)
+
+            prediction_negative_likelihood = self.task_prediction_negative_likelihood["validation"][dataloader_index] / n
+            target_negative_likelihood = self.task_target_negative_likelihood["validation"][dataloader_index] / n
+
+            recorded_outputs = [item.logging() for item in bAbI_items[:NUM_SAMPLES]]
 
             demonstrations = wandb.Table(
                 data=[[trainer.datamodule.datasets["train"][dataloader_index].demonstrations]],
@@ -81,12 +95,16 @@ class bAbILogger(QuestionAnswerLogger):
 
             wandb.log({f"validation/task{task_index}/accuracy": accuracy})
             wandb.log({f"validation/task{task_index}/f1": f1})
+            wandb.log({f"validation/task{task_index}/prediction_negative_likelihood": prediction_negative_likelihood})
+            wandb.log({f"validation/task{task_index}/target_negative_likelihood": target_negative_likelihood})
             wandb.log({f"validation/task{task_index}/demonstrations": demonstrations})
             wandb.log({f"validation/task{task_index}/data": outputs_table})
 
             self.run[f"task{task_index}"] = {
                 "accuracy": accuracy,
                 "f1": f1,
+                "prediction_negative_likelihood": prediction_negative_likelihood,
+                "target_negative_likelihood": target_negative_likelihood,
             }
 
     def on_test_end(self, trainer, pl_module):
