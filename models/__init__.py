@@ -54,6 +54,7 @@ class QuestionAnswerModel(LightningModule):
         # calculate accuracy
         babi_items = batch["batch"]
         babi_prompts = batch["formatted_batch"]
+        prompt_perplexities = []
         prediction_perplexities = []
         target_perplexities = []
 
@@ -65,16 +66,21 @@ class QuestionAnswerModel(LightningModule):
             prediction = babi_items[idx].prediction
             target = babi_items[idx].answer
 
+            prompt_perplexities.append(
+                self.calculate_perplexity(prompt, '', False)
+            )
+            
             prediction_perplexities.append(
-                self.calculate_perplexity(prompt, prediction)
+                self.calculate_perplexity(prompt, prediction, True)
             )
 
             target_perplexities.append(
-                self.calculate_perplexity(prompt, target)
+                self.calculate_perplexity(prompt, target, True)
             )
 
         return (
             babi_items,
+            prompt_perplexities,
             prediction_perplexities,
             target_perplexities
         )
@@ -107,12 +113,13 @@ class QuestionAnswerModel(LightningModule):
 
         return babi_items
 
-    def calculate_perplexity(self, prompt, target):
+    def calculate_perplexity(self, prompt, target, mask_prompt):
         prompt_length = len(self.tokenizer.encode(prompt))
         text = prompt + target
         input_ids = self.tokenizer.encode(text, return_tensors="pt").to(self.device)
         target_ids = input_ids.clone()
-        target_ids[:, :prompt_length] = -100
+        if mask_prompt == True:
+            target_ids[:, :prompt_length] = -100
 
         with torch.no_grad():
             negative_log_likelihood = self.model(input_ids, labels=target_ids).loss

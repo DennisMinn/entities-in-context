@@ -40,10 +40,12 @@ class bAbILogger(QuestionAnswerLogger):
         self.run["id"] = wandb.run.id
 
         self.outputs = {}
+        self.task_prompt_perplexity = {}
         self.task_prediction_perplexity = {}
         self.task_target_perplexity = {}
         tasks = datamodule.datasets[stage]
         self.outputs[stage] = [[] for _ in range(len(tasks))]
+        self.task_prompt_perplexity[stage] = [0 for _ in range(len(tasks))]
         self.task_prediction_perplexity[stage] = [0 for _ in range(len(tasks))]
         self.task_target_perplexity[stage] = [0 for _ in range(len(tasks))]
         self.tmp = None
@@ -56,8 +58,9 @@ class bAbILogger(QuestionAnswerLogger):
                                 batch_index,
                                 dataloader_index):
 
-        bAbI_items, prediction_perplexity, target_perplexity = outputs
+        bAbI_items, prompt_perplexity, prediction_perplexity, target_perplexity = outputs
         self.outputs["validation"][dataloader_index] += bAbI_items
+        self.task_prompt_perplexity["validation"][dataloader_index] += sum(prompt_perplexity)
         self.task_prediction_perplexity["validation"][dataloader_index] += sum(prediction_perplexity)
         self.task_target_perplexity["validation"][dataloader_index] += sum(target_perplexity)
 
@@ -82,6 +85,7 @@ class bAbILogger(QuestionAnswerLogger):
             accuracy = calculate_accuracy(bAbI_items)
             f1 = calculate_f1(bAbI_items)
 
+            prompt_perplexity = self.task_prompt_perplexity["validation"][dataloader_index] / n
             prediction_perplexity = self.task_prediction_perplexity["validation"][dataloader_index] / n
             target_perplexity = self.task_target_perplexity["validation"][dataloader_index] / n
 
@@ -98,6 +102,7 @@ class bAbILogger(QuestionAnswerLogger):
 
             wandb.log({f"validation/task{task_index}/accuracy": accuracy})
             wandb.log({f"validation/task{task_index}/f1": f1})
+            wandb.log({f"validation/task{task_index}/prompt_perplexity": prompt_perplexity})
             wandb.log({f"validation/task{task_index}/prediction_perplexity": prediction_perplexity})
             wandb.log({f"validation/task{task_index}/target_perplexity": target_perplexity})
             wandb.log({f"validation/task{task_index}/demonstrations": demonstrations})
@@ -106,6 +111,7 @@ class bAbILogger(QuestionAnswerLogger):
             self.run[f"task{task_index}"] = {
                 "accuracy": accuracy,
                 "f1": f1,
+                "prompt_perplexity": prompt_perplexity,
                 "prediction_perplexity": prediction_perplexity,
                 "target_perplexity": target_perplexity,
             }
