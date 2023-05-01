@@ -8,7 +8,6 @@ from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
 from data_modules.entities import NER_MODEL_NAME, Entity
 from tqdm.auto import tqdm
-from data_modules.constants import QUERY, BOTH
 
 if TYPE_CHECKING:
     from typing import List, Union
@@ -61,26 +60,18 @@ class bAbIDataset(QuestionAnswerDataset):
                  max_demonstrations_token_length: int = 400,
                  demonstration_indices: "List[int]" = None):
 
+        super().__init__(
+            question_answer_items=bAbI_items,
+            tokenizer=tokenizer,
+            entities_dataframe=entities_dataframe,
+            entity_augmentation=entity_augmentation,
+            prompt_augmentation=prompt_augmentation,
+            num_demonstrations=num_demonstrations,
+            max_demonstrations_token_length=max_demonstrations_token_length,
+            demonstration_indices=demonstration_indices
+        )
+
         self.task = task
-        self.num_demonstrations = num_demonstrations
-        self.max_demonstrations_token_length = max_demonstrations_token_length
-        self.tokenizer = tokenizer
-        self.demonstration_indices = demonstration_indices
-        self.bAbI_items = bAbI_items
-        self.entities_dataframe = entities_dataframe
-        self.entity_augmentation = entity_augmentation
-        self.replacement_entity = self.initialize_replacement_entity()
-        self.prompt_augmentation = prompt_augmentation
-        self.demonstrations = self.initialize_demonstrations(bAbI_items)
-
-    def __getitem__(self, index: int) -> bAbIItem:
-        if self.prompt_augmentation in [QUERY, BOTH]:
-            return self.bAbI_items[index].replace_entity(self.replacement_entity)
-        else:
-            return self.bAbI_items[index]
-
-    def __len__(self) -> int:
-        return len(self.bAbI_items)
 
     def collate_fn(self, batch: "List[bAbIItem]") -> "dict[str, Union[List[bAbIItem], BatchEncoding]]":
         '''
@@ -193,20 +184,18 @@ class bAbIDataModule(QuestionAnswerDataModule):
             else:
                 num_demonstrations = -1
                 demonstration_indices = None
-            try:
-                dataset = bAbIDataset(
-                    bAbI_items=data,
-                    task=task_index,
-                    tokenizer=self.tokenizer,
-                    entities_dataframe=self.entities_dataframe,
-                    entity_augmentation=self.entity_augmentation,
-                    prompt_augmentation=self.prompt_augmentation,
-                    num_demonstrations=num_demonstrations,
-                    max_demonstrations_token_length=self.max_demonstrations_token_length,
-                    demonstration_indices=demonstration_indices
-                )
-            except Exception:
-                raise Exception("Could not initialize the demonstrations within the specified token length for task index ", task_index)
+
+            dataset = bAbIDataset(
+                bAbI_items=data,
+                task=task_index,
+                tokenizer=self.tokenizer,
+                entities_dataframe=self.entities_dataframe,
+                entity_augmentation=self.entity_augmentation,
+                prompt_augmentation=self.prompt_augmentation,
+                num_demonstrations=num_demonstrations,
+                max_demonstrations_token_length=self.max_demonstrations_token_length,
+                demonstration_indices=demonstration_indices
+            )
 
             datasets.append(dataset)
 

@@ -1,12 +1,17 @@
+from typing import List, TYPE_CHECKING
 from abc import abstractmethod
-from typing import List
 from torch.utils.data import Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
 from dataclasses import dataclass, field
 from data_modules.entities import Entity
 import random
 
-from data_modules.constants import DEMONSTRATIONS, BOTH, CONTEXT, QUESTION, ANSWER, NEXT_LINE, NUM_OF_DEMONSTRATIONS_TRIES
+from data_modules.constants import DEMONSTRATIONS, QUERY, BOTH, CONTEXT, QUESTION, ANSWER, NEXT_LINE, NUM_OF_DEMONSTRATIONS_TRIES
+
+
+if TYPE_CHECKING:
+    from pandas import DataFrame
+    from transformers import PreTrainedTokenizerFast
 
 
 @dataclass
@@ -37,7 +42,6 @@ class QuestionAnswerItem():
         answer_entities (List[Entity]):
             List of entities in answer
   '''
-    # TODO find method to parse entities list
     context: str
     question: str
     answer: str
@@ -84,6 +88,36 @@ class QuestionAnswerItem():
 
 
 class QuestionAnswerDataset(Dataset):
+    def __init__(self,
+                 question_answer_items: "List[QuestionAnswerItem]",
+                 tokenizer: "PreTrainedTokenizerFast",
+                 entities_dataframe: "DataFrame" = None,
+                 entity_augmentation: str = None,
+                 prompt_augmentation: str = None,
+                 num_demonstrations: int = -1,
+                 max_demonstrations_token_length: int = 400,
+                 demonstration_indices: "List[int]" = None):
+
+        self.num_demonstrations = num_demonstrations
+        self.max_demonstrations_token_length = max_demonstrations_token_length
+        self.tokenizer = tokenizer
+        self.demonstration_indices = demonstration_indices
+        self.question_answer_items = question_answer_items
+        self.entities_dataframe = entities_dataframe
+        self.entity_augmentation = entity_augmentation
+        self.replacement_entity = self.initialize_replacement_entity()
+        self.prompt_augmentation = prompt_augmentation
+        self.demonstrations = self.initialize_demonstrations(question_answer_items)
+
+    def __getitem__(self, index: int) -> QuestionAnswerItem:
+        if self.prompt_augmentation in [QUERY, BOTH]:
+            return self.question_answer_items[index].replace_entity(self.replacement_entity)
+        else:
+            return self.question_answer_items[index]
+
+    def __len__(self) -> int:
+        return len(self.question_answer_items)
+
     def initialize_demonstrations(self, question_answer_items: List[QuestionAnswerItem]):
         if self.demonstration_indices is None and self.num_demonstrations == -1:
             return None
