@@ -14,11 +14,10 @@ class QuestionAnswerModel(LightningModule):
         if "flan-t5" in model_name:
             from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
             self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        elif "gpt-j" in model_name:
+        elif "gpt-j" in model_name or "gpt-neo-1.3B" in model_name:
             from transformers import AutoModelForCausalLM, AutoTokenizer
             self.model = AutoModelForCausalLM.from_pretrained(model_name)
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def forward(self, inputs: "BatchEncoding") -> "torch.Tensor":
         """
@@ -55,8 +54,9 @@ class QuestionAnswerModel(LightningModule):
         # calculate accuracy
         babi_items = batch["batch"]
         babi_prompts = batch["formatted_batch"]
-        prediction_negative_likelihoods = []
-        target_negative_likelihoods = []
+        prompt_perplexities = []
+        prediction_perplexities = []
+        target_perplexities = []
 
         # update bAbIItem prediction attribute
         for idx, item in enumerate(babi_items):
@@ -66,18 +66,23 @@ class QuestionAnswerModel(LightningModule):
             prediction = babi_items[idx].prediction
             target = babi_items[idx].answer
 
-            prediction_negative_likelihoods.append(
-                self.calculate_negative_likelihood(prompt, prediction)
+            prompt_perplexities.append(
+                self.calculate_perplexity(prompt, '', False)
+            )
+            
+            prediction_perplexities.append(
+                self.calculate_perplexity(prompt, prediction, True)
             )
 
-            target_negative_likelihoods.append(
-                self.calculate_negative_likelihood(prompt, target)
+            target_perplexities.append(
+                self.calculate_perplexity(prompt, target, True)
             )
 
         return (
             babi_items,
-            prediction_negative_likelihoods,
-            target_negative_likelihoods
+            prompt_perplexities,
+            prediction_perplexities,
+            target_perplexities
         )
 
     def test_step(self,
@@ -108,12 +113,16 @@ class QuestionAnswerModel(LightningModule):
 
         return babi_items
 
-    def calculate_negative_likelihood(self, prompt, target):
+    def calculate_perplexity(self, prompt, target, mask_prompt):
         prompt_length = len(self.tokenizer.encode(prompt))
         text = prompt + target
         input_ids = self.tokenizer.encode(text, return_tensors="pt").to(self.device)
         target_ids = input_ids.clone()
-        target_ids[:, :prompt_length - 1] = -100
+        if mask_prompt == True:
+            target_ids[:, :prompt_length] = -100
 
-        loss = self.model(input_ids, labels=target_ids).loss
-        return loss.item()
+        with torch.no_grad():
+            negative_log_likelihood = self.model(input_ids, labels=target_ids).loss
+            perplexity = torch.exp(negative_log_likelihood)
+
+        return perplexity.item()
