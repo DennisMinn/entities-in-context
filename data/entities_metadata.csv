@@ -4275,3 +4275,1160 @@ Zofia,55,PERSON,NA,5,5,google/flan-t5-small,demographics
 Zoila,66,PERSON,NA,5,4,google/flan-t5-small,demographics
 Zoltan,47,PERSON,NA,6,5,google/flan-t5-small,demographics
 Zoran,52,PERSON,NA,5,3,google/flan-t5-small,demographics
+Janet,16,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Josh,14,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+James,65,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Wendi,2,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Kylar,1,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Kylar,5,GPE,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Toulouse,2,GPE,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Charleston,5,GPE,en_core_web_lg,10,1,google/flan-t5-base,GSM
+Seattle,4,GPE,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Toulouse,1,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Carla,7,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+GB,1,ORG,en_core_web_lg,2,2,google/flan-t5-base,GSM
+Windows,2,PRODUCT,en_core_web_lg,7,1,google/flan-t5-base,GSM
+John,112,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Eliza,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Eliza,4,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Toula,2,GPE,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Carlos,13,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Melanie,11,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+the green house,1,ORG,en_core_web_lg,15,3,google/flan-t5-base,GSM
+the red house,1,ORG,en_core_web_lg,13,3,google/flan-t5-base,GSM
+the orange house,2,ORG,en_core_web_lg,16,3,google/flan-t5-base,GSM
+San Rafael,1,GPE,en_core_web_lg,10,2,google/flan-t5-base,GSM
+Jill,15,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Claire,7,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Marissa,9,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Raymond,20,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Samantha,5,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Billy,22,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Kyle,7,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+X - X*25%,1,FAC,en_core_web_lg,9,9,google/flan-t5-base,GSM
+.75,2,GPE,en_core_web_lg,3,3,google/flan-t5-base,GSM
+Marie,4,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Mishka,3,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Cynthia,1,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Henry,6,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Gloria,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Darrell,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Allen,6,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Gunter,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Gretchen,8,PERSON,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Siobhan,1,ORG,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Aaron,14,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Siobhan,2,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Mike,23,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Terry,3,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+lego,4,ORG,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Dana,2,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Brandon,6,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Ben,15,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Suzy,2,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Perg,1,GPE,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Farbo,1,GPE,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Polly,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Grandma Jones,1,PERSON,en_core_web_lg,13,4,google/flan-t5-base,GSM
+Charlie,17,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Meredith,1,ORG,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Candice,2,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Post,2,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Tracy,3,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Richard,12,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Lloyd,3,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Lloyd,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Lloyd's,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Tom,27,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Uriah,1,ORG,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Trixie,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Doubtfire,2,PERSON,en_core_web_lg,9,4,google/flan-t5-base,GSM
+Jean,11,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Jean fill?,1,PERSON,en_core_web_lg,10,3,google/flan-t5-base,GSM
+Peter,30,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Stephen,9,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+bush,4,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Marcy,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Aleena,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Sophia,10,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Olivia,6,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Jim,21,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Wertz,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Bailey,3,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Bailey,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Judy,9,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Kelian,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Tommy,9,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Shiela,5,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Artie,9,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+the Farmers Market,1,FAC,en_core_web_lg,18,3,google/flan-t5-base,GSM
+Luke,8,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Cecilia,2,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Sarah,20,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+David,17,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Sara,11,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Vincent,2,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Grace,2,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Alex,9,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Dan,1,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Gene,3,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Greg,8,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Sylvie,4,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Marilyn,3,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Harald's,1,ORG,en_core_web_lg,8,5,google/flan-t5-base,GSM
+Harald,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Christina,4,PERSON,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Ted the T-Rex,1,PERSON,en_core_web_lg,13,6,google/flan-t5-base,GSM
+Ted,5,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+10/2=,1,GPE,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Marcia,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Cindy,9,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Emily,3,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Amy,19,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Jackson,12,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Corey,6,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Lee,6,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Gerald,12,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Harry,12,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Freda,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Tomatoes,2,ORG,en_core_web_lg,8,4,google/flan-t5-base,GSM
+Mary,14,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Jerome,12,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Science,1,WORK_OF_ART,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Social Studies,1,ORG,en_core_web_lg,14,2,google/flan-t5-base,GSM
+Geography,1,WORK_OF_ART,en_core_web_lg,9,2,google/flan-t5-base,GSM
+Solo,1,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Cody,7,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Amir,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Frankie,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Henry bake,1,PERSON,en_core_web_lg,10,2,google/flan-t5-base,GSM
+Marcell,3,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Beatrice,5,ORG,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Beatrice,1,PERSON,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Julia,11,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Ryan,7,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Jamal,14,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Brittany,10,PERSON,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Sasha,10,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Katy,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Adrien,7,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Lylah,5,ORG,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Lylah,2,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Miguel,2,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Morisette,4,PERSON,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Kael,4,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+8 / 2 =,1,WORK_OF_ART,en_core_web_lg,7,5,google/flan-t5-base,GSM
+Sadie,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Rosie,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Jennie,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Julia,2,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Dylan,6,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Lily,2,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Dillon,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Dillon,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Nissa,1,ORG,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Santa village,1,GPE,en_core_web_lg,13,2,google/flan-t5-base,GSM
+Joseph,7,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Pam,2,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Fred,11,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Walt,4,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Brian,13,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Bobby,14,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+the Scottish Highlands,1,LOC,en_core_web_lg,22,4,google/flan-t5-base,GSM
+the Scottish unicorns,1,ORG,en_core_web_lg,21,4,google/flan-t5-base,GSM
+Rory,13,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Mark,46,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Workers:2(2x)=4x,1,PERSON,en_core_web_lg,16,10,google/flan-t5-base,GSM
+7x=700,1,PERSON,en_core_web_lg,6,4,google/flan-t5-base,GSM
+Workers:4(100)=400,1,PERSON,en_core_web_lg,18,8,google/flan-t5-base,GSM
+Jordan,12,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Kim,14,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Lucas,3,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Pineapple,1,ORG,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Johnny,10,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Debra,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Debra first,1,PERSON,en_core_web_lg,11,3,google/flan-t5-base,GSM
+Facebook,6,ORG,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Dorothy,3,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Steve,22,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Tim,23,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Steve 15840 feet,1,PERSON,en_core_web_lg,16,4,google/flan-t5-base,GSM
+Tim 10560 feet,1,PERSON,en_core_web_lg,14,5,google/flan-t5-base,GSM
+Shawnda,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Carl,18,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Dave,5,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Kimo,4,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Bill,24,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Blake,4,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Kelly,17,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Raphael,4,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Finn,3,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Locsin,3,PERSON,en_core_web_lg,6,4,google/flan-t5-base,GSM
+Locsin,3,ORG,en_core_web_lg,6,4,google/flan-t5-base,GSM
+Anakin,2,GPE,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Anakin,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Jackie,8,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Elvira,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Sandra,10,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Seth,8,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Brooke,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+3x/3,1,ORG,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Jimmy,5,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Ethel,3,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Ethal,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+jimmy,1,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Pancho,1,PRODUCT,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Jake,12,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+the Museum of Entomology,1,ORG,en_core_web_lg,24,7,google/flan-t5-base,GSM
+Caboose,1,GPE,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Sally Two,1,PERSON,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Granny Red,2,PERSON,en_core_web_lg,10,3,google/flan-t5-base,GSM
+Sally Four,2,PERSON,en_core_web_lg,10,3,google/flan-t5-base,GSM
+Sally Thirtytwo,4,PERSON,en_core_web_lg,15,6,google/flan-t5-base,GSM
+Sally,25,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Granny red,3,PERSON,en_core_web_lg,10,3,google/flan-t5-base,GSM
+Jessica,6,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Zaid,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Rani,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Monic,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Bo,5,PERSON,en_core_web_lg,2,1,google/flan-t5-base,GSM
+Monic,2,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Lloyd earns $,1,ORG,en_core_web_lg,13,4,google/flan-t5-base,GSM
+Sarai,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Marks,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Jerry,18,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Jenna,12,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Russell,2,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Mandy,3,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Benedict $,1,PERSON,en_core_web_lg,10,2,google/flan-t5-base,GSM
+Benedict,2,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Sue,12,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Violetta,2,ORG,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Soda,1,ORG,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Elaine,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Pokemon,11,ORG,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Publisher B. Thus,1,WORK_OF_ART,en_core_web_lg,17,4,google/flan-t5-base,GSM
+B. Thus,1,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Baldur,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Baldur,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Josie,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Brinley,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Bert,2,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Micheal,5,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Joe,19,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Rose,9,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Rose,8,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Sara babysits,1,PERSON,en_core_web_lg,13,4,google/flan-t5-base,GSM
+Gary,10,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Sloane,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Lori,2,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Janeth,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Adrian,3,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Harriet,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Zack,9,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Harriet,1,GPE,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Naomi,7,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Yuri,2,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Brianna,6,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Jojo,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Yuri + Brianna,1,PERSON,en_core_web_lg,14,7,google/flan-t5-base,GSM
+Carmen,6,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Celine,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Andy,13,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Benji,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Andrew,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+New Jersey,2,GPE,en_core_web_lg,10,2,google/flan-t5-base,GSM
+Rochester,4,GPE,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Pokemon,1,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Chad,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Kalinda,3,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Ashlyn,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Kylie,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Robert,26,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Kylie,3,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Dax,1,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Joan,2,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Jessa,2,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Dolly,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Dolly,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Jason,24,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Griffin,6,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Ginger,5,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Colby,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Griffin 3,1,FAC,en_core_web_lg,9,2,google/flan-t5-base,GSM
+Griffin x=20,1,PERSON,en_core_web_lg,12,5,google/flan-t5-base,GSM
+Jeans,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Isabelle,1,ORG,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Isabelle,1,PERSON,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Travis,2,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Rick,5,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Shelly,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Mitchel,4,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Anne,19,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+.30,1,PRODUCT,en_core_web_lg,3,3,google/flan-t5-base,GSM
+Sylas,4,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Brady,5,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Nancy,5,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Andrea,8,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Maddison,2,PERSON,en_core_web_lg,8,4,google/flan-t5-base,GSM
+Chris,6,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Ferdinand,2,PERSON,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Ferdinand,1,ORG,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Samantha,1,ORG,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Daisy,5,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Cruz,3,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Tan,5,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Blue Golf Balls:8/2=,1,ORG,en_core_web_lg,20,8,google/flan-t5-base,GSM
+M&M,5,ORG,en_core_web_lg,3,3,google/flan-t5-base,GSM
+Terri,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Rylan,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Sean,8,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Carly,8,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Matthew 3 minutes,1,PERSON,en_core_web_lg,17,3,google/flan-t5-base,GSM
+Marco,2,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Mico,1,ORG,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Ruby,2,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Sam,32,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Ruby,3,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Katerina,3,PERSON,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Alani,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Braylen,3,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Margot,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Ann,2,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Kelly,1,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Ali,20,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Izzy,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Susan,9,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Tony,9,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Darren,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Annika,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+50/2=$,1,PERSON,en_core_web_lg,6,4,google/flan-t5-base,GSM
+Elise,4,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Watson,3,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Sandy,7,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Joey,12,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Helena,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Helena,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Theo,8,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+South Africa,2,GPE,en_core_web_lg,12,2,google/flan-t5-base,GSM
+Trent,3,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Jane,14,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Quinn,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Noah,5,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Cera,4,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Chile,6,GPE,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Martha,22,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Solomon,2,ORG,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Johanna,4,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+2kgs,1,ORG,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Solomon,4,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Meg,2,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Jam,1,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Jam,1,ORG,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Meg,1,ORG,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Shannon,5,FAC,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Ralph,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Jaime,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Oscar,2,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Erin,11,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Ella,5,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Nick,9,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Job A,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Next,2,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Nick,3,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Scotland,2,GPE,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Cozy Homes',1,ORG,en_core_web_lg,11,4,google/flan-t5-base,GSM
+Cozy Homes's,1,ORG,en_core_web_lg,12,5,google/flan-t5-base,GSM
+DJ,1,PERSON,en_core_web_lg,2,1,google/flan-t5-base,GSM
+DJ,1,ORG,en_core_web_lg,2,1,google/flan-t5-base,GSM
+RJ,1,ORG,en_core_web_lg,2,2,google/flan-t5-base,GSM
+24/4= 6,1,PRODUCT,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Mason,6,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Maria,15,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Thomas,5,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Farmer Brown,2,PERSON,en_core_web_lg,12,3,google/flan-t5-base,GSM
+Laurel,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Laurel,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Tyson,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Juice Box,1,FAC,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Jenny,13,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Davos,3,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Madeline,11,PERSON,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Madeline spends$25,1,PERSON,en_core_web_lg,18,6,google/flan-t5-base,GSM
+Peyton,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Alice,11,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Annabelle,3,PERSON,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Eddy,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Dean,9,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Morgan,1,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Marisa,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Carver,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+x=25,1,PERSON,en_core_web_lg,4,4,google/flan-t5-base,GSM
+Rottweiler,2,PRODUCT,en_core_web_lg,10,4,google/flan-t5-base,GSM
+Small Tree School,2,ORG,en_core_web_lg,17,3,google/flan-t5-base,GSM
+Walmart,2,ORG,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Ethan,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+20/100*$400=$,1,ORG,en_core_web_lg,13,8,google/flan-t5-base,GSM
+Hallie,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Sherman,2,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+fed,1,ORG,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Lucy,6,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Lindsay,2,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Rachel,3,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Karan,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Cho,3,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Chloe,2,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Axel,2,PERSON,en_core_web_lg,4,4,google/flan-t5-base,GSM
+Anna,13,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Millie,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Millie 36 / 4 = 9 hours,1,WORK_OF_ART,en_core_web_lg,23,10,google/flan-t5-base,GSM
+Ruther,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Lisa,4,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Wilson,1,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Thompson,2,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Yu,2,PERSON,en_core_web_lg,2,1,google/flan-t5-base,GSM
+Dasha,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Monica,4,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Betty,9,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+sam,1,PERSON,en_core_web_lg,3,3,google/flan-t5-base,GSM
+Betty,2,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Netflix,1,ORG,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Hulu,2,ORG,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Disney Plus,2,ORG,en_core_web_lg,11,2,google/flan-t5-base,GSM
+Carol,6,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Wendy,10,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Erica,6,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Valentine,3,PERSON,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Beth,2,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Mel,2,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+muffaletta,1,PRODUCT,en_core_web_lg,10,5,google/flan-t5-base,GSM
+Allan's house,1,ORG,en_core_web_lg,13,5,google/flan-t5-base,GSM
+Allan,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+cannolis Allan,1,PERSON,en_core_web_lg,14,6,google/flan-t5-base,GSM
+Allan,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Elliott,3,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Toby,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Carolyn,1,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Taffy,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Misha,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Joanne,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Joanna,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Europe,1,LOC,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Timothy,8,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Stanley,10,ORG,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Oliver,5,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Josue,2,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Cole,10,PRODUCT,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Google,2,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Lillian,7,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Aleksandra,3,PERSON,en_core_web_lg,10,4,google/flan-t5-base,GSM
+Kenny,1,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Indras,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Indras,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Indras,1,GPE,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Together Indras,1,PERSON,en_core_web_lg,15,4,google/flan-t5-base,GSM
+Charlotte,1,ORG,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Dora,19,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Prince Arthur,1,PERSON,en_core_web_lg,13,2,google/flan-t5-base,GSM
+Prince Walter,2,GPE,en_core_web_lg,13,2,google/flan-t5-base,GSM
+Prince Bruce,2,PERSON,en_core_web_lg,12,2,google/flan-t5-base,GSM
+Prince Walter,2,ORG,en_core_web_lg,13,2,google/flan-t5-base,GSM
+Arthur,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Josey,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+George,23,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Ray,5,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Sitti,1,ORG,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Juris,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Juris,1,GPE,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Antoine,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Wayne,8,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Bernadette,6,PERSON,en_core_web_lg,10,4,google/flan-t5-base,GSM
+Billie,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Elizabeth,5,PERSON,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Margareth,5,PERSON,en_core_web_lg,9,2,google/flan-t5-base,GSM
+Marcus,6,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Jon,5,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Movie B. Movie B,1,WORK_OF_ART,en_core_web_lg,16,5,google/flan-t5-base,GSM
+Michael,7,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Rozanne,3,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Bentley,3,ORG,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Marin,2,GPE,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Bob,24,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+320 / 2 =,1,PRODUCT,en_core_web_lg,9,6,google/flan-t5-base,GSM
+Katelyn,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Jennifer,6,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Oats,1,ORG,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Grayson,3,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Shondra,2,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Toni,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Frederick,3,PERSON,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Frederick Toni,1,PERSON,en_core_web_lg,14,3,google/flan-t5-base,GSM
+Shondra,1,PRODUCT,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Leila,4,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Ashley,7,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Finley,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Becky,9,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Fireman Frank,3,ORG,en_core_web_lg,13,3,google/flan-t5-base,GSM
+Matt,4,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Benny,5,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Gina,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Jasper,5,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Belen,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Keegan,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Tashay,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Tasha,5,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Gabriel,10,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Luri,6,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Stetson,4,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Alec,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Jillian,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Jana,9,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Southlandia,2,GPE,en_core_web_lg,11,5,google/flan-t5-base,GSM
+Northlandia,2,GPE,en_core_web_lg,11,5,google/flan-t5-base,GSM
+Midlandia,2,ORG,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Heather,4,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Charisma,1,ORG,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Brett,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Angela,5,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Paul,24,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Brianne,3,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Ashley,4,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Bodhi,3,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+David = B/2,1,PERSON,en_core_web_lg,11,4,google/flan-t5-base,GSM
+David = 18/2 = 9,1,PERSON,en_core_web_lg,16,6,google/flan-t5-base,GSM
+Mariah,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Mariah,1,WORK_OF_ART,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Cherrie,4,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Cherries,1,PRODUCT,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Suzie,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Mario,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+a New Year's,1,EVENT,en_core_web_lg,12,6,google/flan-t5-base,GSM
+Hannah,14,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+kilometers Hannah,1,PERSON,en_core_web_lg,17,2,google/flan-t5-base,GSM
+Julie,16,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Tara,1,ORG,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Kelsie,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Suzanne,3,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+36/4=,1,ORG,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Royce,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Rob,3,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Royce,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Grandma Concetta's,2,PERSON,en_core_web_lg,18,8,google/flan-t5-base,GSM
+Kathy,6,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Ricky,4,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Beverly Hills Bakery,1,GPE,en_core_web_lg,20,4,google/flan-t5-base,GSM
+Bakery,2,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Ada,5,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Ophelia,7,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+sofas+88,1,ORG,en_core_web_lg,8,4,google/flan-t5-base,GSM
+Jame,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Errol,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Chenny,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Alyana,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Emma,12,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Elvis,2,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Verna,3,ORG,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Jeff,10,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Brad,3,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Jonathan,7,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Daniel,9,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Antonella,3,PERSON,en_core_web_lg,9,2,google/flan-t5-base,GSM
+Subway,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Octavia,4,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Juan,7,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Octavia,1,GPE,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Juan,3,GPE,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Sahir,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+20/5= 4,1,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Trevor,4,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Shiloh,2,GPE,en_core_web_lg,6,4,google/flan-t5-base,GSM
+Sharon $,1,PERSON,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Sharon,6,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Sharon $,1,ORG,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Richie,3,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Richie,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Liam,9,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Mitchell,8,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Leah,1,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Ford,3,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Roses,1,PRODUCT,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Katina,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Kate,6,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Mack,3,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Mack,2,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Diane,2,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Maggie,4,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Max,13,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Herb,6,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Pete,1,GPE,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Tabitha,1,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Jill $,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Burger Palace,1,ORG,en_core_web_lg,13,2,google/flan-t5-base,GSM
+Green Jelly,1,ORG,en_core_web_lg,11,3,google/flan-t5-base,GSM
+Red Jelly,1,ORG,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Jared,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+WPM,6,ORG,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Martin,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Affenpinscher,3,PRODUCT,en_core_web_lg,13,4,google/flan-t5-base,GSM
+Dachshund,5,PERSON,en_core_web_lg,9,4,google/flan-t5-base,GSM
+Papillon,4,PRODUCT,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Affenpinscher,1,PERSON,en_core_web_lg,13,4,google/flan-t5-base,GSM
+Mastiff,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Amazon.com,2,ORG,en_core_web_lg,10,3,google/flan-t5-base,GSM
+eBay,5,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Amazon,3,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Jerry,1,PERSON,en_core_web_lg,6,5,google/flan-t5-base,GSM
+Jamaal,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Ruiz,4,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Merissa,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Howard,1,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Patrick,5,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Jeremy,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Lewis,1,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Lewis’ street,2,ORG,en_core_web_lg,13,3,google/flan-t5-base,GSM
+Reddit,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Scarlett,1,PERSON,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Prince,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Bill 750 / 150 =,1,LAW,en_core_web_lg,16,7,google/flan-t5-base,GSM
+Charmaine,2,PERSON,en_core_web_lg,9,2,google/flan-t5-base,GSM
+Arianna,3,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Mb per hour,2,GPE,en_core_web_lg,11,4,google/flan-t5-base,GSM
+Adam,27,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Tiffany,1,ORG,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Jewell,5,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Jewellcosts,1,ORG,en_core_web_lg,11,4,google/flan-t5-base,GSM
+Tom 75 miles,1,PERSON,en_core_web_lg,12,3,google/flan-t5-base,GSM
+Manny,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Jewel,2,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Jewel,1,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Reggie,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Lynn,3,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Paisley,3,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Paisley,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Lynn,1,GPE,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Clyde,2,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Alisa,4,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Howie,4,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Fishio,3,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Instagram,4,ORG,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Clara,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Sheila,4,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Clara 20,1,PERSON,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Ariadne,2,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+geese,1,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+geese,1,GPE,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Roger,4,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Gus,1,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+fried chicken and $1.00,1,ORG,en_core_web_lg,23,6,google/flan-t5-base,GSM
+District A,1,ORG,en_core_web_lg,10,2,google/flan-t5-base,GSM
+District A,1,FAC,en_core_web_lg,10,2,google/flan-t5-base,GSM
+Rayna,2,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Kassidy,7,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Aurelia,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Arelia,2,GPE,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Svetlana,2,PERSON,en_core_web_lg,8,5,google/flan-t5-base,GSM
+B. One,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Janey,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Jameson,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Frances,5,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Skyler,5,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Skylers,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Dylan's,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Los Angeles,1,GPE,en_core_web_lg,11,2,google/flan-t5-base,GSM
+Lorie,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Karen,6,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Jack,19,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Katarina,2,PERSON,en_core_web_lg,8,4,google/flan-t5-base,GSM
+the Cookie Monster,1,WORK_OF_ART,en_core_web_lg,18,3,google/flan-t5-base,GSM
+Summer,1,EVENT,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Cookie Monster’s,1,ORG,en_core_web_lg,16,4,google/flan-t5-base,GSM
+Shania,1,GPE,en_core_web_lg,6,3,google/flan-t5-base,GSM
+x/2,1,GPE,en_core_web_lg,3,3,google/flan-t5-base,GSM
+Catherine,1,PERSON,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Greta,6,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Celinda,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Twin,1,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Triplet,1,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Manolo,1,ORG,en_core_web_lg,6,4,google/flan-t5-base,GSM
+Rong,5,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+piggy,3,GPE,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Neil,4,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+red squares,1,FAC,en_core_web_lg,11,3,google/flan-t5-base,GSM
+Mia,1,ORG,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Mia,4,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Points:25(.20)=5,1,GPE,en_core_web_lg,16,10,google/flan-t5-base,GSM
+Marta,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Great Grandma Jones',2,PERSON,en_core_web_lg,20,6,google/flan-t5-base,GSM
+Great Grandma Jones,1,PERSON,en_core_web_lg,19,5,google/flan-t5-base,GSM
+fireworks Hannah,1,PERSON,en_core_web_lg,16,2,google/flan-t5-base,GSM
+Aiden,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Gissela,4,GPE,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Gordy,4,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Larry,10,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Colorado City,1,GPE,en_core_web_lg,13,2,google/flan-t5-base,GSM
+the Colorado River,1,LOC,en_core_web_lg,18,3,google/flan-t5-base,GSM
+Vanilla,1,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Marcus,6,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Boarden,5,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+mosaic,3,PRODUCT,en_core_web_lg,6,1,google/flan-t5-base,GSM
+6 / 3 =,1,ORG,en_core_web_lg,7,5,google/flan-t5-base,GSM
+Goldy,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Goldy,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Castle,3,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Coco Crunch,1,ORG,en_core_web_lg,11,3,google/flan-t5-base,GSM
+Fruit Loops,1,ORG,en_core_web_lg,11,3,google/flan-t5-base,GSM
+Helga,1,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Slovenia,1,GPE,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Ron,4,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+the city council,1,ORG,en_core_web_lg,16,3,google/flan-t5-base,GSM
+Ron $,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Bryce,6,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Topher,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Parker,1,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+graham crackers,2,PERSON,en_core_web_lg,15,5,google/flan-t5-base,GSM
+smore,1,ORG,en_core_web_lg,5,3,google/flan-t5-base,GSM
+graham,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+English,9,LANGUAGE,en_core_web_lg,7,1,google/flan-t5-base,GSM
+C. If,1,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+A. Thus,1,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Boris,16,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Beck,2,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Beck,3,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Steven,3,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Cecelia,1,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Mara,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Melissa,6,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+3500*.4=$ 1400,1,WORK_OF_ART,en_core_web_lg,14,9,google/flan-t5-base,GSM
+Cal,1,ORG,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Cal,3,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Candy,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Gunther,6,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Arnold,10,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+48/2= 24,1,FAC,en_core_web_lg,8,4,google/flan-t5-base,GSM
+Lorraine,2,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Colleen,1,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Krissa,4,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Jayden,5,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Ava,10,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+"Rob, Royce",1,ORG,en_core_web_lg,10,4,google/flan-t5-base,GSM
+Pedro,3,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Chase,3,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Ezra,5,PERSON,en_core_web_lg,4,4,google/flan-t5-base,GSM
+Ahmed,4,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Tanya,7,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Bennet,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Tatiana,2,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Anthony,10,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+400*.4= 160,1,WORK_OF_ART,en_core_web_lg,11,6,google/flan-t5-base,GSM
+Winston,1,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Llesis,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Llesis,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Rider,1,PRODUCT,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Carrie,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Ricardo,2,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Samwell,1,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Samwell,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Analog,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Smart,1,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Carson,5,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Damien,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Jamie,3,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Deck the Halls,3,WORK_OF_ART,en_core_web_lg,14,4,google/flan-t5-base,GSM
+Jingle Bells,3,WORK_OF_ART,en_core_web_lg,12,5,google/flan-t5-base,GSM
+Pierson,1,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Nikita,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Pierson,4,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Nikita,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Kris,7,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Herbert Hoover Elementary School's,1,PERSON,en_core_web_lg,34,7,google/flan-t5-base,GSM
+Milo,4,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Dale,1,ORG,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Dale,4,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Felix,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+DeSean,1,PERSON,en_core_web_lg,6,4,google/flan-t5-base,GSM
+DeSean,1,GPE,en_core_web_lg,6,4,google/flan-t5-base,GSM
+2Z +,1,ORG,en_core_web_lg,4,3,google/flan-t5-base,GSM
+joe,1,PERSON,en_core_web_lg,3,3,google/flan-t5-base,GSM
+Holloway Shores,1,GPE,en_core_web_lg,15,5,google/flan-t5-base,GSM
+Sun Valley Shores,1,LOC,en_core_web_lg,17,4,google/flan-t5-base,GSM
+Hollock,1,GPE,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Hunter,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Julie's,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Kimberly,2,ORG,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Kimberley,1,ORG,en_core_web_lg,9,3,google/flan-t5-base,GSM
+"Becca, Smendrick",1,ORG,en_core_web_lg,16,7,google/flan-t5-base,GSM
+PJ,2,PERSON,en_core_web_lg,2,2,google/flan-t5-base,GSM
+Magic Cards,1,ORG,en_core_web_lg,11,2,google/flan-t5-base,GSM
+Becca,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Smendrick,1,GPE,en_core_web_lg,9,4,google/flan-t5-base,GSM
+Smendrick,1,ORG,en_core_web_lg,9,4,google/flan-t5-base,GSM
+PJ,1,PRODUCT,en_core_web_lg,2,2,google/flan-t5-base,GSM
+Smendrick:3x,1,ORG,en_core_web_lg,12,7,google/flan-t5-base,GSM
+the Easter Egg Hunt,1,EVENT,en_core_web_lg,19,4,google/flan-t5-base,GSM
+9 / 3,1,EVENT,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Milly,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Milly,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+1.60 Milly,1,ORG,en_core_web_lg,10,4,google/flan-t5-base,GSM
+Mulan,5,PRODUCT,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Britany,4,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+TikTok,5,ORG,en_core_web_lg,6,4,google/flan-t5-base,GSM
+Roy,5,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Eva,3,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Kagiyami,5,PERSON,en_core_web_lg,8,4,google/flan-t5-base,GSM
+Saskay,4,GPE,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Saskay,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Pompei,4,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Jada,3,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Kora,5,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Jada + 40,1,ORG,en_core_web_lg,9,5,google/flan-t5-base,GSM
+Erika,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+10/5= 2,1,WORK_OF_ART,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Bali,1,GPE,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Thea,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Craig,13,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+jack,2,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Vicki,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Brenda,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Smith,8,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Farm X,2,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Farm X,1,GPE,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Farm Y.,2,GPE,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Farm Y. How,1,ORG,en_core_web_lg,11,5,google/flan-t5-base,GSM
+Farm X.,1,GPE,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Farm Y. Thus,1,ORG,en_core_web_lg,12,5,google/flan-t5-base,GSM
+2640/24=$ 110,1,PERSON,en_core_web_lg,13,7,google/flan-t5-base,GSM
+the KozyInn Motel,2,FAC,en_core_web_lg,17,7,google/flan-t5-base,GSM
+Julieta,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Rafaela,5,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Amber,8,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Paige,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Sofie,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Fawn,5,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Sofie,4,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Jello,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Keenan,3,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Tobias,7,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Isaias,6,PERSON,en_core_web_lg,6,6,google/flan-t5-base,GSM
+Micah,7,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Iris,4,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+100 Together,1,ORG,en_core_web_lg,12,2,google/flan-t5-base,GSM
+Thrice Melanie's,1,PERSON,en_core_web_lg,16,5,google/flan-t5-base,GSM
+Elaina,1,PERSON,en_core_web_lg,6,4,google/flan-t5-base,GSM
+Argo,4,ORG,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Alyssa,2,PERSON,en_core_web_lg,6,5,google/flan-t5-base,GSM
+Bonnie,2,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Nicky,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Nicky 30,1,PERSON,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Arge,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Aggie Burrito Shop,1,ORG,en_core_web_lg,18,7,google/flan-t5-base,GSM
+Lani,4,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Joelle,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Ellen,16,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Kamala,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Alba,2,ORG,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Tasha $,1,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Kamala,1,GPE,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Martin,2,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Dijana,4,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Anis,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Denise,6,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Calvin,2,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+2 / 2,1,EVENT,en_core_web_lg,5,4,google/flan-t5-base,GSM
+William,2,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Jo,1,PERSON,en_core_web_lg,2,1,google/flan-t5-base,GSM
+Deepa,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Harold,2,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Donald,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Duncan,3,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Farmer Brown's,1,PERSON,en_core_web_lg,14,5,google/flan-t5-base,GSM
+Farmer Smith's,1,ORG,en_core_web_lg,14,5,google/flan-t5-base,GSM
+Farmer Smith,1,PERSON,en_core_web_lg,12,3,google/flan-t5-base,GSM
+bologna,1,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Bruce,5,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Nadine,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Kira,2,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Lola,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Abby,2,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Lana,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Rita,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Junebugs,4,PRODUCT,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Sophie,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Sophie,5,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Zoey,3,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Sydney,3,GPE,en_core_web_lg,6,1,google/flan-t5-base,GSM
+the WidgetMaster 9000,2,PRODUCT,en_core_web_lg,21,7,google/flan-t5-base,GSM
+the Widgeteer 3000,1,ORG,en_core_web_lg,18,8,google/flan-t5-base,GSM
+Philippines,1,GPE,en_core_web_lg,11,1,google/flan-t5-base,GSM
+Cameron,3,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Nate,8,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Patty,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Jen,1,ORG,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Jen,6,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Jasmine,2,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Cayley,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+the New York Times,3,ORG,en_core_web_lg,18,4,google/flan-t5-base,GSM
+the Wall Street Journal,1,ORG,en_core_web_lg,23,4,google/flan-t5-base,GSM
+Wall Street Journal,2,ORG,en_core_web_lg,19,3,google/flan-t5-base,GSM
+Leo,8,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Deanna,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Bahati,3,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Azibo,1,GPE,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Dinar,1,EVENT,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Azibo,3,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Azibo = B - 20 Dinar,1,PERSON,en_core_web_lg,20,11,google/flan-t5-base,GSM
+Vince,6,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Robyn,3,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Shawna,7,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Aliya,3,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Shawn,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Courtney,2,PERSON,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Jordan,7,GPE,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Jeffrey,4,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Amora,3,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Lainey,3,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Collins,2,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Stan,5,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Adelwolfe,2,ORG,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Pokemon Adelwolfe,1,ORG,en_core_web_lg,17,4,google/flan-t5-base,GSM
+Nani,4,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Zeke,2,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Carlton,3,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Harrington,4,PERSON,en_core_web_lg,10,2,google/flan-t5-base,GSM
+India,3,GPE,en_core_web_lg,5,1,google/flan-t5-base,GSM
+USA,3,GPE,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Tyler,5,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Sunny,2,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Sunny,3,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Pamela reapplies,1,PERSON,en_core_web_lg,16,7,google/flan-t5-base,GSM
+Emil,3,PERSON,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Adrianne,4,PERSON,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Roper,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Pat,8,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Edgar,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Katherine,1,PERSON,en_core_web_lg,9,1,google/flan-t5-base,GSM
+Artemis,1,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Comet Halley,1,ORG,en_core_web_lg,12,4,google/flan-t5-base,GSM
+Comet,4,PRODUCT,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Comet Halley,1,PERSON,en_core_web_lg,12,4,google/flan-t5-base,GSM
+Buford,3,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Greece,2,GPE,en_core_web_lg,6,1,google/flan-t5-base,GSM
+France,6,GPE,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Germany,4,GPE,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Poland,1,GPE,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Chikote,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Igneous,1,LOC,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Akbar,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Alessandro,2,PERSON,en_core_web_lg,10,4,google/flan-t5-base,GSM
+Helene,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Wilfred,3,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Walter,8,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Jones,4,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Matteo,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Shandy,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Shandy,1,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Matteo,2,ORG,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Shandy,2,GPE,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Brook Hills High School,1,ORG,en_core_web_lg,23,4,google/flan-t5-base,GSM
+Bethany,4,GPE,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Trey,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Shaelyn,2,GPE,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Shaelyn,1,ORG,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Quinn,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Wanda,6,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+the power bank,1,ORG,en_core_web_lg,14,3,google/flan-t5-base,GSM
+Jamaar,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Aries,2,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Teresa,3,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Suzzane,2,ORG,en_core_web_lg,7,4,google/flan-t5-base,GSM
+Apple High School,1,ORG,en_core_web_lg,17,3,google/flan-t5-base,GSM
+Fine Arts Center,1,ORG,en_core_web_lg,16,3,google/flan-t5-base,GSM
+Minus,1,PRODUCT,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Grandpa,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Richard 5 seconds,1,PERSON,en_core_web_lg,17,3,google/flan-t5-base,GSM
+Uncle Franky,2,PERSON,en_core_web_lg,12,3,google/flan-t5-base,GSM
+Amor,2,ORG,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Molly,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+South America,2,LOC,en_core_web_lg,13,2,google/flan-t5-base,GSM
+Xavier,6,PERSON,en_core_web_lg,6,4,google/flan-t5-base,GSM
+X+ 80,1,PRODUCT,en_core_web_lg,5,4,google/flan-t5-base,GSM
+X+80)*2 = 1920,1,ORG,en_core_web_lg,14,9,google/flan-t5-base,GSM
+Spanish,1,LANGUAGE,en_core_web_lg,7,1,google/flan-t5-base,GSM
+San Diego,1,GPE,en_core_web_lg,9,2,google/flan-t5-base,GSM
+California,1,GPE,en_core_web_lg,10,1,google/flan-t5-base,GSM
+New York City,1,GPE,en_core_web_lg,13,3,google/flan-t5-base,GSM
+New York,1,GPE,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Bernice,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Ingrid,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Alison,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+SqFt,3,ORG,en_core_web_lg,4,4,google/flan-t5-base,GSM
+4 / 2 =,1,EVENT,en_core_web_lg,7,5,google/flan-t5-base,GSM
+Imma,1,ORG,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Silvia,4,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Betsy,6,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Donovan,3,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+The Science Center,1,ORG,en_core_web_lg,18,3,google/flan-t5-base,GSM
+the Science Center,2,FAC,en_core_web_lg,18,3,google/flan-t5-base,GSM
+Sidney,5,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Hezekiah,2,PERSON,en_core_web_lg,8,5,google/flan-t5-base,GSM
+Dennis,1,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Kayla,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Riza,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Robles,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Teddy place,1,WORK_OF_ART,en_core_web_lg,11,2,google/flan-t5-base,GSM
+Teddy,2,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Rogers,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Binkie,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Binkie's,2,ORG,en_core_web_lg,8,4,google/flan-t5-base,GSM
+x=20,1,PERSON,en_core_web_lg,4,4,google/flan-t5-base,GSM
+Crocodile,2,ORG,en_core_web_lg,9,4,google/flan-t5-base,GSM
+Marcel,5,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Trekking,1,PERSON,en_core_web_lg,8,2,google/flan-t5-base,GSM
+MTB,1,ORG,en_core_web_lg,3,2,google/flan-t5-base,GSM
+BMX,1,ORG,en_core_web_lg,3,3,google/flan-t5-base,GSM
+MTB,3,PRODUCT,en_core_web_lg,3,2,google/flan-t5-base,GSM
+BMX,1,PRODUCT,en_core_web_lg,3,3,google/flan-t5-base,GSM
+Nathan,2,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Caroline,4,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Allosaurus,2,PRODUCT,en_core_web_lg,10,4,google/flan-t5-base,GSM
+the T-Rex,2,ORG,en_core_web_lg,9,5,google/flan-t5-base,GSM
+The T-Rex,1,ORG,en_core_web_lg,9,5,google/flan-t5-base,GSM
+East,1,LOC,en_core_web_lg,4,1,google/flan-t5-base,GSM
+Ahito,3,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Ahito,1,ORG,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Lauren,4,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Marty,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Soledad,3,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Pierre,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Jacques,1,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+degrees Celsius,1,PERSON,en_core_web_lg,15,2,google/flan-t5-base,GSM
+Tate,3,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Amalia,1,GPE,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Megan,4,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Dior,4,ORG,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Amalia,6,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Elijah,4,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Kory,5,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Luis,4,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+John packs M&M,1,PERSON,en_core_web_lg,14,5,google/flan-t5-base,GSM
+Alfie,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+MPH,2,ORG,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Camden,6,GPE,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Nik,2,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+64/4= 16,1,PRODUCT,en_core_web_lg,8,4,google/flan-t5-base,GSM
+Valerie,2,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Grandma,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Donny,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Milkie Cows Limited,1,ORG,en_core_web_lg,19,6,google/flan-t5-base,GSM
+Broilers Limited,1,ORG,en_core_web_lg,16,4,google/flan-t5-base,GSM
+Milkie,1,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Gomer,4,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Chester,2,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Jess,1,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Faraday,1,ORG,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Faraday,4,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Chatty,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Patricia,2,PERSON,en_core_web_lg,8,1,google/flan-t5-base,GSM
+Sid,4,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Carrey,4,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Linus,2,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Ned,5,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Isabel,4,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Hortex,3,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+IRS,2,ORG,en_core_web_lg,3,1,google/flan-t5-base,GSM
+"Thur, Fri =",1,GPE,en_core_web_lg,11,4,google/flan-t5-base,GSM
+Abraham,2,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Geb,3,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Haley,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Tyrion,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Lamar,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Stacy,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Mei,2,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Ronnie,6,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Rissa,5,PERSON,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Albert,6,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Marcellus,2,PERSON,en_core_web_lg,9,2,google/flan-t5-base,GSM
+Colin,4,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Newton,6,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Newton,1,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+bags Ali,1,PERSON,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Jay,4,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Digimon,2,ORG,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Doxa,1,ORG,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Suppose Jen,1,PERSON,en_core_web_lg,11,3,google/flan-t5-base,GSM
+2*.75,1,GPE,en_core_web_lg,5,4,google/flan-t5-base,GSM
+Maxim,1,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Alain,3,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Julius,5,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+White Oak,3,FAC,en_core_web_lg,9,2,google/flan-t5-base,GSM
+Lodgepole Pine,5,PRODUCT,en_core_web_lg,14,3,google/flan-t5-base,GSM
+Barbie,2,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Mattison,1,ORG,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Mattison,1,PERSON,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Gogetters,3,PRODUCT,en_core_web_lg,9,3,google/flan-t5-base,GSM
+Bernie,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Deandre,2,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Trinity,2,ORG,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Jolene,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Saanvi,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Chengli city,1,GPE,en_core_web_lg,12,3,google/flan-t5-base,GSM
+Pauline,7,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Cedar Falls Middle School,1,ORG,en_core_web_lg,25,4,google/flan-t5-base,GSM
+Ian,1,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Shelley,3,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+0.8=$32,1,PERSON,en_core_web_lg,7,5,google/flan-t5-base,GSM
+0.5=,1,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Eve,3,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Regina,1,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Alaska,1,GPE,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Texas,1,GPE,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Rydell Elementary School,1,ORG,en_core_web_lg,24,5,google/flan-t5-base,GSM
+Bud,1,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Elly,1,PERSON,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Archie,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Audrey,1,PERSON,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Ara,2,PERSON,en_core_web_lg,3,2,google/flan-t5-base,GSM
+Brendan,3,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Jason,2,ORG,en_core_web_lg,5,1,google/flan-t5-base,GSM
+John 5 minutes,1,PERSON,en_core_web_lg,14,3,google/flan-t5-base,GSM
+Rubik,2,ORG,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Dominick,2,PERSON,en_core_web_lg,8,2,google/flan-t5-base,GSM
+Louise,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Crista,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Crista,1,PRODUCT,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Phineas Frog,1,PERSON,en_core_web_lg,12,6,google/flan-t5-base,GSM
+Phineas,2,PERSON,en_core_web_lg,7,4,google/flan-t5-base,GSM
+the Washington Monument,1,FAC,en_core_web_lg,23,3,google/flan-t5-base,GSM
+Derrick,5,PERSON,en_core_web_lg,7,2,google/flan-t5-base,GSM
+Jade,1,ORG,en_core_web_lg,4,2,google/flan-t5-base,GSM
+Alicia,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Conor,5,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Garrett,4,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Kennel,1,ORG,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Bulldogs,1,ORG,en_core_web_lg,8,3,google/flan-t5-base,GSM
+9000-2700= 6300,1,PRODUCT,en_core_web_lg,15,7,google/flan-t5-base,GSM
+Starbursts,1,PRODUCT,en_core_web_lg,10,5,google/flan-t5-base,GSM
+Helen,5,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Mazie,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Dallas,3,GPE,en_core_web_lg,6,1,google/flan-t5-base,GSM
+Darla,3,PERSON,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Popcorns,1,ORG,en_core_web_lg,8,3,google/flan-t5-base,GSM
+Avery,1,ORG,en_core_web_lg,5,2,google/flan-t5-base,GSM
+Dexter,2,PERSON,en_core_web_lg,6,3,google/flan-t5-base,GSM
+Mamou,2,PERSON,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Mamou,1,PRODUCT,en_core_web_lg,5,3,google/flan-t5-base,GSM
+Justin,1,ORG,en_core_web_lg,6,1,google/flan-t5-base,GSM
+120/20,1,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Randy,4,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Matthew,4,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Norman High School,5,ORG,en_core_web_lg,18,3,google/flan-t5-base,GSM
+Butler High School,4,ORG,en_core_web_lg,18,3,google/flan-t5-base,GSM
+Adams,1,PERSON,en_core_web_lg,5,1,google/flan-t5-base,GSM
+Hugo Grumpus,1,PERSON,en_core_web_lg,12,5,google/flan-t5-base,GSM
+Igor,6,PERSON,en_core_web_lg,4,3,google/flan-t5-base,GSM
+Grumpus,1,PERSON,en_core_web_lg,7,3,google/flan-t5-base,GSM
+Alexandra,1,PERSON,en_core_web_lg,9,2,google/flan-t5-base,GSM
+Maryam,2,PERSON,en_core_web_lg,6,2,google/flan-t5-base,GSM
+Vanessa,7,PERSON,en_core_web_lg,7,1,google/flan-t5-base,GSM
+Ana,3,PERSON,en_core_web_lg,3,1,google/flan-t5-base,GSM
+Ana peels,1,PERSON,en_core_web_lg,9,3,google/flan-t5-base,GSM
+C=,1,GPE,en_core_web_lg,2,2,google/flan-t5-base,GSM

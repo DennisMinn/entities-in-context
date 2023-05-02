@@ -2,7 +2,7 @@ import pandas as pd
 from collections import namedtuple
 from functools import reduce
 
-NER_MODEL_NAME = "en_core_web_sm"
+NER_MODEL_NAME = "en_core_web_lg"
 
 Entity = namedtuple('Entity', ['text', 'occurrences', 'label', 'model', 'length', 'token_length', 'tokenizer', 'dataset'])
 
