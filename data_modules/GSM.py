@@ -163,6 +163,8 @@ class GSMDataModule(QuestionAnswerDataModule):
         GSM_items = []
         for line in lines:
             question, answer = json.loads(line).values()
+            question = re.sub(r"<<.*?>>", " ", question)
+            answer = re.sub(r"<<.*?>>", " ", answer)
 
             question_entities = GSM_entities.entity.annotate(question.split(".")[-1])
             answer_entities = GSM_entities.entity.annotate(answer)
