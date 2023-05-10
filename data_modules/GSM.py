@@ -8,6 +8,7 @@ import json
 from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
 from data_modules.entities import NER_MODEL_NAME, Entity
+from data_modules.constants import QUESTION, NEXT_LINE, ANSWER
 
 if TYPE_CHECKING:
     from typing import List, Union
@@ -67,17 +68,39 @@ class GSMItem(QuestionAnswerItem):
         else:
             return INVALID_PREDICTION
 
-    def is_correct(self):
+    def calculate_accuracy(self):
         answer = self.get_answer()
         assert answer != INVALID_ANSWER
 
         prediction = self.get_prediction()
         return answer == prediction
 
+    def format(self, demonstrations: str = "", include_answer: bool = True) -> str:
+        if include_answer:
+            query = QUESTION + self.question + NEXT_LINE + ANSWER + self.answer + NEXT_LINE
+        else:
+            query = QUESTION + self.question + NEXT_LINE + ANSWER
+
+        return demonstrations + query
+
+    def logging(self):
+        return [
+            self.question,
+            self.answer,
+            self.prediction,
+            self.get_answer(),
+            self.get_prediction()
+        ]
+
 
 class GSMDataset(QuestionAnswerDataset):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+    def calculate_valid_predictions(self):
+        valid_predictions = reduce(lambda total, item: total + (item.get_prediction() != INVALID_ANSWER), self.qa_items, 0)
+        valid_predictions /= len(self.qa_items)
+        return valid_predictions
 
     def collate_fn(self, batch: "List[GSMItem]") -> "dict[str, Union[List[GSMItem], BatchEncoding]]":
         '''
