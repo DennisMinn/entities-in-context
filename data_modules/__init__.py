@@ -1,9 +1,12 @@
 from typing import List, TYPE_CHECKING
+import string
+import re
 from abc import abstractmethod
 from torch.utils.data import Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
 from dataclasses import dataclass, field
 from data_modules.entities import Entity
+from functools import reduce
 import pandas as pd
 import random
 
@@ -13,6 +16,26 @@ from data_modules.constants import DEMONSTRATIONS, QUERY, BOTH, CONTEXT, QUESTIO
 if TYPE_CHECKING:
     from pandas import DataFrame
     from transformers import PreTrainedTokenizerFast
+
+
+# These functions are directly taken from https://qa.fastforwardlabs.com/no%20answer/null%20threshold/bert/distilbert/exact%20match/f1/robust%20predictions/2020/06/09/Evaluating_BERT_on_SQuAD.html#:~:text=F1%20score%20is%20a%20common,those%20in%20the%20True%20Answer.
+def normalize_text(s):
+    """Removing articles and punctuation, and standardizing whitespace are all typical text processing steps."""
+    def remove_articles(text):
+        regex = re.compile(r"\b(a|an|the)\b", re.UNICODE)
+        return re.sub(regex, " ", text)
+
+    def white_space_fix(text):
+        return " ".join(text.split())
+
+    def remove_punc(text):
+        exclude = set(string.punctuation)
+        return "".join(ch for ch in text if ch not in exclude)
+
+    def lower(text):
+        return text.lower()
+
+    return white_space_fix(remove_articles(remove_punc(lower(s))))
 
 
 @dataclass
@@ -42,14 +65,17 @@ class QuestionAnswerItem():
 
         answer_entities (List[Entity]):
             List of entities in answer
-  '''
+    '''
     context: str
     question: str
     answer: str
-    prediction: str = field(default=None)
-    context_entities: List[Entity] = field(default=None)
-    question_entities: List[Entity] = field(default=None)
-    answer_entities: List[Entity] = field(default=None)
+    prediction: str = None
+    context_entities: List[Entity] = None
+    question_entities: List[Entity] = None
+    answer_entities: List[Entity] = None
+    prompt_perplexity: float = field(default=0.0, repr=False)
+    answer_perplexity: float = field(default=0.0, repr=False)
+    prediction_perplexity: float = field(default=0.0, repr=False)
 
     def format(self, demonstrations: str = "", include_answer: bool = True) -> str:
         '''
@@ -83,6 +109,28 @@ class QuestionAnswerItem():
             return QuestionAnswerItem(context, question, answer)
         else:
             return QuestionAnswerItem(self.context, self.question, self.answer)
+
+    def calculate_f1(self):
+        pred_tokens = normalize_text(self.prediction).split()
+        truth_tokens = normalize_text(self.answer).split()
+
+        # if either the prediction or the truth is no-answer then f1 = 1 if they agree, 0 otherwise
+        if len(pred_tokens) == 0 or len(truth_tokens) == 0:
+            return int(pred_tokens == truth_tokens)
+
+        common_tokens = set(pred_tokens) & set(truth_tokens)
+
+        # if there are no common tokens then f1 = 0
+        if len(common_tokens) == 0:
+            return 0
+
+        prec = len(common_tokens) / len(pred_tokens)
+        rec = len(common_tokens) / len(truth_tokens)
+
+        return 2 * (prec * rec) / (prec + rec)
+
+    def calculate_accuracy(self):
+        return self.prediction == self.answer
 
     def logging(self):
         return [self.context, self.question, self.answer, self.prediction]
@@ -163,6 +211,28 @@ class QuestionAnswerDataset(Dataset):
 
         raise NotImplementedError
 
+    def calculate_accuracy(self):
+        accuracy = reduce(lambda accuracy, item: accuracy + item.calculate_accuracy(), self.qa_items, 0)
+        accuracy /= len(self.qa_items)
+        return accuracy
+
+    def calculate_f1(self):
+        f1 = reduce(lambda f1, item: f1 + item.calculate_f1(), self.qa_items, 0)
+        f1 /= len(self.qa_items)
+        return f1
+
+    def calculate_perplexities(self):
+        prompt_perplexity = reduce(lambda prompt_perplexity, item: prompt_perplexity + item.prompt_perplexity, self.qa_items, 0)
+        prompt_perplexity /= len(self.qa_items)
+
+        answer_perplexity = reduce(lambda answer_perplexity, item: answer_perplexity + item.answer_perplexity, self.qa_items, 0)
+        answer_perplexity /= len(self.qa_items)
+
+        prediction_perplexity = reduce(lambda prompt_perplexity, item: prompt_perplexity + item.prediction_perplexity, self.qa_items, 0)
+        prediction_perplexity /= len(self.qa_items)
+
+        return prompt_perplexity, answer_perplexity, prediction_perplexity
+
 
 @dataclass
 class QuestionAnswerDataModule(LightningDataModule):
@@ -178,6 +248,7 @@ class QuestionAnswerDataModule(LightningDataModule):
     entity_augmentation: str = None
 
     def __post_init__(self):
+        super().__init__()
         self.entities_dataframe = pd.read_csv(self.entities_metadata_fpath)
         self.datasets = {}
 
