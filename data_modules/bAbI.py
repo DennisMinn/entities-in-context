@@ -86,7 +86,6 @@ class bAbIDataModule(QuestionAnswerDataModule):
                 or isinstance(self.demonstration_indices, List))
 
     def parse(self, fpath) -> "List[bAbIItem]":
-        # TODO Optimize parse
         bAbI_entities = self.entities_dataframe.entity.filter(dataset="bAbI")
         bAbI_entities = bAbI_entities.entity.aggregate()
 
