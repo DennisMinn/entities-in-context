@@ -4,6 +4,7 @@ from torch.utils.data import Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
 from dataclasses import dataclass, field
 from data_modules.entities import Entity
+import pandas as pd
 import random
 
 from data_modules.constants import DEMONSTRATIONS, QUERY, BOTH, CONTEXT, QUESTION, ANSWER, NEXT_LINE, NUM_OF_DEMONSTRATIONS_TRIES
@@ -57,7 +58,7 @@ class QuestionAnswerItem():
         learning. To limit memory overhead, this function is static.
 
         Args:
-            question_answer_item (QuestionAnswerItem):
+            qa_item (QuestionAnswerItem):
                 Sample from question-answer dataset.
 
             demonstrations (str):
@@ -87,56 +88,49 @@ class QuestionAnswerItem():
         return [self.context, self.question, self.answer, self.prediction]
 
 
+@dataclass
 class QuestionAnswerDataset(Dataset):
-    def __init__(self,
-                 question_answer_items: "List[QuestionAnswerItem]",
-                 tokenizer: "PreTrainedTokenizerFast",
-                 entities_dataframe: "DataFrame" = None,
-                 entity_augmentation: str = None,
-                 prompt_augmentation: str = None,
-                 num_demonstrations: int = -1,
-                 max_demonstrations_token_length: int = 400,
-                 demonstration_indices: "List[int]" = None):
+    qa_items: "List[QuestionAnswerItem]" = field(repr=False)
+    tokenizer: "PreTrainedTokenizerFast" = field(repr=False)
+    entities_dataframe: "DataFrame" = field(repr=False, default=None)
+    entity_augmentation: str = None
+    prompt_augmentation: str = None
+    num_demonstrations: int = -1
+    max_demonstrations_token_length: int = 400
+    demonstration_indices: "List[int]" = None
 
-        self.num_demonstrations = num_demonstrations
-        self.max_demonstrations_token_length = max_demonstrations_token_length
-        self.tokenizer = tokenizer
-        self.demonstration_indices = demonstration_indices
-        self.question_answer_items = question_answer_items
-        self.entities_dataframe = entities_dataframe
-        self.entity_augmentation = entity_augmentation
+    def __post_init__(self):
         self.replacement_entity = self.initialize_replacement_entity()
-        self.prompt_augmentation = prompt_augmentation
-        self.demonstrations = self.initialize_demonstrations(question_answer_items)
+        self.demonstrations = self.initialize_demonstrations(self.qa_items)
 
     def __getitem__(self, index: int) -> QuestionAnswerItem:
         if self.prompt_augmentation in [QUERY, BOTH]:
-            return self.question_answer_items[index].replace_entity(self.replacement_entity)
+            return self.qa_items[index].replace_entity(self.replacement_entity)
         else:
-            return self.question_answer_items[index]
+            return self.qa_items[index]
 
     def __len__(self) -> int:
-        return len(self.question_answer_items)
+        return len(self.qa_items)
 
-    def initialize_demonstrations(self, question_answer_items: List[QuestionAnswerItem]):
+    def initialize_demonstrations(self, qa_items: List[QuestionAnswerItem]):
         if self.demonstration_indices is None and self.num_demonstrations == -1:
             return None
 
         # Apply prompt augmentation
         if self.prompt_augmentation in [DEMONSTRATIONS, BOTH]:
-            question_answer_items = [item.replace_entity(self.replacement_entity) for item in question_answer_items]
+            qa_items = [item.replace_entity(self.replacement_entity) for item in qa_items]
 
         # Initialize using specified demonstration indices
         if self.demonstration_indices is not None:
             k = self.num_demonstrations if self.num_demonstrations != -1 else len(self.demonstration_indices)
             demonstration_indices = self.demonstration_indices[:k]
-            demonstrations = [question_answer_items[index] for index in demonstration_indices]
+            demonstrations = [qa_items[index] for index in demonstration_indices]
             demonstrations = "".join([item.format() for item in demonstrations])
             return demonstrations
 
         # Initialize by randomly sampling dataset
         for _ in range(NUM_OF_DEMONSTRATIONS_TRIES):
-            demonstrations = random.sample(question_answer_items, self.num_demonstrations)
+            demonstrations = random.sample(qa_items, self.num_demonstrations)
             demonstrations = "".join([item.format() for item in demonstrations])
 
             num_tokens = len(self.tokenize.encode(demonstrations))
@@ -170,7 +164,23 @@ class QuestionAnswerDataset(Dataset):
         raise NotImplementedError
 
 
+@dataclass
 class QuestionAnswerDataModule(LightningDataModule):
+    model_name: str
+    batch_size: int
+    data_directory: str
+    entities_metadata_fpath: str
+    num_demonstrations: int = -1
+    max_demonstrations_token_length: int = 400
+    demonstration_indices: List[int] = None
+    num_workers: int = 0
+    prompt_augmentation: str = None
+    entity_augmentation: str = None
+
+    def __post_init__(self):
+        self.entities_dataframe = pd.read_csv(self.entities_metadata_fpath)
+        self.datasets = {}
+
     @abstractmethod
     def setup(self, stage: str = None):
         raise NotImplementedError
@@ -180,31 +190,79 @@ class QuestionAnswerDataModule(LightningDataModule):
         raise NotImplementedError
 
     def train_dataloader(self):
-        return DataLoader(
-            self.datasets["train"],
-            batch_size=self.batch_size,
-            num_workers=self.num_workers,
-            shuffle=False,
-            pin_memory=True,
-            collate_fn=self.datasets["train"].collate_fn
-        )
+        if isinstance(self.datasets["train"], List):
+            dataloaders = [
+                DataLoader(
+                    dataset,
+                    batch_size=self.batch_size,
+                    num_workers=self.num_workers,
+                    shuffle=False,
+                    pin_memory=True,
+                    collate_fn=dataset.collate_fn
+                )
+                for dataset in self.datasets["train"]
+            ]
+            return dataloaders
+
+        else:
+            dataloader = DataLoader(
+                self.datasets["train"],
+                batch_size=self.batch_size,
+                num_workers=self.num_workers,
+                shuffle=False,
+                pin_memory=True,
+                collate_fn=self.datasets["train"].collate_fn
+            )
+            return dataloader
 
     def val_dataloader(self):
-        return DataLoader(
-            self.datasets["validation"],
-            batch_size=self.batch_size,
-            num_workers=self.num_workers,
-            shuffle=False,
-            pin_memory=True,
-            collate_fn=self.datasets["validation"].collate_fn
-        )
+        if isinstance(self.datasets["validation"], List):
+            dataloaders = [
+                DataLoader(
+                    dataset,
+                    batch_size=self.batch_size,
+                    num_workers=self.num_workers,
+                    shuffle=False,
+                    pin_memory=True,
+                    collate_fn=dataset.collate_fn
+                )
+                for dataset in self.datasets["validation"]
+            ]
+            return dataloaders
+
+        else:
+            dataloader = DataLoader(
+                self.datasets["validation"],
+                batch_size=self.batch_size,
+                num_workers=self.num_workers,
+                shuffle=False,
+                pin_memory=True,
+                collate_fn=self.datasets["validation"].collate_fn
+            )
+            return dataloader
 
     def test_dataloader(self):
-        return DataLoader(
-            self.datasets["test"],
-            batch_size=self.batch_size,
-            num_workers=self.num_workers,
-            shuffle=False,
-            pin_memory=True,
-            collate_fn=self.datasets["test"].collate_fn
-        )
+        if isinstance(self.datasets["test"], List):
+            dataloaders = [
+                DataLoader(
+                    dataset,
+                    batch_size=self.batch_size,
+                    num_workers=self.num_workers,
+                    shuffle=False,
+                    pin_memory=True,
+                    collate_fn=dataset.collate_fn
+                )
+                for dataset in self.datasets["test"]
+            ]
+            return dataloaders
+
+        else:
+            dataloader = DataLoader(
+                self.datasets["test"],
+                batch_size=self.batch_size,
+                num_workers=self.num_workers,
+                shuffle=False,
+                pin_memory=True,
+                collate_fn=self.datasets["test"].collate_fn
+            )
+            return dataloader

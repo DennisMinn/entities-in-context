@@ -1,7 +1,6 @@
 from typing import TYPE_CHECKING
 import os
 import re
-import pandas as pd
 from collections import defaultdict
 from functools import reduce
 import spacy
@@ -12,9 +11,7 @@ from data_modules.entities import NER_MODEL_NAME, Entity
 
 if TYPE_CHECKING:
     from typing import List, Union
-    from pandas import DataFrame
     from torch import BatchEncoding
-    from transformers import PreTrainedTokenizerFast
 
 ANSWER_REGEX = PREDICTION_REGEX = re.compile(r"#### (\-?[0-9\.\,]+)")
 ANSWER_EOL = "\n"
@@ -79,26 +76,8 @@ class GSMItem(QuestionAnswerItem):
 
 
 class GSMDataset(QuestionAnswerDataset):
-    def __init__(self,
-                 GSM_items: "List[GSMItem]",
-                 tokenizer: "PreTrainedTokenizerFast",
-                 entities_dataframe: "DataFrame" = None,
-                 entity_augmentation: str = None,
-                 prompt_augmentation: str = None,
-                 num_demonstrations: int = -1,
-                 max_demonstrations_token_length: int = 400,
-                 demonstration_indices: "List[int]" = None):
-
-        super().__init__(
-            question_answer_items=GSM_items,
-            tokenizer=tokenizer,
-            entities_dataframe=entities_dataframe,
-            entity_augmentation=entity_augmentation,
-            prompt_augmentation=prompt_augmentation,
-            num_demonstrations=num_demonstrations,
-            max_demonstrations_token_length=max_demonstrations_token_length,
-            demonstration_indices=demonstration_indices
-        )
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
     def collate_fn(self, batch: "List[GSMItem]") -> "dict[str, Union[List[GSMItem], BatchEncoding]]":
         '''
@@ -125,35 +104,10 @@ class GSMDataset(QuestionAnswerDataset):
 
 
 class GSMDataModule(QuestionAnswerDataModule):
-    def __init__(self,
-                 model_name: str,
-                 batch_size: int,
-                 data_directory: str,
-                 entities_metadata_fpath: str,
-                 num_demonstrations: int = -1,
-                 max_demonstrations_token_length: int = 400,
-                 demonstration_indices: "List[List[int]]" = None,
-                 num_workers: int = 0,
-                 prompt_augmentation: str = None,
-                 entity_augmentation: str = None):
-
-        super().__init__()
-        self.model_name = model_name
-        self.batch_size = batch_size
-        self.num_demonstrations = num_demonstrations
-        self.max_demonstrations_token_length = max_demonstrations_token_length
-        self.demonstration_indices = demonstration_indices
-        self.num_workers = num_workers
-        self.prompt_augmentation = prompt_augmentation
-        self.entity_augmentation = entity_augmentation
-        self.data_directory = data_directory
-
-        self.entities_dataframe = pd.read_csv(entities_metadata_fpath)
-
-        self.datasets = {}
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
     def parse(self, fpath) -> "List[GSMItem]":
-        # TODO add GSM to entities_metadata
         GSM_entities = self.entities_dataframe.entity.filter(dataset="GSM")
         GSM_entities = GSM_entities.entity.aggregate()
 
@@ -163,10 +117,13 @@ class GSMDataModule(QuestionAnswerDataModule):
         GSM_items = []
         for line in lines:
             question, answer = json.loads(line).values()
-            question = re.sub(r"<<.*?>>", " ", question)
-            answer = re.sub(r"<<.*?>>", " ", answer)
 
-            question_entities = GSM_entities.entity.annotate(question.split(".")[-1])
+            question = re.sub(r"<<.*?>>", " ", question)
+            question = re.sub(r"\s+", " ", question)
+            answer = re.sub(r"<<.*?>>", " ", answer)
+            answer = re.sub(r"\s+", " ", answer)
+
+            question_entities = GSM_entities.entity.annotate(question)
             answer_entities = GSM_entities.entity.annotate(answer)
 
             GSM_item = GSMItem(
@@ -187,11 +144,10 @@ class GSMDataModule(QuestionAnswerDataModule):
         if self.tokenizer.pad_token is None:
             self.tokenizer.add_special_tokens({"pad_token": "[PAD]"})
 
-        # TODO create constant referring to fpath
         train_data = self.parse(os.path.join(self.data_directory, "train.jsonl"))
 
         self.datasets["train"] = GSMDataset(
-            GSM_items=train_data,
+            qa_items=train_data,
             tokenizer=self.tokenizer,
             entities_dataframe=self.entities_dataframe,
             entity_augmentation=self.entity_augmentation,
@@ -204,27 +160,29 @@ class GSMDataModule(QuestionAnswerDataModule):
             validation_data = self.parse(os.path.join(self.data_directory, "validation.jsonl"))
 
             self.datasets["validation"] = GSMDataset(
-                GSM_items=validation_data,
+                qa_items=validation_data,
                 tokenizer=self.tokenizer,
                 entities_dataframe=self.entities_dataframe,
                 entity_augmentation=self.entity_augmentation,
                 prompt_augmentation=self.prompt_augmentation,
-                num_demonstrations=self.num_demonstrations,
-                demonstration_indices=self.demonstration_indices
+                num_demonstrations=-1,
+                demonstration_indices=None
             )
+            self.datasets["validation"].demonstrations = self.datasets["train"].demonstrations
 
         if stage in ("test", None):
             test_data = self.parse(os.path.join(self.data_directory, "test.jsonl"))
 
             self.datasets["test"] = GSMDataset(
-                GSM_items=test_data,
+                qa_items=test_data,
                 tokenizer=self.tokenizer,
                 entities_dataframe=self.entities_dataframe,
                 entity_augmentation=self.entity_augmentation,
                 prompt_augmentation=self.prompt_augmentation,
-                num_demonstrations=self.num_demonstrations,
-                demonstration_indices=self.demonstration_indices
+                num_demonstrations=-1,
+                demonstration_indices=None
             )
+            self.datasets["test"].demonstrations = self.datasets["train"].demonstrations
 
     @staticmethod
     def entity_statistics(data_directory, tokenizer_name):

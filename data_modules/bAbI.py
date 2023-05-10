@@ -1,19 +1,15 @@
-from typing import TYPE_CHECKING
+from typing import List, TYPE_CHECKING
 import os
-import pandas as pd
 from collections import defaultdict
 import spacy
-from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
 from data_modules.entities import NER_MODEL_NAME, Entity
 from tqdm.auto import tqdm
 
 if TYPE_CHECKING:
-    from typing import List, Union
-    from pandas import DataFrame
+    from typing import Union
     from torch import BatchEncoding
-    from transformers import PreTrainedTokenizerFast
 
 CONTEXT_START = "1"
 NUM_TASKS = 20
@@ -49,28 +45,8 @@ class bAbIItem(QuestionAnswerItem):
 
 
 class bAbIDataset(QuestionAnswerDataset):
-    def __init__(self,
-                 bAbI_items: "List[bAbIItem]",
-                 tokenizer: "PreTrainedTokenizerFast",
-                 task: int,
-                 entities_dataframe: "DataFrame" = None,
-                 entity_augmentation: str = None,
-                 prompt_augmentation: str = None,
-                 num_demonstrations: int = -1,
-                 max_demonstrations_token_length: int = 400,
-                 demonstration_indices: "List[int]" = None):
-
-        super().__init__(
-            question_answer_items=bAbI_items,
-            tokenizer=tokenizer,
-            entities_dataframe=entities_dataframe,
-            entity_augmentation=entity_augmentation,
-            prompt_augmentation=prompt_augmentation,
-            num_demonstrations=num_demonstrations,
-            max_demonstrations_token_length=max_demonstrations_token_length,
-            demonstration_indices=demonstration_indices
-        )
-
+    def __init__(self, task: int, **kwargs):
+        super().__init__(**kwargs)
         self.task = task
 
     def collate_fn(self, batch: "List[bAbIItem]") -> "dict[str, Union[List[bAbIItem], BatchEncoding]]":
@@ -99,37 +75,15 @@ class bAbIDataset(QuestionAnswerDataset):
 
 
 class bAbIDataModule(QuestionAnswerDataModule):
-    def __init__(self,
-                 model_name: str,
-                 batch_size: int,
-                 tasks: "List[int]",
-                 data_directory: str,
-                 entities_metadata_fpath: str,
-                 num_demonstrations: int = -1,
-                 max_demonstrations_token_length: int = 400,
-                 demonstration_indices: "List[List[int]]" = None,
-                 num_workers: int = 0,
-                 prompt_augmentation: str = None,
-                 entity_augmentation: str = None):
-
-        super().__init__()
-        self.model_name = model_name
-        self.batch_size = batch_size
-        self.num_demonstrations = num_demonstrations
-        self.max_demonstrations_token_length = max_demonstrations_token_length
-        self.demonstration_indices = demonstration_indices
-        self.num_workers = num_workers
-        self.prompt_augmentation = prompt_augmentation
-        self.entity_augmentation = entity_augmentation
-        self.data_directory = data_directory
+    def __init__(self, tasks: "List[int]", **kwargs):
+        super().__init__(**kwargs)
         self.tasks = tasks
 
-        self.entities_dataframe = pd.read_csv(entities_metadata_fpath)
+        assert (self.demonstration_indices is None
+                or len(self.tasks) == len(self.demonstration_indices))
 
-        self.datasets = {}
-        self.datasets["train"] = []
-        self.datasets["validation"] = []
-        self.datasets["test"] = []
+        assert (self.demonstration_indices is None
+                or isinstance(self.demonstration_indices, List))
 
     def parse(self, fpath) -> "List[bAbIItem]":
         # TODO Optimize parse
@@ -186,7 +140,7 @@ class bAbIDataModule(QuestionAnswerDataModule):
                 demonstration_indices = None
 
             dataset = bAbIDataset(
-                bAbI_items=data,
+                qa_items=data,
                 task=task_index,
                 tokenizer=self.tokenizer,
                 entities_dataframe=self.entities_dataframe,
@@ -212,56 +166,14 @@ class bAbIDataModule(QuestionAnswerDataModule):
         if stage in ("validate", None):
             self.datasets["validation"] = self.load_tasks("valid")
 
-            for task_index in range(len(self.tasks)):
-                self.datasets["validation"][task_index].demonstrations = self.datasets["train"][task_index].demonstrations
+            for dataset_index in range(len(self.datasets)):
+                self.datasets["validation"][dataset_index].demonstrations = self.datasets["train"][dataset_index].demonstrations
 
         if stage in ("test", None):
             self.datasets["test"] = self.load_tasks("test")
 
-            for task_index in range(len(self.tasks)):
-                self.datasets["test"][task_index].demonstrations = self.datasets["train"][task_index].demonstrations
-
-    def train_dataloader(self):
-        dataloaders = []
-        for task in self.datasets["train"]:
-            dataloaders.append(DataLoader(
-                task,
-                batch_size=self.batch_size,
-                num_workers=self.num_workers,
-                shuffle=False,
-                pin_memory=True,
-                collate_fn=task.collate_fn
-            ))
-
-        return dataloaders
-
-    def val_dataloader(self):
-        dataloaders = []
-        for task in self.datasets["validation"]:
-            dataloaders.append(DataLoader(
-                task,
-                batch_size=self.batch_size,
-                num_workers=self.num_workers,
-                shuffle=False,
-                pin_memory=True,
-                collate_fn=task.collate_fn
-            ))
-
-        return dataloaders
-
-    def test_dataloader(self):
-        dataloaders = []
-        for task in self.datasets["test"]:
-            dataloaders.append(DataLoader(
-                task,
-                batch_size=self.batch_size,
-                num_workers=self.num_workers,
-                shuffle=False,
-                pin_memory=True,
-                collate_fn=task.collate_fn
-            ))
-
-        return dataloaders
+            for dataset_index in range(len(self.datasets)):
+                self.datasets["test"][dataset_index].demonstrations = self.datasets["train"][dataset_index].demonstrations
 
     @staticmethod
     def entity_statistics(data_dir, tokenizer_name):
