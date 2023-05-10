@@ -9,7 +9,7 @@ if TYPE_CHECKING:
 
 
 class QuestionAnswerModel(LightningModule):
-    def __init__(self, model_name: str):
+    def __init__(self, model_name: str, max_new_tokens=128):
         super().__init__()
         if "flan-t5" in model_name:
             from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
@@ -18,6 +18,7 @@ class QuestionAnswerModel(LightningModule):
             from transformers import AutoModelForCausalLM, AutoTokenizer
             self.model = AutoModelForCausalLM.from_pretrained(model_name)
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.max_new_tokens = max_new_tokens
 
     def forward(self, inputs: "BatchEncoding") -> "torch.Tensor":
         """
@@ -28,14 +29,16 @@ class QuestionAnswerModel(LightningModule):
                 Output from transformer tokenizer
         """
         # generate tokens
-        gen_tokens = self.model.generate(inputs.input_ids)
+        gen_tokens = self.model.generate(**inputs,
+                                         max_new_tokens=self.max_new_tokens,
+                                         early_stopping=True)
 
         return gen_tokens
 
     def validation_step(self,
                         batch: "dict[str, Union[List[bAbIItem], BatchEncoding]]",
                         batch_index: int,
-                        dataset_index: int):
+                        dataset_index: int = 0):
         """
         One iteration of validation loop
 
@@ -52,73 +55,20 @@ class QuestionAnswerModel(LightningModule):
         gen_text = self.tokenizer.batch_decode(gen_tokens, skip_special_tokens=True)
 
         # calculate accuracy
-        babi_items = batch["batch"]
-        babi_prompts = batch["formatted_batch"]
-        prompt_perplexities = []
-        prediction_perplexities = []
-        target_perplexities = []
+        qa_items = batch["batch"]
 
         # update bAbIItem prediction attribute
-        for idx, item in enumerate(babi_items):
+        for idx, item in enumerate(qa_items):
             item.prediction = gen_text[idx]
 
-            prompt = babi_prompts[idx]
-            prediction = babi_items[idx].prediction
-            target = babi_items[idx].answer
-
-            prompt_perplexities.append(
-                self.calculate_perplexity(prompt, '', False)
-            )
-            
-            prediction_perplexities.append(
-                self.calculate_perplexity(prompt, prediction, True)
-            )
-
-            target_perplexities.append(
-                self.calculate_perplexity(prompt, target, True)
-            )
-
-        return (
-            babi_items,
-            prompt_perplexities,
-            prediction_perplexities,
-            target_perplexities
-        )
-
-    def test_step(self,
-                  batch: "dict[str, Union[List[bAbIItem], BatchEncoding]]",
-                  batch_index: int,
-                  dataset_index: int):
-        """
-        One iteration of validation loop
-
-        Args:
-            batch (dict[str, Union[List[bAbIItem], BatchEncoding]]):
-                Output of bAbIDataset.collate_fn
-            batch_index (int):
-                Index of subset
-        """
-        # generate tokens
-        gen_tokens = self.forward(batch["BatchEncoding"])
-
-        # decode tokens
-        gen_text = self.tokenizer.batch_decode(gen_tokens, skip_special_tokens=True)
-
-        # calculate accuracy
-        babi_items = batch["batch"]
-
-        # update bAbIItem prediction attribute
-        for idx, item in enumerate(babi_items):
-            item.prediction = gen_text[idx]
-
-        return babi_items
+        return qa_items
 
     def calculate_perplexity(self, prompt, target, mask_prompt):
         prompt_length = len(self.tokenizer.encode(prompt))
         text = prompt + target
         input_ids = self.tokenizer.encode(text, return_tensors="pt").to(self.device)
         target_ids = input_ids.clone()
-        if mask_prompt == True:
+        if mask_prompt:
             target_ids[:, :prompt_length] = -100
 
         with torch.no_grad():
