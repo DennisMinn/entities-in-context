@@ -121,7 +121,7 @@ class GSMDataset(QuestionAnswerDataset):
                                         return_tensors='pt')
         return {
             "batch": batch,
-            "formatted_batch": formatted_batch,
+            "demonstrations": self.demonstrations,
             "BatchEncoding": batch_encoding
         }
 

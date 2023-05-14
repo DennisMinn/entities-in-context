@@ -18,7 +18,8 @@ if TYPE_CHECKING:
     from transformers import PreTrainedTokenizerFast
 
 
-# These functions are directly taken from https://qa.fastforwardlabs.com/no%20answer/null%20threshold/bert/distilbert/exact%20match/f1/robust%20predictions/2020/06/09/Evaluating_BERT_on_SQuAD.html#:~:text=F1%20score%20is%20a%20common,those%20in%20the%20True%20Answer.
+# These functions are directly taken from:
+# https://qa.fastforwardlabs.com/no%20answer/null%20threshold/bert/distilbert/exact%20match/f1/robust%20predictions/2020/06/09/Evaluating_BERT_on_SQuAD.html#:~:text=F1%20score%20is%20a%20common,those%20in%20the%20True%20Answer.
 def normalize_text(s):
     """Removing articles and punctuation, and standardizing whitespace are all typical text processing steps."""
     def remove_articles(text):
@@ -77,7 +78,8 @@ class QuestionAnswerItem():
     answer_perplexity: float = field(default=0.0, repr=False)
     prediction_perplexity: float = field(default=0.0, repr=False)
 
-    def format(self, demonstrations: str = "", include_answer: bool = True) -> str:
+    def format(self, demonstrations: str = "", include_answer: bool = True,
+               include_prediction: bool = False) -> str:
         '''
         Concatenates `QuestionAnswerItem.context` and
         `QuestionAnswerItem.question` with demonstrations for in-context
@@ -90,8 +92,13 @@ class QuestionAnswerItem():
             demonstrations (str):
                 Demonstrations/Examples for the model to use as a template.
         '''
+        if include_answer and include_prediction:
+            raise Exception("include_answer = True and include_prediciton = True")
+
         if include_answer:
             query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.answer + NEXT_LINE
+        elif include_prediction:
+            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.prediction + NEXT_LINE
         else:
             query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER
 

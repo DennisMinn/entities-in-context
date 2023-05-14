@@ -69,7 +69,7 @@ class bAbIDataset(QuestionAnswerDataset):
         return {
             "task": self.task,
             "batch": batch,
-            "formatted_batch": formatted_batch,
+            "demonstrations": self.demonstrations,
             "BatchEncoding": batch_encoding
         }
 
@@ -165,13 +165,13 @@ class bAbIDataModule(QuestionAnswerDataModule):
         if stage in ("validate", None):
             self.datasets["validation"] = self.load_tasks("valid")
 
-            for dataset_index in range(len(self.datasets)):
+            for dataset_index in range(len(self.datasets["train"])):
                 self.datasets["validation"][dataset_index].demonstrations = self.datasets["train"][dataset_index].demonstrations
 
         if stage in ("test", None):
             self.datasets["test"] = self.load_tasks("test")
 
-            for dataset_index in range(len(self.datasets)):
+            for dataset_index in range(len(self.datasets["train"])):
                 self.datasets["test"][dataset_index].demonstrations = self.datasets["train"][dataset_index].demonstrations
 
     @staticmethod
