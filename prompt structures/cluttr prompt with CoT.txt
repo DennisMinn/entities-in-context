@@ -1,0 +1,15 @@
+As a genealogist, your task is to think step by step and determine the absolute kinship relation between two individuals.
+
+context: Letty is the wife of Noble. Claud is Letty's son. Claud has a brother named Clemente. 
+question: How is Clemente related to Noble?
+answer: son
+
+context: Erasmus has a daughter called Ava. Burr is a brother of Ava. Tobe is Burr's son. 
+question: How is Tobe related to Erasmus?
+answer: grandson
+
+context: Vance is Maria's son. Viva is the grandmother of Vance. Reginald is Viva's father.
+question: How is Reginald related to Maria?
+answer: Let's think step by step.
+Reginald is the father of Viva. Maria is the mother of Vance.
+Among the choices mother, brother, grandmother, sister, father, son, granddaughter, grandfather, daughter, the answer is 
