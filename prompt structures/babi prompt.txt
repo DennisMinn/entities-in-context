@@ -10,7 +10,7 @@ context: Sandra went to the hallway. Sandra journeyed to the kitchen.
 question: Where is Sandra?
 answer: kitchen
 ###
-context:Sandra went to the garden. Sandra journeyed to the bedroom.
+context: Sandra went to the garden. Sandra journeyed to the bedroom.
 question: Where is Sandra?
 answer: bedroom
 ###

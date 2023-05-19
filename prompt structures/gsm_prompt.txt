@@ -1,17 +1,17 @@
-question:Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?
-answer:Weng earns 12/60 = $ 0.2 per minute. Working 50 minutes, she earned 0.2 x 50 = $ 10. #### 10
+question: Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?
+answer: Weng earns 12/60 = $ 0.2 per minute. Working 50 minutes, she earned 0.2 x 50 = $ 10. #### 10
 
-question:James writes a 3-page letter to 2 different friends twice a week. How many pages does he write a year?
-answer:He writes each friend 3*2= 6 pages a week So he writes 6*2= 12 pages every week That means he writes 12*52= 624 pages a year #### 624
+question: James writes a 3-page letter to 2 different friends twice a week. How many pages does he write a year?
+answer: He writes each friend 3*2= 6 pages a week So he writes 6*2= 12 pages every week That means he writes 12*52= 624 pages a year #### 624
 
-question:Tim has 30 less apples than Martha, and Harry has half as many apples as Tim. If Martha has 68 apples, how many apples does Harry have?
-answer:Tim has 68-30 = 38 apples. Harry has 38/2 = 19 apples. #### 19
+question: Tim has 30 less apples than Martha, and Harry has half as many apples as Tim. If Martha has 68 apples, how many apples does Harry have?
+answer: Tim has 68-30 = 38 apples. Harry has 38/2 = 19 apples. #### 19
 
-question:Brandon sold 86 geckos last year. He sold twice that many the year before. How many geckos has Brandon sold in the last two years?
-answer:Last year: 86 geckos 2 years ago: 86(2)=172 Total number of geckos sold 86+172= 258 geckos #### 258
+question: Brandon sold 86 geckos last year. He sold twice that many the year before. How many geckos has Brandon sold in the last two years?
+answer: Last year: 86 geckos 2 years ago: 86(2)=172 Total number of geckos sold 86+172= 258 geckos #### 258
 
-question:John writes 20 pages a day. How long will it take him to write 3 books that are 400 pages each?
-answer:He wants to write 3*400= 1200 pages So it will take him 1200/20= 60 days #### 60
+question: John writes 20 pages a day. How long will it take him to write 3 books that are 400 pages each?
+answer: He wants to write 3*400= 1200 pages So it will take him 1200/20= 60 days #### 60
 
 question:Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?
 answer:
