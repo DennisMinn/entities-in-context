@@ -20,4 +20,4 @@ answer: father
 ###
 context: Reuben is the husband of Nellie. Barton is a brother of Reuben. Matthew is the father of Barton. 
 question: How is Matthew related to Nellie?
-answer: 
+answer:
