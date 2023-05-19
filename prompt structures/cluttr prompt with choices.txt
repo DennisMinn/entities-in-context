@@ -8,4 +8,4 @@ answer: Among the choices grandson, son, granddaughter, grandfather, the answer 
 
 context: Vance is Maria's son. Viva is the grandmother of Vance. Reginald is Viva's father.
 question: How is Reginald related to Maria?
-answer: Among the choices father, son, granddaughter, grandfather, the answer is 
+answer: Among the choices father, son, granddaughter, grandfather, the answer is

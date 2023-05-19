@@ -12,4 +12,4 @@ context: Vance is Maria's son. Viva is the grandmother of Vance. Reginald is Viv
 question: How is Reginald related to Maria?
 answer: Let's think step by step.
 Reginald is the father of Viva. Maria is the mother of Vance.
-Among the choices mother, brother, grandmother, sister, father, son, granddaughter, grandfather, daughter, the answer is 
+Among the choices mother, brother, grandmother, sister, father, son, granddaughter, grandfather, daughter, the answer is
