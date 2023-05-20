@@ -78,7 +78,14 @@ class QuestionAnswerItem():
     answer_perplexity: float = field(default=0.0, repr=False)
     prediction_perplexity: float = field(default=0.0, repr=False)
 
-    def format(self, demonstrations: str = "", include_answer: bool = True,
+    def __post_init__(self):
+        self.context = self.context.strip()
+        self.question = self.question.strip()
+        self.answer = self.answer.strip()
+
+    def format(self,
+               demonstrations: str = "",
+               include_answer: bool = False,
                include_prediction: bool = False) -> str:
         '''
         Concatenates `QuestionAnswerItem.context` and
@@ -167,7 +174,7 @@ class QuestionAnswerDataset(Dataset):
     def __len__(self) -> int:
         return len(self.qa_items)
 
-    def initialize_demonstrations(self, qa_items: List[QuestionAnswerItem]):
+    def initialize_demonstrations(self, qa_items: "List[QuestionAnswerItem]"):
         if self.demonstration_indices is None and self.num_demonstrations == -1:
             return None
 
@@ -180,13 +187,13 @@ class QuestionAnswerDataset(Dataset):
             k = self.num_demonstrations if self.num_demonstrations != -1 else len(self.demonstration_indices)
             demonstration_indices = self.demonstration_indices[:k]
             demonstrations = [qa_items[index] for index in demonstration_indices]
-            demonstrations = "".join([item.format() for item in demonstrations])
+            demonstrations = "\n".join([item.format(include_answer=True) for item in demonstrations])
             return demonstrations
 
         # Initialize by randomly sampling dataset
         for _ in range(NUM_OF_DEMONSTRATIONS_TRIES):
             demonstrations = random.sample(qa_items, self.num_demonstrations)
-            demonstrations = "".join([item.format() for item in demonstrations])
+            demonstrations = "\n".join([item.format(include_answer=True) for item in demonstrations])
 
             num_tokens = len(self.tokenize.encode(demonstrations))
             if num_tokens <= self.max_demonstrations_token_length:

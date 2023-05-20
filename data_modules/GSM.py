@@ -75,13 +75,22 @@ class GSMItem(QuestionAnswerItem):
         prediction = self.get_prediction()
         return answer == prediction
 
-    def format(self, demonstrations: str = "", include_answer: bool = True) -> str:
+    def format(self,
+               demonstrations: str = "",
+               include_answer: bool = False,
+               include_prediction: bool = False) -> str:
+
         if include_answer:
-            query = QUESTION + self.question + NEXT_LINE + ANSWER + self.answer + NEXT_LINE
+            query = QUESTION + self.question + NEXT_LINE + ANSWER + self.answer
+        elif include_prediction:
+            query = QUESTION + self.question + NEXT_LINE + ANSWER + self.prediction
         else:
             query = QUESTION + self.question + NEXT_LINE + ANSWER
 
-        return demonstrations + query
+        if demonstrations:
+            return demonstrations + NEXT_LINE + query
+        else:
+            return query
 
     def logging(self):
         return [
