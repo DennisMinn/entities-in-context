@@ -69,7 +69,7 @@ class QuestionAnswerModel(LightningModule):
             prompt_perplexities.append(
                 self.calculate_perplexity(prompt, '', False)
             )
-            
+
             prediction_perplexities.append(
                 self.calculate_perplexity(prompt, prediction, True)
             )
@@ -118,9 +118,13 @@ class QuestionAnswerModel(LightningModule):
         text = prompt + target
         input_ids = self.tokenizer.encode(text, return_tensors="pt").to(self.device)
         target_ids = input_ids.clone()
-        if mask_prompt == True:
+        if mask_prompt:
             target_ids[:, :prompt_length] = -100
 
+        # Remove Later #
+        with torch.no_grad():
+            return input_ids, self.model(input_ids, labels=target_ids)
+        ###############
         with torch.no_grad():
             negative_log_likelihood = self.model(input_ids, labels=target_ids).loss
             perplexity = torch.exp(negative_log_likelihood)
