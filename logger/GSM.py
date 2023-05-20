@@ -5,6 +5,9 @@ NUM_SAMPLES = 100
 
 
 class GSMLogger(QuestionAnswerLogger):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
     def setup(self, trainer, pl_module, stage):
         self.qa_items = {
             "train": [],
@@ -54,7 +57,7 @@ class GSMLogger(QuestionAnswerLogger):
         wandb.log({"validation/demonstrations": demonstrations})
         wandb.log({"validation/data": data_table})
 
-        self.run = {
+        self.run["validation"] = {
             "accuracy": accuracy,
             "f1": f1,
             "prompt_perplexity": prompt_ppl,

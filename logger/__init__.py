@@ -25,7 +25,7 @@ class QuestionAnswerLogger(Callback):
 
         self.run = {
             "name": run_name,
-            "dataset": "bAbI",
+            "dataset": data_module.name,
             "model_name": data_module.model_name,
             "batch_size": data_module.batch_size,
             "data_directory": data_module.data_directory,
