@@ -1,23 +1,23 @@
-context: Flem is Alvena's son. Martin is Flem's son. Rutherford is Martin's uncle. 
+context: Flem is Alvena's son. Martin is Flem's son. Rutherford is Martin's uncle.
 question: How is Rutherford related to Alvena?
 answer: son
 ###
-context: Mable is Rubin's wife. Preston is the grandson of Mable. Preston has a brother named Merle. 
+context: Mable is Rubin's wife. Preston is the grandson of Mable. Preston has a brother named Merle.
 question: How is Merle related to Rubin?
 answer: grandson
 ###
-context: Ferdinand has a sister named Addie. Guadalupe is a sister of Addie. Ann is Guadalupe's sister. 
+context: Ferdinand has a sister named Addie. Guadalupe is a sister of Addie. Ann is Guadalupe's sister.
 question: How is Ann related to Ferdinand?
 answer: sister
 ###
-context: Carey is Evan's daughter. Winifred is Carey's sister. Weaver is Winifred's grandfather. 
+context: Carey is Evan's daughter. Winifred is Carey's sister. Weaver is Winifred's grandfather.
 question: How is Weaver related to Evan?
 answer: father
 ###
-context: Vada is Asa's wife. Erie is Vada's daughter. Lincoln is the grandfather of Erie. 
+context: Vada is Asa's wife. Erie is Vada's daughter. Lincoln is the grandfather of Erie.
 question: How is Lincoln related to Asa?
 answer: father
 ###
-context: Reuben is the husband of Nellie. Barton is a brother of Reuben. Matthew is the father of Barton. 
+context: Reuben is the husband of Nellie. Barton is a brother of Reuben. Matthew is the father of Barton.
 question: How is Matthew related to Nellie?
 answer:

@@ -1,8 +1,8 @@
-context: Letty is the wife of Noble. Claud is Letty's son. Claud has a brother named Clemente. 
+context: Letty is the wife of Noble. Claud is Letty's son. Claud has a brother named Clemente.
 question: How is Clemente related to Noble?
 answer: Among the choices brother, son, grandfather, daughter, the answer is son
 ###
-context: Erasmus has a daughter called Ava. Burr is a brother of Ava. Tobe is Burr's son. 
+context: Erasmus has a daughter called Ava. Burr is a brother of Ava. Tobe is Burr's son.
 question: How is Tobe related to Erasmus?
 answer: Among the choices grandson, son, granddaughter, grandfather, the answer is grandson
 ###
