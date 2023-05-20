@@ -1,19 +1,19 @@
-from typing import List, TYPE_CHECKING
+from typing import TYPE_CHECKING
 import string
 import re
 from abc import abstractmethod
+
 from torch.utils.data import Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
 from dataclasses import dataclass, field
-from data_modules.entities import Entity
-from functools import reduce
-import pandas as pd
+import copy
 import random
 
 from data_modules.constants import DEMONSTRATIONS, QUERY, BOTH, CONTEXT, QUESTION, ANSWER, NEXT_LINE, NUM_OF_DEMONSTRATIONS_TRIES
 
 
 if TYPE_CHECKING:
+    from typing import List
     from pandas import DataFrame
     from transformers import PreTrainedTokenizerFast
 
@@ -71,9 +71,9 @@ class QuestionAnswerItem():
     question: str
     answer: str
     prediction: str = None
-    context_entities: List[Entity] = None
-    question_entities: List[Entity] = None
-    answer_entities: List[Entity] = None
+    context_entities: "List[str]" = None
+    question_entities: "List[str]" = None
+    answer_entities: "List[str]" = None
     prompt_perplexity: float = field(default=0.0, repr=False)
     answer_perplexity: float = field(default=0.0, repr=False)
     prediction_perplexity: float = field(default=0.0, repr=False)
@@ -103,26 +103,31 @@ class QuestionAnswerItem():
             raise Exception("include_answer = True and include_prediciton = True")
 
         if include_answer:
-            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.answer + NEXT_LINE
+            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.answer
         elif include_prediction:
-            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.prediction + NEXT_LINE
+            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.prediction
         else:
             query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER
 
-        return demonstrations + query
+        if demonstrations:
+            return demonstrations + NEXT_LINE + query
+        else:
+            return query
 
     def replace_entity(self, replacement_entity):
-        if len(self.question_entities) or len(self.answer_entities):
-            entities = self.question_entities + self.answer_entities
-            entity = entities[0]
+        qa_item = copy.deepcopy(self)
+        if len(qa_item.question_entities) or len(qa_item.answer_entities):
+            original_entity = (qa_item.question_entities + qa_item.answer_entities)[0]
 
-            context = self.context.replace(entity.text, replacement_entity.text)
-            question = self.question.replace(entity.text, replacement_entity.text)
-            answer = self.answer.replace(entity.text, replacement_entity.text)
+            qa_item.context = qa_item.context.replace(original_entity, replacement_entity)
+            qa_item.question = qa_item.question.replace(original_entity, replacement_entity)
+            qa_item.answer = qa_item.answer.replace(original_entity, replacement_entity)
 
-            return QuestionAnswerItem(context, question, answer)
-        else:
-            return QuestionAnswerItem(self.context, self.question, self.answer)
+            qa_item.context_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.context_entities)]
+            qa_item.question_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.question_entities)]
+            qa_item.answer_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.answer_entities)]
+
+        return qa_item
 
     def calculate_f1(self):
         pred_tokens = normalize_text(self.prediction).split()
@@ -206,15 +211,13 @@ class QuestionAnswerDataset(Dataset):
             return None
 
         if "demographics" in self.entity_augmentation:
-            entity_text = self.entity_augmentation.split("_")[-1]
-            entities_dataframe = self.entities_dataframe.entity.filter(dataset="demographics")
-            replacement_entity = entities_dataframe.entity.entities[entity_text]
+            replacement_entity = self.entity_augmentation.split("_")[-1]
             return replacement_entity
 
         raise Exception("Unlisted entity augmentation")
 
     @abstractmethod
-    def collate_fn(self, batch: List[QuestionAnswerItem]) -> dict:
+    def collate_fn(self, batch: "List[QuestionAnswerItem]") -> dict:
         '''
         Coalesces and formats list of question-answer items for model prediction
 
@@ -226,16 +229,19 @@ class QuestionAnswerDataset(Dataset):
         raise NotImplementedError
 
     def calculate_accuracy(self):
+        from functools import reduce
         accuracy = reduce(lambda accuracy, item: accuracy + item.calculate_accuracy(), self.qa_items, 0)
         accuracy /= len(self.qa_items)
         return accuracy
 
     def calculate_f1(self):
+        from functools import reduce
         f1 = reduce(lambda f1, item: f1 + item.calculate_f1(), self.qa_items, 0)
         f1 /= len(self.qa_items)
         return f1
 
     def calculate_perplexities(self):
+        from functools import reduce
         prompt_perplexity = reduce(lambda prompt_perplexity, item: prompt_perplexity + item.prompt_perplexity, self.qa_items, 0)
         prompt_perplexity /= len(self.qa_items)
 
@@ -253,18 +259,17 @@ class QuestionAnswerDataModule(LightningDataModule):
     model_name: str
     batch_size: int
     data_directory: str
-    entities_metadata_fpath: str
     num_demonstrations: int = -1
     max_demonstrations_token_length: int = 400
-    demonstration_indices: List[int] = None
+    demonstration_indices: "List[int]" = None
     num_workers: int = 0
     prompt_augmentation: str = None
     entity_augmentation: str = None
 
     def __post_init__(self):
         super().__init__()
-        self.entities_dataframe = pd.read_csv(self.entities_metadata_fpath)
         self.datasets = {}
+        self.tokenizer = self.initialize_tokenizer()
 
     @abstractmethod
     def setup(self, stage: str = None):
@@ -275,7 +280,7 @@ class QuestionAnswerDataModule(LightningDataModule):
         raise NotImplementedError
 
     def train_dataloader(self):
-        if isinstance(self.datasets["train"], List):
+        if isinstance(self.datasets["train"], list):
             dataloaders = [
                 DataLoader(
                     dataset,
@@ -301,7 +306,7 @@ class QuestionAnswerDataModule(LightningDataModule):
             return dataloader
 
     def val_dataloader(self):
-        if isinstance(self.datasets["validation"], List):
+        if isinstance(self.datasets["validation"], list):
             dataloaders = [
                 DataLoader(
                     dataset,
@@ -327,7 +332,7 @@ class QuestionAnswerDataModule(LightningDataModule):
             return dataloader
 
     def test_dataloader(self):
-        if isinstance(self.datasets["test"], List):
+        if isinstance(self.datasets["test"], list):
             dataloaders = [
                 DataLoader(
                     dataset,
@@ -351,3 +356,34 @@ class QuestionAnswerDataModule(LightningDataModule):
                 collate_fn=self.datasets["test"].collate_fn
             )
             return dataloader
+
+    def initialize_tokenizer(self):
+        from transformers import AutoTokenizer
+
+        if "flan-t5" in self.model_name:
+            tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        elif "gpt" in self.model_name:
+            tokenizer = AutoTokenizer.from_pretrained(self.model_name, padding_side="left")
+            tokenizer.pad_token = tokenizer.eos_token
+            tokenizer.pad_token_id = tokenizer.eos_token_id
+
+        return tokenizer
+
+    def _load_pickle(self, fpath):
+        import os
+        import pickle
+
+        root, _ = os.path.splitext(fpath)
+        pickle_fpath = root + ".pkl"
+        pickle_file = open(pickle_fpath, "rb")
+        qa_items = pickle.load(pickle_file)
+        return qa_items
+
+    def _save_pickle(self, qa_items, fpath):
+        import os
+        import pickle
+
+        root, _ = os.path.splitext(fpath)
+        pickle_fpath = root + ".pkl"
+        pickle_file = open(pickle_fpath, "wb")
+        qa_items = pickle.dump(qa_items, pickle_file)

@@ -1,4 +1,6 @@
 .ipynb_checkpoints
 *.ipynb
+*.pkl
 entities_venv
 __pycache__
+wandb
