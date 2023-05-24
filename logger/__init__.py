@@ -4,7 +4,7 @@ from datetime import datetime
 from pytorch_lightning.callbacks import Callback
 import wandb
 
-PROJECT_NAME = "Entities In Context"
+PROJECT_NAME = "entities-in-context"
 
 
 def timestamp():

@@ -45,7 +45,7 @@ class GSMLogger(QuestionAnswerLogger):
 
         data_table = wandb.Table(
             data=[item.logging() for item in qa_items[:NUM_SAMPLES]],
-            columns=["question", "answer", "predictions", "numeric_answer", "numeric_prediction"]
+            columns=["context", "question", "answer", "prediction", "numeric_answer", "numeric_prediction"]
         )
 
         wandb.log({"validation/accuracy": accuracy})

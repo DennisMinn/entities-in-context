@@ -9,13 +9,15 @@ from dataclasses import dataclass, field
 import copy
 import random
 
-from data_modules.constants import DEMONSTRATIONS, QUERY, BOTH, CONTEXT, QUESTION, ANSWER, NEXT_LINE, NUM_OF_DEMONSTRATIONS_TRIES
+from data_modules.constants import DEMONSTRATIONS, QUERY, BOTH, NUM_OF_DEMONSTRATIONS_TRIES
 
 
 if TYPE_CHECKING:
     from typing import List
     from pandas import DataFrame
     from transformers import PreTrainedTokenizerFast
+
+DEMONSTRATION_DELIMITER = "\n###\n"
 
 
 # These functions are directly taken from:
@@ -103,29 +105,39 @@ class QuestionAnswerItem():
             raise Exception("include_answer = True and include_prediciton = True")
 
         if include_answer:
-            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.answer
+            query = f"context: {self.context}\nquestion: {self.question}\nanswer: {self.answer}"
         elif include_prediction:
-            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER + self.prediction
+            query = f"context: {self.context}\nquestion: {self.question}\nanswer: {self.prediction}"
         else:
-            query = CONTEXT + self.context + NEXT_LINE + QUESTION + self.question + NEXT_LINE + ANSWER
+            query = f"context: {self.context}\nquestion: {self.question}\nanswer:"
 
         if demonstrations:
-            return demonstrations + NEXT_LINE + query
+            return demonstrations + DEMONSTRATION_DELIMITER + query
         else:
             return query
 
     def replace_entity(self, replacement_entity):
         qa_item = copy.deepcopy(self)
-        if len(qa_item.question_entities) or len(qa_item.answer_entities):
-            original_entity = (qa_item.question_entities + qa_item.answer_entities)[0]
+        if (
+            not len(qa_item.context_entities) and
+            not len(qa_item.question_entities) and
+            not len(qa_item.answer_entities)
+        ):
+            return qa_item
 
-            qa_item.context = qa_item.context.replace(original_entity, replacement_entity)
-            qa_item.question = qa_item.question.replace(original_entity, replacement_entity)
-            qa_item.answer = qa_item.answer.replace(original_entity, replacement_entity)
+        original_entity = (
+            qa_item.question_entities +
+            qa_item.answer_entities +
+            qa_item.context_entities
+        )[0]
 
-            qa_item.context_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.context_entities)]
-            qa_item.question_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.question_entities)]
-            qa_item.answer_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.answer_entities)]
+        qa_item.context = qa_item.context.replace(original_entity, replacement_entity)
+        qa_item.question = qa_item.question.replace(original_entity, replacement_entity)
+        qa_item.answer = qa_item.answer.replace(original_entity, replacement_entity)
+
+        qa_item.context_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.context_entities)]
+        qa_item.question_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.question_entities)]
+        qa_item.answer_entities = [*map(lambda entity: entity.replace(original_entity, replacement_entity), qa_item.answer_entities)]
 
         return qa_item
 
@@ -153,6 +165,15 @@ class QuestionAnswerItem():
 
     def logging(self):
         return [self.context, self.question, self.answer, self.prediction]
+
+    @staticmethod
+    def separate_last_sentence(text):
+        sentences = text.split(".")
+        sentences = [sentence.strip() for sentence in sentences]
+
+        context = ". ".join(sentences[:-1]) + "."
+        question = sentences[-1]
+        return context, question
 
 
 @dataclass
@@ -192,13 +213,13 @@ class QuestionAnswerDataset(Dataset):
             k = self.num_demonstrations if self.num_demonstrations != -1 else len(self.demonstration_indices)
             demonstration_indices = self.demonstration_indices[:k]
             demonstrations = [qa_items[index] for index in demonstration_indices]
-            demonstrations = "\n".join([item.format(include_answer=True) for item in demonstrations])
+            demonstrations = DEMONSTRATION_DELIMITER.join([item.format(include_answer=True) for item in demonstrations])
             return demonstrations
 
         # Initialize by randomly sampling dataset
         for _ in range(NUM_OF_DEMONSTRATIONS_TRIES):
             demonstrations = random.sample(qa_items, self.num_demonstrations)
-            demonstrations = "\n".join([item.format(include_answer=True) for item in demonstrations])
+            demonstrations = DEMONSTRATION_DELIMITER.join([item.format(include_answer=True) for item in demonstrations])
 
             num_tokens = len(self.tokenize.encode(demonstrations))
             if num_tokens <= self.max_demonstrations_token_length:

@@ -4,7 +4,6 @@ import re
 from functools import reduce
 import json
 from data_modules import QuestionAnswerItem, QuestionAnswerDataset, QuestionAnswerDataModule
-from data_modules.constants import QUESTION, NEXT_LINE, ANSWER
 
 if TYPE_CHECKING:
     from typing import List, Union
@@ -68,31 +67,22 @@ class GSMItem(QuestionAnswerItem):
         prediction = self.get_prediction()
         return answer == prediction
 
-    def format(self,
-               demonstrations: str = "",
-               include_answer: bool = False,
-               include_prediction: bool = False) -> str:
-
-        if include_answer:
-            query = QUESTION + self.question + NEXT_LINE + ANSWER + self.answer
-        elif include_prediction:
-            query = QUESTION + self.question + NEXT_LINE + ANSWER + self.prediction
-        else:
-            query = QUESTION + self.question + NEXT_LINE + ANSWER
-
-        if demonstrations:
-            return demonstrations + NEXT_LINE + query
-        else:
-            return query
-
     def logging(self):
         return [
+            self.context,
             self.question,
             self.answer,
             self.prediction,
             self.get_answer(),
             self.get_prediction()
         ]
+
+    @staticmethod
+    def clean_text(text):
+        text = re.sub(r"<<.*?>>", " ", text)
+        text = re.sub(r"\s+", " ", text)
+        text = re.sub(r"(\$) (\d+)", r"\1\2", text)
+        return text
 
 
 class GSMDataset(QuestionAnswerDataset):
@@ -152,19 +142,20 @@ class GSMDataModule(QuestionAnswerDataModule):
         for line in tqdm(lines, desc=f"Annotating {fpath}"):
             question, answer = json.loads(line).values()
 
-            question = re.sub(r"<<.*?>>", " ", question)
-            question = re.sub(r"\s+", " ", question)
-            answer = re.sub(r"<<.*?>>", " ", answer)
-            answer = re.sub(r"\s+", " ", answer)
+            question = GSMItem.clean_text(question)
+            answer = GSMItem.clean_text(answer)
 
+            context, question = QuestionAnswerItem.separate_last_sentence(question)
+
+            context_entities = list(model.annotate_entities(context))
             question_entities = list(model.annotate_entities(question))
             answer_entities = list(model.annotate_entities(answer))
 
             GSM_item = GSMItem(
-                context="",
+                context=context,
                 question=question,
                 answer=answer,
-                context_entities=[],
+                context_entities=context_entities,
                 question_entities=question_entities,
                 answer_entities=answer_entities
             )
