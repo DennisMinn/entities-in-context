@@ -1,7 +1,29 @@
-import wandb from logger import QuestionAnswerLogger NUM_SAMPLES = 100 class bAbILogger(QuestionAnswerLogger): def __init__(self, **kwargs): super().__init__(**kwargs) def setup(self, trainer, pl_module, stage): num_tasks = len(trainer.datamodule.tasks) self.qa_items = { "train": [[] for _ in range(num_tasks)], "validation": [[] for _ in range(num_tasks)], "test": [[] for _ in range(num_tasks)], } def on_validation_batch_end(self, trainer, pl_module, outputs, batch, batch_index,
+import wandb
+from logger import QuestionAnswerLogger
+
+NUM_SAMPLES = 100
+
+
+class bAbILogger(QuestionAnswerLogger):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def setup(self, trainer, pl_module, stage):
+        num_tasks = len(trainer.datamodule.tasks)
+        self.qa_items = {
+            "train": [[] for _ in range(num_tasks)],
+            "validation": [[] for _ in range(num_tasks)],
+            "test": [[] for _ in range(num_tasks)]
+        }
+
+    def on_validation_batch_end(self,
+                                trainer,
+                                pl_module,
+                                outputs,
+                                batch,
+                                batch_index,
                                 dataset_index=0):
 
-        print(dataset_index)
         self.qa_items["validation"][dataset_index] += outputs
 
     def on_validation_end(self, trainer, pl_module):
