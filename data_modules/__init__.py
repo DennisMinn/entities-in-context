@@ -274,6 +274,17 @@ class QuestionAnswerDataset(Dataset):
 
         return prompt_perplexity, answer_perplexity, prediction_perplexity
 
+    def export(self):
+        data = []
+        for item in self:
+            prompt = item.format(self.demonstrations)
+            answer = item.answer
+            entity = item.question_entities + item.answer_entities + item.context_entities
+            entity = entity[0] if len(entity) else None
+            data.append({"prompt": prompt, "answer": answer, "entity": entity})
+
+        return data
+
 
 @dataclass
 class QuestionAnswerDataModule(LightningDataModule):
