@@ -26,6 +26,7 @@ class GSMLogger(QuestionAnswerLogger):
         self.qa_items["validation"] += outputs
 
     def on_validation_end(self, trainer, pl_module):
+        import os
         qa_items = self.qa_items["validation"]
         dataset = trainer.datamodule.datasets["validation"]
 
@@ -35,7 +36,7 @@ class GSMLogger(QuestionAnswerLogger):
         accuracy = dataset.calculate_accuracy()
         f1 = dataset.calculate_f1()
 
-        prompt_ppl, answer_ppl, prediction_ppl = dataset.calculate_perplexities()
+        perplexity = dataset.calculate_perplexity()
         valid_predictions = dataset.calculate_valid_predictions()
 
         demonstrations = wandb.Table(
@@ -50,9 +51,7 @@ class GSMLogger(QuestionAnswerLogger):
 
         wandb.log({"validation/accuracy": accuracy})
         wandb.log({"validation/f1": f1})
-        wandb.log({"validation/prompt_perplexity": prompt_ppl})
-        wandb.log({"validation/prediction_perplexity": prediction_ppl})
-        wandb.log({"validation/answer_perplexity": answer_ppl})
+        wandb.log({"validation/perplexity": perplexity})
         wandb.log({"validation/valid_predictions": valid_predictions})
         wandb.log({"validation/demonstrations": demonstrations})
         wandb.log({"validation/data": data_table})
@@ -60,7 +59,10 @@ class GSMLogger(QuestionAnswerLogger):
         self.run["validation"] = {
             "accuracy": accuracy,
             "f1": f1,
-            "prompt_perplexity": prompt_ppl,
-            "prediction_perplexity": prediction_ppl,
-            "target_perplexity": answer_ppl,
+            "perplexity": perplexity,
         }
+
+        directory, _ = os.path.split(self.output_fpath)
+        file_name = f"{self.run['name']}_validation.jsonl"
+        fpath = os.path.join(directory, file_name)
+        dataset.export(fpath)

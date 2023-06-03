@@ -27,6 +27,7 @@ class bAbILogger(QuestionAnswerLogger):
         self.qa_items["validation"][dataset_index] += outputs
 
     def on_validation_end(self, trainer, pl_module):
+        import os
         for dataset_index, qa_items in enumerate(self.qa_items["validation"]):
             dataset = trainer.datamodule.datasets["validation"][dataset_index]
             task = dataset.task
@@ -37,7 +38,7 @@ class bAbILogger(QuestionAnswerLogger):
             accuracy = dataset.calculate_accuracy()
             f1 = dataset.calculate_f1()
 
-            prompt_ppl, answer_ppl, prediction_ppl = dataset.calculate_perplexities()
+            perplexity = dataset.calculate_perplexity()
 
             demonstrations = wandb.Table(
                 data=[[trainer.datamodule.datasets["train"][dataset_index].demonstrations]],
@@ -51,16 +52,17 @@ class bAbILogger(QuestionAnswerLogger):
 
             wandb.log({f"validation/task{task}/accuracy": accuracy})
             wandb.log({f"validation/task{task}/f1": f1})
-            wandb.log({f"validation/task{task}/prompt_perplexity": prompt_ppl})
-            wandb.log({f"validation/task{task}/prediction_perplexity": prediction_ppl})
-            wandb.log({f"validation/task{task}/answer_perplexity": answer_ppl})
+            wandb.log({f"validation/task{task}/perplexity": perplexity})
             wandb.log({f"validation/task{task}/demonstrations": demonstrations})
             wandb.log({f"validation/task{task}/data": data_table})
 
             self.run[f"task{task}"] = {
                 "accuracy": accuracy,
                 "f1": f1,
-                "prompt_perplexity": prompt_ppl,
-                "prediction_perplexity": prediction_ppl,
-                "target_perplexity": answer_ppl,
+                "perplexity": perplexity,
             }
+
+            directory, _ = os.path.split(self.output_fpath)
+            file_name = f"{self.run['name']}_task{task}_validation.jsonl"
+            fpath = os.path.join(directory, file_name)
+            dataset.export(fpath)

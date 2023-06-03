@@ -76,9 +76,7 @@ class QuestionAnswerItem():
     context_entities: "List[str]" = None
     question_entities: "List[str]" = None
     answer_entities: "List[str]" = None
-    prompt_perplexity: float = field(default=0.0, repr=False)
-    answer_perplexity: float = field(default=0.0, repr=False)
-    prediction_perplexity: float = field(default=0.0, repr=False)
+    prompt_perplexity: "float" = field(default=None, repr=False)
 
     def __post_init__(self):
         self.context = self.context.strip()
@@ -261,29 +259,25 @@ class QuestionAnswerDataset(Dataset):
         f1 /= len(self.qa_items)
         return f1
 
-    def calculate_perplexities(self):
+    def calculate_perplexity(self):
         from functools import reduce
-        prompt_perplexity = reduce(lambda prompt_perplexity, item: prompt_perplexity + item.prompt_perplexity, self.qa_items, 0)
-        prompt_perplexity /= len(self.qa_items)
+        perplexity = reduce(lambda perplexity, item: perplexity + item.prompt_perplexity, self.qa_items, 0)
+        perplexity /= len(self.qa_items)
 
-        answer_perplexity = reduce(lambda answer_perplexity, item: answer_perplexity + item.answer_perplexity, self.qa_items, 0)
-        answer_perplexity /= len(self.qa_items)
+        return perplexity
 
-        prediction_perplexity = reduce(lambda prompt_perplexity, item: prompt_perplexity + item.prediction_perplexity, self.qa_items, 0)
-        prediction_perplexity /= len(self.qa_items)
+    def export(self, fpath):
+        import json
+        with open(fpath, "w") as outfile:
+            for item in self:
+                json_line = json.dumps({
+                    "prompt": item.format(self.demonstrations),
+                    "answer": item.answer,
+                    "prediction": item.prediction,
+                    "prompt_perplexity": item.prompt_perplexity
+                })
 
-        return prompt_perplexity, answer_perplexity, prediction_perplexity
-
-    def export(self):
-        data = []
-        for item in self:
-            prompt = item.format(self.demonstrations)
-            answer = item.answer
-            entity = item.question_entities + item.answer_entities + item.context_entities
-            entity = entity[0] if len(entity) else None
-            data.append({"prompt": prompt, "answer": answer, "entity": entity})
-
-        return data
+                outfile.write(json_line + "\n")
 
 
 @dataclass

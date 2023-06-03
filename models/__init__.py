@@ -62,20 +62,24 @@ class QuestionAnswerModel(LightningModule):
             self.model = AutoModelForCausalLM.from_pretrained(self.model_name)
         self.max_new_tokens = max_new_tokens
 
-    def forward(self, inputs: "BatchEncoding") -> "torch.Tensor":
+    def forward(self, batch_encodings: "BatchEncoding") -> "torch.Tensor":
         """
-        Generates tokens for question answer
+        Generates tokens for question answer and perplexity associated with
+        prompt
 
         Args:
-            inputs (BatchEncoding):
+            batch_encodings (BatchEncoding):
                 Output from transformer tokenizer
         """
         # generate tokens
-        gen_tokens = self.model.generate(**inputs,
-                                         max_new_tokens=self.max_new_tokens,
-                                         early_stopping=True)
+        predictions = self.model.generate(**batch_encodings,
+                                          max_new_tokens=self.max_new_tokens,
+                                          early_stopping=True)
 
-        return gen_tokens
+        perplexities = self.calculate_perplexity(batch_encodings,
+                                                 reduction="unnormalized")
+
+        return predictions, perplexities
 
     def validation_step(self,
                         batch: "dict[str, Union[List[bAbIItem], BatchEncoding]]",
@@ -90,63 +94,23 @@ class QuestionAnswerModel(LightningModule):
             batch_index (int):
                 Index of subset
         """
-        # generate tokens
-        gen_tokens = self.forward(batch["batch_encoding"])
-
-        # decode tokens
-        gen_text = self.tokenizer.batch_decode(gen_tokens, skip_special_tokens=True)
+        predictions, perplexities = self.forward(batch["batch_encoding"])
+        predictions = self.tokenizer.batch_decode(predictions, skip_special_tokens=True)
 
         # update bAbIItem prediction attribute
         qa_items = batch["batch"]
-        demonstrations = batch["demonstrations"]
         for idx, item in enumerate(qa_items):
-            item.prediction = gen_text[idx]
-
-        prompts_ppl, predictions_ppl, answers_ppl = self.calculate_perplexity(demonstrations, qa_items)
-        for idx, item in enumerate(qa_items):
-            item.prompt_perplexity = prompts_ppl[idx].item()
-            item.prediction_perplexity = predictions_ppl[idx].item()
-            item.answer_perplexity = answers_ppl[idx].item()
+            item.prediction = predictions[idx]
+            item.prompt_perplexity = perplexities[idx]
 
         return qa_items
 
-    def calculate_perplexity(self, demonstrations, qa_items):
-        batch_size = len(qa_items)
-        prompts_start, prompts_end = 0 * batch_size, 1 * batch_size,
-        predictions_start, predictions_end = 1 * batch_size, 2 * batch_size
-        answers_start, answers_end = 2 * batch_size, 3 * batch_size
-
-        prompts = [item.format(demonstrations) for item in qa_items]
-        predictions = [item.format(demonstrations, include_prediction=True) for item in qa_items]
-        answers = [item.format(demonstrations, include_answer=True) for item in qa_items]
-
-        batch = prompts + predictions + answers
-        batch_encodings = self.tokenizer(batch,
-                                         padding="longest",
-                                         max_length=self.tokenizer.model_max_length,
-                                         truncation=True,
-                                         return_tensors="pt")
-
-        batch_encodings["input_ids"] = batch_encodings["input_ids"].to(self.device)
-        batch_encodings["attention_mask"] = batch_encodings["attention_mask"].to(self.device)
-
-        with torch.no_grad():
-            self.model = self.model.to(self.device)
-            logits = self.model(**batch_encodings, labels=batch_encodings["input_ids"]).logits
-            logits_flatten = logits.reshape(-1, logits.shape[-1])
+    def calculate_perplexity(self, batch_encodings, reduction="unnormalized"):
+        self.model = self.model.to(self.device)
+        logits = self.model(**batch_encodings, labels=batch_encodings["input_ids"]).logits
+        logits_flatten = logits.reshape(-1, logits.shape[-1])
 
         target_ids = batch_encodings["input_ids"].clone()
-        prediction_ids = target_ids[predictions_start: predictions_end]
-        answer_ids = target_ids[answers_start: answers_end]
-
-        if "flan-t5" in self.model_name:
-            self._mask_target_ids(prompts, prediction_ids)
-            self._mask_target_ids(prompts, answer_ids)
-
-        elif "gpt" in self.model_name:
-            self._mask_target_ids([item.prediction for item in qa_items], prediction_ids, inverse=True)
-            self._mask_target_ids([item.answer for item in qa_items], answer_ids, inverse=True)
-
         target_ids_flatten = target_ids.reshape(-1)
 
         negative_log_likelihood_loss = F.cross_entropy(
@@ -157,28 +121,8 @@ class QuestionAnswerModel(LightningModule):
         )
 
         negative_log_likelihood_loss = negative_log_likelihood_loss.reshape(target_ids.shape)
-        perplexities = torch.exp(negative_log_likelihood_loss.mean(1))
-
-        prompts_ppl = perplexities[prompts_start: prompts_end]
-        predictions_ppl = perplexities[predictions_start: predictions_end]
-        answers_ppl = perplexities[answers_start: answers_end]
-
-        return prompts_ppl, predictions_ppl, answers_ppl
-
-    def _mask_target_ids(self, text, target_ids, inverse=False):
-        sequence_length = target_ids.shape[1]
-        ignore_index = self.tokenizer.pad_token_id
-        attention_mask = self.tokenizer(text,
-                                        padding="max_length",
-                                        max_length=sequence_length,
-                                        add_special_tokens=False,
-                                        truncation=True,
-                                        return_tensors="pt")["attention_mask"]
-        attention_mask = attention_mask.to(self.device)
-
-        # TODO target_ids.masked_fill(~attention_mask, ignore_index) doesn't work
-        if not inverse:
-            target_ids.masked_fill_(attention_mask == 1, ignore_index)
+        negative_log_likelihood_loss = negative_log_likelihood_loss.sum(1)
+        if reduction == "unnormalized":
+            return negative_log_likelihood_loss.tolist()
         else:
-            target_ids.masked_fill_(attention_mask == 0, ignore_index)
-        return target_ids
+            pass
