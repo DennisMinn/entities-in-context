@@ -1,4 +1,3 @@
-import os
 import json
 from datetime import datetime
 from pytorch_lightning.callbacks import Callback
@@ -40,15 +39,7 @@ class QuestionAnswerLogger(Callback):
         self.run["id"] = wandb.run.id
 
     def teardown(self, trainer, pl_module, stage):
-        if not os.path.isfile(self.output_fpath):
-            with open(self.output_fpath, "x") as f:
-                run_list = list([])
-        else:
-            with open(self.output_fpath, "r") as f:
-                run_list = list(json.load(f))
-        run_list.append(self.run)
-
-        with open(self.output_fpath, "w") as f:
-            json.dump(run_list, f, indent=2, separators=(',', ': '))
+        with open(self.output_fpath, "a") as f:
+            f.write(json.dumps(self.run) + "\n")
 
         wandb.finish()
