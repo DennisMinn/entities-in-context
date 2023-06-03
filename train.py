@@ -2,14 +2,13 @@ import ast
 import pytorch_lightning as pl
 from models import QuestionAnswerModel
 import argparse
-import os
+# import os
 
 
 if __name__ == "__main__":
-    os.system("wandb offline")
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file_name", help="file name")
-    parser.add_argument("--enable-wandb", type=bool, default=True)
+    parser.add_argument("--enable_wandb", type=bool, default=True)
 
     parser.add_argument("--dataset_name", type=str, required=True)
     parser.add_argument("--model_name", type=str, required=True)
