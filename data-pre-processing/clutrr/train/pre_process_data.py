@@ -11,12 +11,12 @@ import json
 
 # Read train and valid data
 train_data = []
-with open('../../data/clutrr/train.jsonl') as f:
+with open('../../../data/clutrr/train.jsonl') as f:
     for line in f:
         train_data.append(json.loads(line))
 
 valid_data = []
-with open('../../data/clutrr/valid.jsonl') as f:
+with open('../../../data/clutrr/valid.jsonl') as f:
     for line in f:
         valid_data.append(json.loads(line))
 
@@ -1032,7 +1032,7 @@ valid_data_gender = {'Mima': 'female',
 
 # Get the genders of names in the demographics dataset
 import pandas as pd
-df = pd.read_csv("../../data/demographic_updated.csv")
+df = pd.read_csv("../../../data/demographic_updated.csv")
 
 def get_gender_demographics(name):
     gender_df = df[df['firstname'] == name]
@@ -1151,21 +1151,21 @@ ALLOWED_DEMONSTRATIONS_LENGTH = 350
 ALLOWED_TOTAL_LENGTH = 512
 # Generates the baseline dataset without entity replacement
 print("Generating datasets 1/4")
-generate_validation_dataset(filename="../../data/clutrr/pre-processed/cluttr_val_baseline.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, baseline=True)
+generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_baseline.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, baseline=True)
 
 # Generates the dataset with entity replacement only in demonstrations
 print("Generating datasets 2/4")
 for entity in selected_names:
-    generate_validation_dataset(filename="../../data/clutrr/pre-processed/cluttr_val_aug_demonstrations.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_demonstrations_entity=True, baseline=False)
+    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_demonstrations.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_demonstrations_entity=True, baseline=False)
 
 # Generates the dataset with entity replacement only in queries
 print("Generating datasets 3/4")
 for entity in selected_names:
-    generate_validation_dataset(filename="../../data/clutrr/pre-processed/cluttr_val_aug_query.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_query_entity=True, baseline=False)
+    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_query.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_query_entity=True, baseline=False)
 
 # Generates the dataset with entity replacement in both demonstrations and queries
 print("Generating datasets 4/4")
 for entity in selected_names:
-    generate_validation_dataset(filename="../../data/clutrr/pre-processed/cluttr_val_aug_query_and_demonstrations.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_demonstrations_entity=True, replace_query_entity=True, baseline=False)
+    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_query_and_demonstrations.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_demonstrations_entity=True, replace_query_entity=True, baseline=False)
 
 print("Generated pre-processed data!")
