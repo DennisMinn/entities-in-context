@@ -1,0 +1,2301 @@
+prompt,actual_ans,gen_ans,prompt_ppl,accuracy
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John journeyed to the office. John and Sandra went to the hallway.
+question: Where is Mary?
+answer:",office,office,3.0679268836975098,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John journeyed to the office. John and Sandra went to the hallway. Daniel and Mary journeyed to the bedroom. Mary and Sandra moved to the bathroom.
+question: Where is Daniel?
+answer:",bedroom,bedroom,3.1901843547821045,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John journeyed to the office. John and Sandra went to the hallway. Daniel and Mary journeyed to the bedroom. Mary and Sandra moved to the bathroom. Mary and John travelled to the office. Sandra and Mary went back to the bedroom.
+question: Where is Mary?
+answer:",bedroom,bedroom,3.582404613494873,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John journeyed to the office. John and Sandra went to the hallway. Daniel and Mary journeyed to the bedroom. Mary and Sandra moved to the bathroom. Mary and John travelled to the office. Sandra and Mary went back to the bedroom. Daniel and Mary went to the hallway. John and Sandra travelled to the garden.
+question: Where is Daniel?
+answer:",hallway,hallway,3.2538084983825684,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John journeyed to the office. John and Sandra went to the hallway. Daniel and Mary journeyed to the bedroom. Mary and Sandra moved to the bathroom. Mary and John travelled to the office. Sandra and Mary went back to the bedroom. Daniel and Mary went to the hallway. John and Sandra travelled to the garden. Sandra and John moved to the office. John and Mary went back to the bedroom.
+question: Where is John?
+answer:",bedroom,bedroom,3.4520046710968018,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra went back to the kitchen. Daniel and John went back to the hallway.
+question: Where is Daniel?
+answer:",hallway,hallway,2.966594696044922,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra went back to the kitchen. Daniel and John went back to the hallway. Daniel and John moved to the bathroom. Sandra and Mary travelled to the office.
+question: Where is Daniel?
+answer:",bathroom,bathroom,3.165679693222046,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra went back to the kitchen. Daniel and John went back to the hallway. Daniel and John moved to the bathroom. Sandra and Mary travelled to the office. John and Mary travelled to the hallway. Sandra and Mary journeyed to the garden.
+question: Where is Mary?
+answer:",garden,garden,3.2932183742523193,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra went back to the kitchen. Daniel and John went back to the hallway. Daniel and John moved to the bathroom. Sandra and Mary travelled to the office. John and Mary travelled to the hallway. Sandra and Mary journeyed to the garden. Daniel and Sandra went back to the bedroom. Daniel and John went back to the kitchen.
+question: Where is Mary?
+answer:",garden,garden,3.277665376663208,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra went back to the kitchen. Daniel and John went back to the hallway. Daniel and John moved to the bathroom. Sandra and Mary travelled to the office. John and Mary travelled to the hallway. Sandra and Mary journeyed to the garden. Daniel and Sandra went back to the bedroom. Daniel and John went back to the kitchen. Sandra and John journeyed to the hallway. John and Sandra journeyed to the bathroom.
+question: Where is John?
+answer:",bathroom,bathroom,3.3869988918304443,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the hallway. Mary and Sandra travelled to the hallway.
+question: Where is Daniel?
+answer:",hallway,hallway,2.613896369934082,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the hallway. Mary and Sandra travelled to the hallway. Daniel and John moved to the kitchen. John and Daniel travelled to the garden.
+question: Where is John?
+answer:",garden,garden,3.0621144771575928,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the hallway. Mary and Sandra travelled to the hallway. Daniel and John moved to the kitchen. John and Daniel travelled to the garden. Sandra and John moved to the bedroom. Sandra and Daniel went back to the kitchen.
+question: Where is Sandra?
+answer:",kitchen,kitchen,3.107961893081665,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the hallway. Mary and Sandra travelled to the hallway. Daniel and John moved to the kitchen. John and Daniel travelled to the garden. Sandra and John moved to the bedroom. Sandra and Daniel went back to the kitchen. Sandra and John journeyed to the hallway. John and Daniel went back to the bedroom.
+question: Where is Daniel?
+answer:",bedroom,bedroom,2.8680078983306885,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the hallway. Mary and Sandra travelled to the hallway. Daniel and John moved to the kitchen. John and Daniel travelled to the garden. Sandra and John moved to the bedroom. Sandra and Daniel went back to the kitchen. Sandra and John journeyed to the hallway. John and Daniel went back to the bedroom. John and Sandra went back to the kitchen. Daniel and Sandra travelled to the bathroom.
+question: Where is Daniel?
+answer:",bathroom,bathroom,2.7501864433288574,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and Sandra journeyed to the kitchen. Daniel and Mary went to the hallway.
+question: Where is Daniel?
+answer:",hallway,hallway,2.739889144897461,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and Sandra journeyed to the kitchen. Daniel and Mary went to the hallway. John and Mary went back to the kitchen. Mary and Daniel went to the bedroom.
+question: Where is Daniel?
+answer:",bedroom,bedroom,3.023435354232788,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and Sandra journeyed to the kitchen. Daniel and Mary went to the hallway. John and Mary went back to the kitchen. Mary and Daniel went to the bedroom. Sandra and Daniel went to the garden. Daniel and John went to the bathroom.
+question: Where is Daniel?
+answer:",bathroom,bathroom,3.1967034339904785,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and Sandra journeyed to the kitchen. Daniel and Mary went to the hallway. John and Mary went back to the kitchen. Mary and Daniel went to the bedroom. Sandra and Daniel went to the garden. Daniel and John went to the bathroom. Daniel and Sandra moved to the kitchen. John and Sandra travelled to the garden.
+question: Where is John?
+answer:",garden,garden,3.378607749938965,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and Sandra journeyed to the kitchen. Daniel and Mary went to the hallway. John and Mary went back to the kitchen. Mary and Daniel went to the bedroom. Sandra and Daniel went to the garden. Daniel and John went to the bathroom. Daniel and Sandra moved to the kitchen. John and Sandra travelled to the garden. John and Mary moved to the kitchen. Sandra and Daniel went to the office.
+question: Where is Daniel?
+answer:",office,office,2.8565759658813477,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel journeyed to the bedroom. Mary and John moved to the bathroom.
+question: Where is John?
+answer:",bathroom,bathroom,3.186962604522705,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel journeyed to the bedroom. Mary and John moved to the bathroom. John and Sandra moved to the office. Daniel and Sandra travelled to the hallway.
+question: Where is John?
+answer:",office,office,3.5067341327667236,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel journeyed to the bedroom. Mary and John moved to the bathroom. John and Sandra moved to the office. Daniel and Sandra travelled to the hallway. Sandra and Mary went to the bedroom. Sandra and Mary went back to the office.
+question: Where is Mary?
+answer:",office,office,3.5227222442626953,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel journeyed to the bedroom. Mary and John moved to the bathroom. John and Sandra moved to the office. Daniel and Sandra travelled to the hallway. Sandra and Mary went to the bedroom. Sandra and Mary went back to the office. Mary and Sandra journeyed to the kitchen. Mary and Daniel went to the bedroom.
+question: Where is Daniel?
+answer:",bedroom,bedroom,2.988024950027466,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel journeyed to the bedroom. Mary and John moved to the bathroom. John and Sandra moved to the office. Daniel and Sandra travelled to the hallway. Sandra and Mary went to the bedroom. Sandra and Mary went back to the office. Mary and Sandra journeyed to the kitchen. Mary and Daniel went to the bedroom. Mary and Sandra moved to the garden. Sandra and Daniel journeyed to the hallway.
+question: Where is Sandra?
+answer:",hallway,hallway,2.988137722015381,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and John moved to the hallway. Daniel and John travelled to the garden.
+question: Where is Daniel?
+answer:",garden,garden,2.5148813724517822,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and John moved to the hallway. Daniel and John travelled to the garden. John and Daniel travelled to the hallway. Daniel and Mary travelled to the kitchen.
+question: Where is Daniel?
+answer:",kitchen,kitchen,2.6832358837127686,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and John moved to the hallway. Daniel and John travelled to the garden. John and Daniel travelled to the hallway. Daniel and Mary travelled to the kitchen. Sandra and John moved to the kitchen. John and Mary journeyed to the bathroom.
+question: Where is Mary?
+answer:",bathroom,bathroom,3.14231014251709,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and John moved to the hallway. Daniel and John travelled to the garden. John and Daniel travelled to the hallway. Daniel and Mary travelled to the kitchen. Sandra and John moved to the kitchen. John and Mary journeyed to the bathroom. Sandra and John went to the bedroom. John and Mary journeyed to the garden.
+question: Where is Mary?
+answer:",garden,garden,3.4604365825653076,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and John moved to the hallway. Daniel and John travelled to the garden. John and Daniel travelled to the hallway. Daniel and Mary travelled to the kitchen. Sandra and John moved to the kitchen. John and Mary journeyed to the bathroom. Sandra and John went to the bedroom. John and Mary journeyed to the garden. Daniel and Sandra moved to the hallway. Mary and John moved to the bedroom.
+question: Where is Sandra?
+answer:",hallway,hallway,2.9398033618927,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Mary travelled to the hallway. Sandra and Mary travelled to the bathroom.
+question: Where is Daniel?
+answer:",hallway,hallway,2.824986696243286,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Mary travelled to the hallway. Sandra and Mary travelled to the bathroom. John and Daniel went back to the garden. John and Sandra moved to the bedroom.
+question: Where is Daniel?
+answer:",garden,garden,2.6262383460998535,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Mary travelled to the hallway. Sandra and Mary travelled to the bathroom. John and Daniel went back to the garden. John and Sandra moved to the bedroom. Sandra and Daniel travelled to the hallway. Daniel and John went back to the garden.
+question: Where is Daniel?
+answer:",garden,garden,2.68143367767334,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Mary travelled to the hallway. Sandra and Mary travelled to the bathroom. John and Daniel went back to the garden. John and Sandra moved to the bedroom. Sandra and Daniel travelled to the hallway. Daniel and John went back to the garden. Daniel and John journeyed to the kitchen. Sandra and John went back to the garden.
+question: Where is John?
+answer:",garden,garden,2.9112517833709717,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Mary travelled to the hallway. Sandra and Mary travelled to the bathroom. John and Daniel went back to the garden. John and Sandra moved to the bedroom. Sandra and Daniel travelled to the hallway. Daniel and John went back to the garden. Daniel and John journeyed to the kitchen. Sandra and John went back to the garden. Daniel and Mary travelled to the bedroom. John and Sandra moved to the office.
+question: Where is Daniel?
+answer:",bedroom,bedroom,2.9154324531555176,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John travelled to the kitchen. Daniel and Mary moved to the bedroom.
+question: Where is Daniel?
+answer:",bedroom,bedroom,2.8021109104156494,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John travelled to the kitchen. Daniel and Mary moved to the bedroom. Sandra and Daniel went to the bathroom. John and Daniel journeyed to the garden.
+question: Where is Sandra?
+answer:",bathroom,bathroom,2.8826162815093994,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John travelled to the kitchen. Daniel and Mary moved to the bedroom. Sandra and Daniel went to the bathroom. John and Daniel journeyed to the garden. Sandra and John went back to the kitchen. John and Sandra moved to the bathroom.
+question: Where is Sandra?
+answer:",bathroom,bathroom,2.7684900760650635,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John travelled to the kitchen. Daniel and Mary moved to the bedroom. Sandra and Daniel went to the bathroom. John and Daniel journeyed to the garden. Sandra and John went back to the kitchen. John and Sandra moved to the bathroom. John and Daniel went to the hallway. Daniel and Sandra went back to the garden.
+question: Where is Sandra?
+answer:",garden,garden,2.490442991256714,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John travelled to the kitchen. Daniel and Mary moved to the bedroom. Sandra and Daniel went to the bathroom. John and Daniel journeyed to the garden. Sandra and John went back to the kitchen. John and Sandra moved to the bathroom. John and Daniel went to the hallway. Daniel and Sandra went back to the garden. Daniel and Sandra journeyed to the hallway. Mary and Sandra went to the office.
+question: Where is Daniel?
+answer:",hallway,hallway,2.709537982940674,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel moved to the garden. John and Daniel went to the bedroom.
+question: Where is Sandra?
+answer:",garden,garden,2.9091944694519043,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel moved to the garden. John and Daniel went to the bedroom. Sandra and Mary went to the hallway. Mary and Daniel journeyed to the garden.
+question: Where is Mary?
+answer:",garden,garden,3.395137310028076,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel moved to the garden. John and Daniel went to the bedroom. Sandra and Mary went to the hallway. Mary and Daniel journeyed to the garden. Sandra and Mary travelled to the bedroom. Daniel and John moved to the bathroom.
+question: Where is John?
+answer:",bathroom,bathroom,2.9360597133636475,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel moved to the garden. John and Daniel went to the bedroom. Sandra and Mary went to the hallway. Mary and Daniel journeyed to the garden. Sandra and Mary travelled to the bedroom. Daniel and John moved to the bathroom. Sandra and Mary went back to the kitchen. Sandra and John moved to the bedroom.
+question: Where is Sandra?
+answer:",bedroom,bedroom,3.001086950302124,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel moved to the garden. John and Daniel went to the bedroom. Sandra and Mary went to the hallway. Mary and Daniel journeyed to the garden. Sandra and Mary travelled to the bedroom. Daniel and John moved to the bathroom. Sandra and Mary went back to the kitchen. Sandra and John moved to the bedroom. John and Mary went back to the office. Mary and Sandra journeyed to the kitchen.
+question: Where is John?
+answer:",office,bedroom,3.3817241191864014,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Sandra moved to the office. Sandra and Mary travelled to the bedroom.
+question: Where is John?
+answer:",office,office,3.1843605041503906,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Sandra moved to the office. Sandra and Mary travelled to the bedroom. Sandra and Mary went to the hallway. John and Sandra travelled to the kitchen.
+question: Where is Sandra?
+answer:",kitchen,kitchen,3.138767719268799,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Sandra moved to the office. Sandra and Mary travelled to the bedroom. Sandra and Mary went to the hallway. John and Sandra travelled to the kitchen. John and Mary went back to the bedroom. Sandra and Mary travelled to the hallway.
+question: Where is Mary?
+answer:",hallway,hallway,3.5862600803375244,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Sandra moved to the office. Sandra and Mary travelled to the bedroom. Sandra and Mary went to the hallway. John and Sandra travelled to the kitchen. John and Mary went back to the bedroom. Sandra and Mary travelled to the hallway. Mary and John travelled to the bathroom. Sandra and Daniel travelled to the bathroom.
+question: Where is Mary?
+answer:",bathroom,hallway,3.3358044624328613,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Sandra moved to the office. Sandra and Mary travelled to the bedroom. Sandra and Mary went to the hallway. John and Sandra travelled to the kitchen. John and Mary went back to the bedroom. Sandra and Mary travelled to the hallway. Mary and John travelled to the bathroom. Sandra and Daniel travelled to the bathroom. John and Sandra travelled to the garden. John and Mary moved to the bedroom.
+question: Where is John?
+answer:",bedroom,garden,2.9425082206726074,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the office. Sandra and Mary journeyed to the hallway.
+question: Where is Mary?
+answer:",hallway,hallway,3.3755030632019043,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the office. Sandra and Mary journeyed to the hallway. Daniel and Mary moved to the office. Mary and Sandra went back to the garden.
+question: Where is Sandra?
+answer:",garden,garden,3.8182787895202637,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the office. Sandra and Mary journeyed to the hallway. Daniel and Mary moved to the office. Mary and Sandra went back to the garden. Daniel and John moved to the bathroom. Sandra and Mary moved to the office.
+question: Where is Mary?
+answer:",office,office,3.5477635860443115,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the office. Sandra and Mary journeyed to the hallway. Daniel and Mary moved to the office. Mary and Sandra went back to the garden. Daniel and John moved to the bathroom. Sandra and Mary moved to the office. John and Mary travelled to the garden. Mary and Daniel went back to the bedroom.
+question: Where is Daniel?
+answer:",bedroom,bedroom,3.108309745788574,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the office. Sandra and Mary journeyed to the hallway. Daniel and Mary moved to the office. Mary and Sandra went back to the garden. Daniel and John moved to the bathroom. Sandra and Mary moved to the office. John and Mary travelled to the garden. Mary and Daniel went back to the bedroom. Sandra and Daniel journeyed to the garden. Daniel and John went to the bathroom.
+question: Where is Daniel?
+answer:",bathroom,bathroom,2.9223814010620117,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John went back to the garden. Sandra and Mary moved to the office.
+question: Where is Sandra?
+answer:",office,office,3.1968281269073486,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John went back to the garden. Sandra and Mary moved to the office. Daniel and Mary moved to the bedroom. Sandra and Daniel travelled to the hallway.
+question: Where is Daniel?
+answer:",hallway,hallway,3.053168535232544,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John went back to the garden. Sandra and Mary moved to the office. Daniel and Mary moved to the bedroom. Sandra and Daniel travelled to the hallway. Sandra and Daniel journeyed to the bedroom. Sandra and John journeyed to the hallway.
+question: Where is Sandra?
+answer:",hallway,hallway,2.9051499366760254,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John went back to the garden. Sandra and Mary moved to the office. Daniel and Mary moved to the bedroom. Sandra and Daniel travelled to the hallway. Sandra and Daniel journeyed to the bedroom. Sandra and John journeyed to the hallway. Sandra and John went back to the office. Daniel and Sandra moved to the hallway.
+question: Where is Sandra?
+answer:",hallway,hallway,2.78383207321167,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John went back to the garden. Sandra and Mary moved to the office. Daniel and Mary moved to the bedroom. Sandra and Daniel travelled to the hallway. Sandra and Daniel journeyed to the bedroom. Sandra and John journeyed to the hallway. Sandra and John went back to the office. Daniel and Sandra moved to the hallway. Daniel and John went to the bedroom. Mary and Sandra journeyed to the office.
+question: Where is Daniel?
+answer:",bedroom,bedroom,2.963005304336548,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel went back to the bedroom. Sandra and Mary went back to the office.
+question: Where is John?
+answer:",bedroom,bedroom,3.388338088989258,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel went back to the bedroom. Sandra and Mary went back to the office. Sandra and Daniel went to the hallway. John and Mary journeyed to the hallway.
+question: Where is John?
+answer:",hallway,hallway,3.2993147373199463,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel went back to the bedroom. Sandra and Mary went back to the office. Sandra and Daniel went to the hallway. John and Mary journeyed to the hallway. Mary and John went to the garden. Sandra and Daniel travelled to the garden.
+question: Where is Daniel?
+answer:",garden,garden,2.7365899085998535,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel went back to the bedroom. Sandra and Mary went back to the office. Sandra and Daniel went to the hallway. John and Mary journeyed to the hallway. Mary and John went to the garden. Sandra and Daniel travelled to the garden. Daniel and Mary went to the hallway. Sandra and John went back to the bedroom.
+question: Where is Daniel?
+answer:",hallway,hallway,2.9680490493774414,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel went back to the bedroom. Sandra and Mary went back to the office. Sandra and Daniel went to the hallway. John and Mary journeyed to the hallway. Mary and John went to the garden. Sandra and Daniel travelled to the garden. Daniel and Mary went to the hallway. Sandra and John went back to the bedroom. Sandra and Daniel moved to the bathroom. Daniel and Sandra moved to the office.
+question: Where is Sandra?
+answer:",office,office,2.7102437019348145,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra moved to the hallway. John and Mary journeyed to the garden.
+question: Where is John?
+answer:",garden,garden,3.015455722808838,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra moved to the hallway. John and Mary journeyed to the garden. Sandra and Mary travelled to the bedroom. Mary and Sandra travelled to the office.
+question: Where is Mary?
+answer:",office,office,3.8692944049835205,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra moved to the hallway. John and Mary journeyed to the garden. Sandra and Mary travelled to the bedroom. Mary and Sandra travelled to the office. Daniel and Mary travelled to the bathroom. Sandra and Mary went to the bedroom.
+question: Where is Mary?
+answer:",bedroom,bedroom,3.741497278213501,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra moved to the hallway. John and Mary journeyed to the garden. Sandra and Mary travelled to the bedroom. Mary and Sandra travelled to the office. Daniel and Mary travelled to the bathroom. Sandra and Mary went to the bedroom. Sandra and Mary went to the garden. Sandra and Daniel went to the office.
+question: Where is Daniel?
+answer:",office,office,2.7158260345458984,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Daniel and Sandra moved to the hallway. John and Mary journeyed to the garden. Sandra and Mary travelled to the bedroom. Mary and Sandra travelled to the office. Daniel and Mary travelled to the bathroom. Sandra and Mary went to the bedroom. Sandra and Mary went to the garden. Sandra and Daniel went to the office. Daniel and Sandra travelled to the bathroom. Mary and John went back to the office.
+question: Where is John?
+answer:",office,office,3.6671273708343506,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the bedroom. Daniel and John went back to the office.
+question: Where is John?
+answer:",office,office,3.137598752975464,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the bedroom. Daniel and John went back to the office. John and Sandra journeyed to the hallway. Mary and John journeyed to the kitchen.
+question: Where is John?
+answer:",kitchen,kitchen,3.3918204307556152,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the bedroom. Daniel and John went back to the office. John and Sandra journeyed to the hallway. Mary and John journeyed to the kitchen. Daniel and Sandra travelled to the garden. John and Daniel journeyed to the hallway.
+question: Where is John?
+answer:",hallway,hallway,3.0966668128967285,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the bedroom. Daniel and John went back to the office. John and Sandra journeyed to the hallway. Mary and John journeyed to the kitchen. Daniel and Sandra travelled to the garden. John and Daniel journeyed to the hallway. Daniel and Mary journeyed to the bathroom. Daniel and Mary went to the garden.
+question: Where is Daniel?
+answer:",garden,garden,2.5447726249694824,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the bedroom. Daniel and John went back to the office. John and Sandra journeyed to the hallway. Mary and John journeyed to the kitchen. Daniel and Sandra travelled to the garden. John and Daniel journeyed to the hallway. Daniel and Mary journeyed to the bathroom. Daniel and Mary went to the garden. Daniel and Sandra journeyed to the bedroom. Sandra and Mary went back to the kitchen.
+question: Where is Sandra?
+answer:",kitchen,garden,2.984245538711548,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel travelled to the garden. Sandra and Daniel went back to the bathroom.
+question: Where is Sandra?
+answer:",bathroom,bathroom,2.78768253326416,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel travelled to the garden. Sandra and Daniel went back to the bathroom. Mary and John moved to the garden. Daniel and Sandra went to the bedroom.
+question: Where is Daniel?
+answer:",bedroom,bedroom,2.9351184368133545,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel travelled to the garden. Sandra and Daniel went back to the bathroom. Mary and John moved to the garden. Daniel and Sandra went to the bedroom. Sandra and Daniel moved to the kitchen. Sandra and Mary journeyed to the bathroom.
+question: Where is Mary?
+answer:",bathroom,bathroom,3.588158130645752,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel travelled to the garden. Sandra and Daniel went back to the bathroom. Mary and John moved to the garden. Daniel and Sandra went to the bedroom. Sandra and Daniel moved to the kitchen. Sandra and Mary journeyed to the bathroom. Sandra and John journeyed to the kitchen. Sandra and John went back to the office.
+question: Where is Mary?
+answer:",bathroom,bathroom,3.30373477935791,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and Daniel travelled to the garden. Sandra and Daniel went back to the bathroom. Mary and John moved to the garden. Daniel and Sandra went to the bedroom. Sandra and Daniel moved to the kitchen. Sandra and Mary journeyed to the bathroom. Sandra and John journeyed to the kitchen. Sandra and John went back to the office. Daniel and Mary travelled to the bedroom. Daniel and John travelled to the garden.
+question: Where is Daniel?
+answer:",garden,garden,2.8696463108062744,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John went to the bedroom. Sandra and Mary moved to the garden.
+question: Where is Sandra?
+answer:",garden,garden,2.9303817749023438,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John went to the bedroom. Sandra and Mary moved to the garden. Mary and Daniel travelled to the kitchen. Mary and Daniel went back to the bathroom.
+question: Where is Mary?
+answer:",bathroom,bathroom,3.638793706893921,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John went to the bedroom. Sandra and Mary moved to the garden. Mary and Daniel travelled to the kitchen. Mary and Daniel went back to the bathroom. Daniel and Mary journeyed to the hallway. Daniel and John went to the garden.
+question: Where is Daniel?
+answer:",garden,garden,2.369664192199707,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John went to the bedroom. Sandra and Mary moved to the garden. Mary and Daniel travelled to the kitchen. Mary and Daniel went back to the bathroom. Daniel and Mary journeyed to the hallway. Daniel and John went to the garden. Sandra and Mary travelled to the office. John and Mary moved to the bathroom.
+question: Where is Sandra?
+answer:",office,office,3.151737928390503,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Mary and John went to the bedroom. Sandra and Mary moved to the garden. Mary and Daniel travelled to the kitchen. Mary and Daniel went back to the bathroom. Daniel and Mary journeyed to the hallway. Daniel and John went to the garden. Sandra and Mary travelled to the office. John and Mary moved to the bathroom. Sandra and Daniel moved to the hallway. Daniel and Sandra moved to the bathroom.
+question: Where is Sandra?
+answer:",bathroom,bathroom,2.8917813301086426,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John travelled to the office. Daniel and John journeyed to the garden.
+question: Where is John?
+answer:",garden,garden,2.7169978618621826,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John travelled to the office. Daniel and John journeyed to the garden. John and Daniel went to the bathroom. John and Sandra moved to the garden.
+question: Where is Daniel?
+answer:",bathroom,bathroom,2.6415200233459473,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John travelled to the office. Daniel and John journeyed to the garden. John and Daniel went to the bathroom. John and Sandra moved to the garden. Sandra and Mary went to the kitchen. John and Mary travelled to the office.
+question: Where is Sandra?
+answer:",kitchen,garden,3.000084161758423,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John travelled to the office. Daniel and John journeyed to the garden. John and Daniel went to the bathroom. John and Sandra moved to the garden. Sandra and Mary went to the kitchen. John and Mary travelled to the office. John and Sandra went to the bedroom. Daniel and John went to the hallway.
+question: Where is Daniel?
+answer:",hallway,hallway,2.9556334018707275,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: Sandra and John travelled to the office. Daniel and John journeyed to the garden. John and Daniel went to the bathroom. John and Sandra moved to the garden. Sandra and Mary went to the kitchen. John and Mary travelled to the office. John and Sandra went to the bedroom. Daniel and John went to the hallway. Daniel and Sandra travelled to the kitchen. John and Sandra journeyed to the office.
+question: Where is John?
+answer:",office,office,2.9101951122283936,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the kitchen. Sandra and Daniel went to the bedroom.
+question: Where is Mary?
+answer:",kitchen,kitchen,4.082015037536621,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the kitchen. Sandra and Daniel went to the bedroom. Sandra and Daniel went to the kitchen. Sandra and Daniel moved to the bathroom.
+question: Where is Daniel?
+answer:",bathroom,bathroom,3.0377044677734375,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the kitchen. Sandra and Daniel went to the bedroom. Sandra and Daniel went to the kitchen. Sandra and Daniel moved to the bathroom. Mary and Daniel went to the office. Daniel and Mary went to the kitchen.
+question: Where is Daniel?
+answer:",kitchen,kitchen,3.110921621322632,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the kitchen. Sandra and Daniel went to the bedroom. Sandra and Daniel went to the kitchen. Sandra and Daniel moved to the bathroom. Mary and Daniel went to the office. Daniel and Mary went to the kitchen. John and Mary moved to the garden. Mary and John travelled to the bedroom.
+question: Where is John?
+answer:",bedroom,bedroom,3.607254981994629,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Mary travelled to the kitchen. Sandra and Daniel went to the bedroom. Sandra and Daniel went to the kitchen. Sandra and Daniel moved to the bathroom. Mary and Daniel went to the office. Daniel and Mary went to the kitchen. John and Mary moved to the garden. Mary and John travelled to the bedroom. John and Sandra went to the hallway. Sandra and Mary went back to the bathroom.
+question: Where is Sandra?
+answer:",bathroom,bathroom,3.252284049987793,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the bathroom. Mary and John went to the kitchen.
+question: Where is John?
+answer:",kitchen,kitchen,2.8822083473205566,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the bathroom. Mary and John went to the kitchen. Mary and John journeyed to the hallway. Sandra and Daniel travelled to the garden.
+question: Where is Mary?
+answer:",hallway,hallway,3.1939187049865723,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the bathroom. Mary and John went to the kitchen. Mary and John journeyed to the hallway. Sandra and Daniel travelled to the garden. Sandra and Daniel went to the office. Mary and John went back to the bedroom.
+question: Where is Daniel?
+answer:",office,office,2.9701569080352783,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the bathroom. Mary and John went to the kitchen. Mary and John journeyed to the hallway. Sandra and Daniel travelled to the garden. Sandra and Daniel went to the office. Mary and John went back to the bedroom. John and Daniel went back to the hallway. Mary and Daniel journeyed to the bathroom.
+question: Where is Daniel?
+answer:",bathroom,bathroom,2.6446001529693604,0.95
+"context: Mary and Daniel travelled to the bathroom. John and Daniel travelled to the office.
+question: Where is Daniel?
+answer: office
+###
+context: Sandra and Mary went back to the office. Daniel and Sandra went to the bedroom.
+question: Where is Sandra?
+answer: bedroom
+###
+context: Daniel and John moved to the hallway. Sandra and Daniel journeyed to the bathroom.
+question: Where is Sandra?
+answer: bathroom
+###
+context: Sandra and Mary went to the kitchen. Mary and John moved to the hallway.
+question: Where is John?
+answer: hallway
+###
+context: John and Mary moved to the bedroom. Daniel and John went to the kitchen. Daniel and Sandra went to the hallway. John and Daniel journeyed to the garden.
+question: Where is Daniel?
+answer: garden
+###
+context: John and Daniel moved to the bathroom. Mary and John went to the kitchen. Mary and John journeyed to the hallway. Sandra and Daniel travelled to the garden. Sandra and Daniel went to the office. Mary and John went back to the bedroom. John and Daniel went back to the hallway. Mary and Daniel journeyed to the bathroom. Sandra and Daniel moved to the bedroom. Daniel and Sandra moved to the garden.
+question: Where is Daniel?
+answer:",garden,garden,2.670825242996216,0.95

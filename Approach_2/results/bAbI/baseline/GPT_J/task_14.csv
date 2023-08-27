@@ -1,0 +1,2301 @@
+prompt,actual_ans,gen_ans,prompt_ppl,target_ppl,gen_ppl,accuracy
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. Julie moved to the kitchen yesterday.
+question: Where was Julie before the park?
+answer:",kitchen,kitchen,3.6003785133361816,1.3971316814422607,1.3971316814422607,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. Julie moved to the kitchen yesterday. Julie moved to the bedroom this afternoon. Mary journeyed to the school yesterday.
+question: Where was Julie before the bedroom?
+answer:",park,kitchen,3.547912836074829,2.9254627227783203,2.4278857707977295,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. Julie moved to the kitchen yesterday. Julie moved to the bedroom this afternoon. Mary journeyed to the school yesterday. This morning Bill moved to the park. Yesterday Bill travelled to the kitchen.
+question: Where was Julie before the park?
+answer:",kitchen,kitchen,3.6045737266540527,2.186352014541626,2.186352014541626,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. Julie moved to the kitchen yesterday. Julie moved to the bedroom this afternoon. Mary journeyed to the school yesterday. This morning Bill moved to the park. Yesterday Bill travelled to the kitchen. This morning Mary moved to the office. This evening Julie journeyed to the kitchen.
+question: Where was Julie before the kitchen?
+answer:",bedroom,park,3.6151845455169678,4.330102443695068,2.313187837600708,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. Julie moved to the kitchen yesterday. Julie moved to the bedroom this afternoon. Mary journeyed to the school yesterday. This morning Bill moved to the park. Yesterday Bill travelled to the kitchen. This morning Mary moved to the office. This evening Julie journeyed to the kitchen. This afternoon Mary moved to the cinema. This afternoon Bill travelled to the kitchen.
+question: Where was Bill before the kitchen?
+answer:",park,office,3.63277530670166,6.056855201721191,3.5177831649780273,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary travelled to the cinema yesterday. Yesterday Julie travelled to the cinema. This morning Julie travelled to the bedroom. Yesterday Bill moved to the park.
+question: Where was Julie before the bedroom?
+answer:",cinema,cinema,3.6521854400634766,1.149451732635498,1.149451732635498,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary travelled to the cinema yesterday. Yesterday Julie travelled to the cinema. This morning Julie travelled to the bedroom. Yesterday Bill moved to the park. Mary moved to the school this morning. Julie moved to the kitchen this afternoon.
+question: Where was Julie before the kitchen?
+answer:",bedroom,bedroom,3.6955068111419678,1.3712610006332397,1.3712610006332397,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary travelled to the cinema yesterday. Yesterday Julie travelled to the cinema. This morning Julie travelled to the bedroom. Yesterday Bill moved to the park. Mary moved to the school this morning. Julie moved to the kitchen this afternoon. Julie went back to the park this evening. This morning Bill went back to the office.
+question: Where was Mary before the school?
+answer:",cinema,cinema,3.6597304344177246,1.98917818069458,1.98917818069458,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary travelled to the cinema yesterday. Yesterday Julie travelled to the cinema. This morning Julie travelled to the bedroom. Yesterday Bill moved to the park. Mary moved to the school this morning. Julie moved to the kitchen this afternoon. Julie went back to the park this evening. This morning Bill went back to the office. Yesterday Fred journeyed to the cinema. Mary journeyed to the office this afternoon.
+question: Where was Bill before the office?
+answer:",park,office,3.633180856704712,7.372190475463867,3.385408878326416,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary travelled to the cinema yesterday. Yesterday Julie travelled to the cinema. This morning Julie travelled to the bedroom. Yesterday Bill moved to the park. Mary moved to the school this morning. Julie moved to the kitchen this afternoon. Julie went back to the park this evening. This morning Bill went back to the office. Yesterday Fred journeyed to the cinema. Mary journeyed to the office this afternoon. Fred went back to the park this morning. Mary went back to the school this evening.
+question: Where was Julie before the park?
+answer:",kitchen,cinema,3.530719041824341,9.84817123413086,2.291003465652466,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the park yesterday. This morning Julie journeyed to the bedroom. Julie went back to the park this afternoon. Julie moved to the park yesterday.
+question: Where was Julie before the park?
+answer:",bedroom,bedroom,3.5639688968658447,1.1040877103805542,1.1040877103805542,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the park yesterday. This morning Julie journeyed to the bedroom. Julie went back to the park this afternoon. Julie moved to the park yesterday. Bill journeyed to the park this morning. Bill went to the bedroom yesterday.
+question: Where was Bill before the park?
+answer:",bedroom,bedroom,3.5799319744110107,1.1470526456832886,1.1470526456832886,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the park yesterday. This morning Julie journeyed to the bedroom. Julie went back to the park this afternoon. Julie moved to the park yesterday. Bill journeyed to the park this morning. Bill went to the bedroom yesterday. Mary journeyed to the school yesterday. Julie journeyed to the school this evening.
+question: Where was Julie before the park?
+answer:",bedroom,bedroom,3.617537021636963,1.7051714658737183,1.7051714658737183,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the park yesterday. This morning Julie journeyed to the bedroom. Julie went back to the park this afternoon. Julie moved to the park yesterday. Bill journeyed to the park this morning. Bill went to the bedroom yesterday. Mary journeyed to the school yesterday. Julie journeyed to the school this evening. Bill went to the bedroom this afternoon. This morning Fred moved to the kitchen.
+question: Where was Bill before the bedroom?
+answer:",park,kitchen,3.60578989982605,7.728588104248047,2.218132734298706,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the park yesterday. This morning Julie journeyed to the bedroom. Julie went back to the park this afternoon. Julie moved to the park yesterday. Bill journeyed to the park this morning. Bill went to the bedroom yesterday. Mary journeyed to the school yesterday. Julie journeyed to the school this evening. Bill went to the bedroom this afternoon. This morning Fred moved to the kitchen. This morning Mary travelled to the kitchen. Fred moved to the bedroom this afternoon.
+question: Where was Fred before the bedroom?
+answer:",kitchen,kitchen,3.551335573196411,1.3614692687988281,1.3614692687988281,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary journeyed to the kitchen. This morning Fred went back to the cinema. Yesterday Julie journeyed to the cinema. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the cinema?
+answer:",bedroom,bedroom,3.441558837890625,1.015587568283081,1.015587568283081,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary journeyed to the kitchen. This morning Fred went back to the cinema. Yesterday Julie journeyed to the cinema. Fred journeyed to the bedroom yesterday. Julie went back to the bedroom this morning. Fred journeyed to the school this afternoon.
+question: Where was Julie before the bedroom?
+answer:",cinema,cinema,3.451735019683838,2.3484697341918945,2.3484697341918945,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary journeyed to the kitchen. This morning Fred went back to the cinema. Yesterday Julie journeyed to the cinema. Fred journeyed to the bedroom yesterday. Julie went back to the bedroom this morning. Fred journeyed to the school this afternoon. Mary travelled to the bedroom this morning. This afternoon Julie went back to the park.
+question: Where was Fred before the school?
+answer:",cinema,bedroom,3.4460361003875732,2.747105121612549,2.087528944015503,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary journeyed to the kitchen. This morning Fred went back to the cinema. Yesterday Julie journeyed to the cinema. Fred journeyed to the bedroom yesterday. Julie went back to the bedroom this morning. Fred journeyed to the school this afternoon. Mary travelled to the bedroom this morning. This afternoon Julie went back to the park. Mary went back to the kitchen this afternoon. This evening Julie moved to the kitchen.
+question: Where was Mary before the kitchen?
+answer:",bedroom,bedroom,3.405203104019165,1.5099177360534668,1.5099177360534668,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary journeyed to the kitchen. This morning Fred went back to the cinema. Yesterday Julie journeyed to the cinema. Fred journeyed to the bedroom yesterday. Julie went back to the bedroom this morning. Fred journeyed to the school this afternoon. Mary travelled to the bedroom this morning. This afternoon Julie went back to the park. Mary went back to the kitchen this afternoon. This evening Julie moved to the kitchen. Yesterday Bill went to the cinema. Mary went back to the cinema this evening.
+question: Where was Julie before the kitchen?
+answer:",park,park,3.4529199600219727,2.564587116241455,2.564587116241455,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Julie went to the bedroom. Yesterday Bill travelled to the kitchen. This morning Julie went back to the kitchen. Yesterday Mary went to the park. Fred went back to the bedroom yesterday. Fred went to the cinema this morning.
+question: Where was Fred before the cinema?
+answer:",bedroom,bedroom,3.5249569416046143,1.1655632257461548,1.1655632257461548,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Julie went to the bedroom. Yesterday Bill travelled to the kitchen. This morning Julie went back to the kitchen. Yesterday Mary went to the park. Fred went back to the bedroom yesterday. Fred went to the cinema this morning. Fred went to the office this evening. Fred travelled to the bedroom this afternoon.
+question: Where was Fred before the bedroom?
+answer:",cinema,cinema,3.491128444671631,2.491697311401367,2.491697311401367,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Julie went to the bedroom. Yesterday Bill travelled to the kitchen. This morning Julie went back to the kitchen. Yesterday Mary went to the park. Fred went back to the bedroom yesterday. Fred went to the cinema this morning. Fred went to the office this evening. Fred travelled to the bedroom this afternoon. This afternoon Julie moved to the bedroom. Mary journeyed to the school this morning.
+question: Where was Fred before the bedroom?
+answer:",cinema,cinema,3.5237655639648438,2.5842671394348145,2.5842671394348145,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Julie went to the bedroom. Yesterday Bill travelled to the kitchen. This morning Julie went back to the kitchen. Yesterday Mary went to the park. Fred went back to the bedroom yesterday. Fred went to the cinema this morning. Fred went to the office this evening. Fred travelled to the bedroom this afternoon. This afternoon Julie moved to the bedroom. Mary journeyed to the school this morning. This evening Mary journeyed to the bedroom. This afternoon Mary went to the kitchen.
+question: Where was Mary before the bedroom?
+answer:",kitchen,school,3.520188331604004,3.4752814769744873,1.7786195278167725,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Julie went to the bedroom. Yesterday Bill travelled to the kitchen. This morning Julie went back to the kitchen. Yesterday Mary went to the park. Fred went back to the bedroom yesterday. Fred went to the cinema this morning. Fred went to the office this evening. Fred travelled to the bedroom this afternoon. This afternoon Julie moved to the bedroom. Mary journeyed to the school this morning. This evening Mary journeyed to the bedroom. This afternoon Mary went to the kitchen. Bill moved to the bedroom this afternoon. Bill moved to the cinema this morning.
+question: Where was Bill before the cinema?
+answer:",kitchen,bedroom,3.4842917919158936,7.464808464050293,1.4477181434631348,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary went to the park. Bill went to the school yesterday. Julie went back to the school this morning. Julie moved to the bedroom yesterday.
+question: Where was Julie before the school?
+answer:",bedroom,bedroom,3.528515338897705,1.1911005973815918,1.1911005973815918,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary went to the park. Bill went to the school yesterday. Julie went back to the school this morning. Julie moved to the bedroom yesterday. Yesterday Fred travelled to the cinema. Bill journeyed to the office this morning.
+question: Where was Julie before the school?
+answer:",bedroom,bedroom,3.5283288955688477,1.6199764013290405,1.6199764013290405,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary went to the park. Bill went to the school yesterday. Julie went back to the school this morning. Julie moved to the bedroom yesterday. Yesterday Fred travelled to the cinema. Bill journeyed to the office this morning. Fred travelled to the park this afternoon. Fred travelled to the office this morning.
+question: Where was Bill before the office?
+answer:",school,school,3.542311191558838,2.902221441268921,2.902221441268921,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary went to the park. Bill went to the school yesterday. Julie went back to the school this morning. Julie moved to the bedroom yesterday. Yesterday Fred travelled to the cinema. Bill journeyed to the office this morning. Fred travelled to the park this afternoon. Fred travelled to the office this morning. Mary went back to the school this morning. This afternoon Bill travelled to the bedroom.
+question: Where was Bill before the bedroom?
+answer:",office,school,3.5301175117492676,3.2904608249664307,1.9480578899383545,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Mary went to the park. Bill went to the school yesterday. Julie went back to the school this morning. Julie moved to the bedroom yesterday. Yesterday Fred travelled to the cinema. Bill journeyed to the office this morning. Fred travelled to the park this afternoon. Fred travelled to the office this morning. Mary went back to the school this morning. This afternoon Bill travelled to the bedroom. This afternoon Julie journeyed to the office. This afternoon Mary went back to the office.
+question: Where was Mary before the school?
+answer:",park,office,3.49466609954834,11.924763679504395,1.923995852470398,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie moved to the office this morning. Bill journeyed to the kitchen yesterday. Mary went back to the office yesterday. Yesterday Julie went to the bedroom.
+question: Where was Julie before the office?
+answer:",bedroom,bedroom,3.5024900436401367,1.1956398487091064,1.1956398487091064,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie moved to the office this morning. Bill journeyed to the kitchen yesterday. Mary went back to the office yesterday. Yesterday Julie went to the bedroom. Julie went back to the cinema this afternoon. Fred went back to the park yesterday.
+question: Where was Julie before the cinema?
+answer:",office,bedroom,3.504492998123169,5.452307224273682,1.4829071760177612,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie moved to the office this morning. Bill journeyed to the kitchen yesterday. Mary went back to the office yesterday. Yesterday Julie went to the bedroom. Julie went back to the cinema this afternoon. Fred went back to the park yesterday. Julie went back to the school this evening. Bill went back to the cinema this morning.
+question: Where was Julie before the office?
+answer:",bedroom,bedroom,3.4452908039093018,3.5506057739257812,3.5506057739257812,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie moved to the office this morning. Bill journeyed to the kitchen yesterday. Mary went back to the office yesterday. Yesterday Julie went to the bedroom. Julie went back to the cinema this afternoon. Fred went back to the park yesterday. Julie went back to the school this evening. Bill went back to the cinema this morning. This afternoon Bill went to the school. Mary travelled to the school this morning.
+question: Where was Bill before the cinema?
+answer:",kitchen,school,3.476733684539795,11.173598289489746,2.2302615642547607,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie moved to the office this morning. Bill journeyed to the kitchen yesterday. Mary went back to the office yesterday. Yesterday Julie went to the bedroom. Julie went back to the cinema this afternoon. Fred went back to the park yesterday. Julie went back to the school this evening. Bill went back to the cinema this morning. This afternoon Bill went to the school. Mary travelled to the school this morning. Mary moved to the cinema this afternoon. Fred moved to the cinema this morning.
+question: Where was Fred before the cinema?
+answer:",park,school,3.4350712299346924,20.025978088378906,1.5487710237503052,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill journeyed to the office yesterday. Yesterday Mary journeyed to the cinema. This morning Julie travelled to the kitchen. Julie journeyed to the bedroom yesterday.
+question: Where was Julie before the kitchen?
+answer:",bedroom,bedroom,3.550123929977417,1.068325161933899,1.068325161933899,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill journeyed to the office yesterday. Yesterday Mary journeyed to the cinema. This morning Julie travelled to the kitchen. Julie journeyed to the bedroom yesterday. Fred travelled to the bedroom yesterday. Julie journeyed to the park this afternoon.
+question: Where was Julie before the kitchen?
+answer:",bedroom,bedroom,3.575584650039673,1.4787756204605103,1.4787756204605103,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill journeyed to the office yesterday. Yesterday Mary journeyed to the cinema. This morning Julie travelled to the kitchen. Julie journeyed to the bedroom yesterday. Fred travelled to the bedroom yesterday. Julie journeyed to the park this afternoon. This morning Bill went back to the bedroom. This morning Mary journeyed to the kitchen.
+question: Where was Bill before the bedroom?
+answer:",office,office,3.555121898651123,1.2200270891189575,1.2200270891189575,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill journeyed to the office yesterday. Yesterday Mary journeyed to the cinema. This morning Julie travelled to the kitchen. Julie journeyed to the bedroom yesterday. Fred travelled to the bedroom yesterday. Julie journeyed to the park this afternoon. This morning Bill went back to the bedroom. This morning Mary journeyed to the kitchen. Julie went to the bedroom this evening. This morning Fred went back to the school.
+question: Where was Mary before the kitchen?
+answer:",cinema,cinema,3.5433359146118164,1.4379242658615112,1.4379242658615112,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill journeyed to the office yesterday. Yesterday Mary journeyed to the cinema. This morning Julie travelled to the kitchen. Julie journeyed to the bedroom yesterday. Fred travelled to the bedroom yesterday. Julie journeyed to the park this afternoon. This morning Bill went back to the bedroom. This morning Mary journeyed to the kitchen. Julie went to the bedroom this evening. This morning Fred went back to the school. Mary journeyed to the office this evening. This afternoon Mary journeyed to the park.
+question: Where was Mary before the park?
+answer:",kitchen,office,3.544337511062622,10.023368835449219,1.6663416624069214,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill travelled to the park this morning. Bill moved to the office yesterday. This morning Mary went to the cinema. Yesterday Mary went to the kitchen.
+question: Where was Mary before the cinema?
+answer:",kitchen,kitchen,3.523486852645874,1.331496238708496,1.331496238708496,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill travelled to the park this morning. Bill moved to the office yesterday. This morning Mary went to the cinema. Yesterday Mary went to the kitchen. Yesterday Julie travelled to the kitchen. Bill travelled to the school this afternoon.
+question: Where was Bill before the park?
+answer:",office,office,3.576956033706665,2.1142265796661377,2.1142265796661377,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill travelled to the park this morning. Bill moved to the office yesterday. This morning Mary went to the cinema. Yesterday Mary went to the kitchen. Yesterday Julie travelled to the kitchen. Bill travelled to the school this afternoon. This morning Julie went to the bedroom. Bill journeyed to the office this evening.
+question: Where was Mary before the cinema?
+answer:",kitchen,kitchen,3.5851187705993652,1.7888964414596558,1.7888964414596558,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill travelled to the park this morning. Bill moved to the office yesterday. This morning Mary went to the cinema. Yesterday Mary went to the kitchen. Yesterday Julie travelled to the kitchen. Bill travelled to the school this afternoon. This morning Julie went to the bedroom. Bill journeyed to the office this evening. Mary went to the park this afternoon. Julie travelled to the office this afternoon.
+question: Where was Julie before the bedroom?
+answer:",kitchen,office,3.591187000274658,7.839741230010986,1.9520539045333862,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill travelled to the park this morning. Bill moved to the office yesterday. This morning Mary went to the cinema. Yesterday Mary went to the kitchen. Yesterday Julie travelled to the kitchen. Bill travelled to the school this afternoon. This morning Julie went to the bedroom. Bill journeyed to the office this evening. Mary went to the park this afternoon. Julie travelled to the office this afternoon. This evening Mary moved to the bedroom. This evening Julie moved to the kitchen.
+question: Where was Julie before the office?
+answer:",bedroom,bedroom,3.563199996948242,3.2992517948150635,3.2992517948150635,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary went back to the school this morning. Yesterday Mary journeyed to the park.
+question: Where was Mary before the school?
+answer:",park,park,3.5673699378967285,1.5464094877243042,1.5464094877243042,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary went back to the school this morning. Yesterday Mary journeyed to the park. Yesterday Bill moved to the school. Yesterday Fred moved to the school.
+question: Where was Mary before the school?
+answer:",park,park,3.5689339637756348,1.7667605876922607,1.7667605876922607,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary went back to the school this morning. Yesterday Mary journeyed to the park. Yesterday Bill moved to the school. Yesterday Fred moved to the school. This morning Fred travelled to the cinema. This afternoon Mary went back to the cinema.
+question: Where was Mary before the cinema?
+answer:",school,school,3.5850188732147217,1.3643717765808105,1.3643717765808105,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary went back to the school this morning. Yesterday Mary journeyed to the park. Yesterday Bill moved to the school. Yesterday Fred moved to the school. This morning Fred travelled to the cinema. This afternoon Mary went back to the cinema. This evening Mary went to the park. Yesterday Julie went back to the cinema.
+question: Where was Mary before the cinema?
+answer:",school,school,3.5911879539489746,1.7939916849136353,1.7939916849136353,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Mary went back to the school this morning. Yesterday Mary journeyed to the park. Yesterday Bill moved to the school. Yesterday Fred moved to the school. This morning Fred travelled to the cinema. This afternoon Mary went back to the cinema. This evening Mary went to the park. Yesterday Julie went back to the cinema. This morning Julie travelled to the kitchen. This morning Bill moved to the park.
+question: Where was Mary before the park?
+answer:",cinema,school,3.5689339637756348,4.259189605712891,1.5654102563858032,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the school yesterday. Fred journeyed to the office this morning. Mary went to the school yesterday. Yesterday Bill went back to the office.
+question: Where was Fred before the office?
+answer:",school,school,3.4650449752807617,1.2663931846618652,1.2663931846618652,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the school yesterday. Fred journeyed to the office this morning. Mary went to the school yesterday. Yesterday Bill went back to the office. Bill moved to the bedroom this morning. This afternoon Fred went to the kitchen.
+question: Where was Bill before the bedroom?
+answer:",office,office,3.486417293548584,1.2097070217132568,1.2097070217132568,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the school yesterday. Fred journeyed to the office this morning. Mary went to the school yesterday. Yesterday Bill went back to the office. Bill moved to the bedroom this morning. This afternoon Fred went to the kitchen. This evening Fred travelled to the cinema. This afternoon Bill moved to the park.
+question: Where was Bill before the park?
+answer:",bedroom,bedroom,3.5331077575683594,1.6762627363204956,1.6762627363204956,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the school yesterday. Fred journeyed to the office this morning. Mary went to the school yesterday. Yesterday Bill went back to the office. Bill moved to the bedroom this morning. This afternoon Fred went to the kitchen. This evening Fred travelled to the cinema. This afternoon Bill moved to the park. This morning Mary went back to the bedroom. Bill travelled to the office this evening.
+question: Where was Bill before the park?
+answer:",bedroom,office,3.535226821899414,3.751993179321289,1.5708709955215454,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Fred moved to the school yesterday. Fred journeyed to the office this morning. Mary went to the school yesterday. Yesterday Bill went back to the office. Bill moved to the bedroom this morning. This afternoon Fred went to the kitchen. This evening Fred travelled to the cinema. This afternoon Bill moved to the park. This morning Mary went back to the bedroom. Bill travelled to the office this evening. Julie journeyed to the park yesterday. This afternoon Mary journeyed to the park.
+question: Where was Mary before the park?
+answer:",bedroom,bedroom,3.5734732151031494,1.9056694507598877,1.9056694507598877,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill moved to the kitchen. Bill journeyed to the cinema yesterday. This morning Julie went to the park. Julie went to the kitchen yesterday.
+question: Where was Bill before the kitchen?
+answer:",cinema,cinema,3.531407594680786,1.0256835222244263,1.0256835222244263,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill moved to the kitchen. Bill journeyed to the cinema yesterday. This morning Julie went to the park. Julie went to the kitchen yesterday. Mary journeyed to the cinema yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Bill before the kitchen?
+answer:",cinema,cinema,3.501788377761841,1.2516738176345825,1.2516738176345825,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill moved to the kitchen. Bill journeyed to the cinema yesterday. This morning Julie went to the park. Julie went to the kitchen yesterday. Mary journeyed to the cinema yesterday. Fred journeyed to the bedroom yesterday. Fred went to the park this afternoon. Fred went to the kitchen this morning.
+question: Where was Fred before the kitchen?
+answer:",bedroom,bedroom,3.4950802326202393,1.5927352905273438,1.5927352905273438,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill moved to the kitchen. Bill journeyed to the cinema yesterday. This morning Julie went to the park. Julie went to the kitchen yesterday. Mary journeyed to the cinema yesterday. Fred journeyed to the bedroom yesterday. Fred went to the park this afternoon. Fred went to the kitchen this morning. This morning Mary travelled to the school. This afternoon Julie went back to the cinema.
+question: Where was Fred before the kitchen?
+answer:",bedroom,bedroom,3.48628830909729,2.9299516677856445,2.9299516677856445,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill moved to the kitchen. Bill journeyed to the cinema yesterday. This morning Julie went to the park. Julie went to the kitchen yesterday. Mary journeyed to the cinema yesterday. Fred journeyed to the bedroom yesterday. Fred went to the park this afternoon. Fred went to the kitchen this morning. This morning Mary travelled to the school. This afternoon Julie went back to the cinema. Fred journeyed to the cinema this evening. This afternoon Mary moved to the bedroom.
+question: Where was Mary before the bedroom?
+answer:",school,school,3.516112804412842,1.5713127851486206,1.5713127851486206,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Fred travelled to the office. Bill journeyed to the office yesterday. Fred travelled to the park this morning. Mary travelled to the park yesterday.
+question: Where was Fred before the park?
+answer:",office,office,3.4752540588378906,1.0703418254852295,1.0703418254852295,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Fred travelled to the office. Bill journeyed to the office yesterday. Fred travelled to the park this morning. Mary travelled to the park yesterday. Yesterday Julie journeyed to the cinema. This afternoon Fred journeyed to the school.
+question: Where was Fred before the park?
+answer:",office,office,3.530383825302124,1.4818952083587646,1.4818952083587646,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Fred travelled to the office. Bill journeyed to the office yesterday. Fred travelled to the park this morning. Mary travelled to the park yesterday. Yesterday Julie journeyed to the cinema. This afternoon Fred journeyed to the school. This morning Mary moved to the office. Julie moved to the kitchen this morning.
+question: Where was Fred before the park?
+answer:",office,office,3.515103578567505,1.4083340167999268,1.4083340167999268,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Fred travelled to the office. Bill journeyed to the office yesterday. Fred travelled to the park this morning. Mary travelled to the park yesterday. Yesterday Julie journeyed to the cinema. This afternoon Fred journeyed to the school. This morning Mary moved to the office. Julie moved to the kitchen this morning. This evening Fred travelled to the park. Julie moved to the cinema this afternoon.
+question: Where was Julie before the cinema?
+answer:",kitchen,kitchen,3.5548136234283447,3.8042609691619873,3.8042609691619873,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Yesterday Fred travelled to the office. Bill journeyed to the office yesterday. Fred travelled to the park this morning. Mary travelled to the park yesterday. Yesterday Julie journeyed to the cinema. This afternoon Fred journeyed to the school. This morning Mary moved to the office. Julie moved to the kitchen this morning. This evening Fred travelled to the park. Julie moved to the cinema this afternoon. Mary went back to the park this afternoon. This evening Julie journeyed to the kitchen.
+question: Where was Julie before the kitchen?
+answer:",cinema,cinema,3.537201166152954,1.4961580038070679,1.4961580038070679,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went back to the office this morning. Fred travelled to the cinema this morning. Yesterday Julie travelled to the bedroom. Fred went back to the kitchen yesterday. Yesterday Bill went to the park. Mary moved to the kitchen yesterday.
+question: Where was Julie before the office?
+answer:",bedroom,office,3.50195050239563,2.822861909866333,2.0046584606170654,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went back to the office this morning. Fred travelled to the cinema this morning. Yesterday Julie travelled to the bedroom. Fred went back to the kitchen yesterday. Yesterday Bill went to the park. Mary moved to the kitchen yesterday. Mary went back to the cinema this morning. This afternoon Julie travelled to the cinema.
+question: Where was Fred before the cinema?
+answer:",kitchen,kitchen,3.5187182426452637,1.7344447374343872,1.7344447374343872,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went back to the office this morning. Fred travelled to the cinema this morning. Yesterday Julie travelled to the bedroom. Fred went back to the kitchen yesterday. Yesterday Bill went to the park. Mary moved to the kitchen yesterday. Mary went back to the cinema this morning. This afternoon Julie travelled to the cinema. This afternoon Fred travelled to the bedroom. Julie journeyed to the kitchen this evening.
+question: Where was Julie before the kitchen?
+answer:",cinema,bedroom,3.565307855606079,2.6508188247680664,2.5184097290039062,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went back to the office this morning. Fred travelled to the cinema this morning. Yesterday Julie travelled to the bedroom. Fred went back to the kitchen yesterday. Yesterday Bill went to the park. Mary moved to the kitchen yesterday. Mary went back to the cinema this morning. This afternoon Julie travelled to the cinema. This afternoon Fred travelled to the bedroom. Julie journeyed to the kitchen this evening. Fred went to the cinema this evening. This morning Bill travelled to the bedroom.
+question: Where was Bill before the bedroom?
+answer:",park,kitchen,3.524716854095459,8.743953704833984,1.8581119775772095,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went back to the office this morning. Fred travelled to the cinema this morning. Yesterday Julie travelled to the bedroom. Fred went back to the kitchen yesterday. Yesterday Bill went to the park. Mary moved to the kitchen yesterday. Mary went back to the cinema this morning. This afternoon Julie travelled to the cinema. This afternoon Fred travelled to the bedroom. Julie journeyed to the kitchen this evening. Fred went to the cinema this evening. This morning Bill travelled to the bedroom. Bill travelled to the cinema this evening. This afternoon Bill travelled to the office.
+question: Where was Bill before the office?
+answer:",bedroom,bedroom,3.508927345275879,1.5387111902236938,1.5387111902236938,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill journeyed to the bedroom. Yesterday Bill went to the cinema. Mary moved to the bedroom yesterday. Julie journeyed to the cinema yesterday.
+question: Where was Bill before the bedroom?
+answer:",cinema,cinema,3.5134494304656982,1.0615086555480957,1.0615086555480957,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill journeyed to the bedroom. Yesterday Bill went to the cinema. Mary moved to the bedroom yesterday. Julie journeyed to the cinema yesterday. Julie went to the office this morning. This afternoon Bill travelled to the kitchen.
+question: Where was Julie before the office?
+answer:",cinema,cinema,3.5274157524108887,1.9759833812713623,1.9759833812713623,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill journeyed to the bedroom. Yesterday Bill went to the cinema. Mary moved to the bedroom yesterday. Julie journeyed to the cinema yesterday. Julie went to the office this morning. This afternoon Bill travelled to the kitchen. Fred went to the kitchen yesterday. Mary moved to the cinema this morning.
+question: Where was Bill before the bedroom?
+answer:",cinema,cinema,3.5042364597320557,1.5557303428649902,1.5557303428649902,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill journeyed to the bedroom. Yesterday Bill went to the cinema. Mary moved to the bedroom yesterday. Julie journeyed to the cinema yesterday. Julie went to the office this morning. This afternoon Bill travelled to the kitchen. Fred went to the kitchen yesterday. Mary moved to the cinema this morning. Fred went to the bedroom this morning. Mary went back to the office this afternoon.
+question: Where was Fred before the bedroom?
+answer:",kitchen,kitchen,3.424776554107666,2.537961959838867,2.537961959838867,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Bill journeyed to the bedroom. Yesterday Bill went to the cinema. Mary moved to the bedroom yesterday. Julie journeyed to the cinema yesterday. Julie went to the office this morning. This afternoon Bill travelled to the kitchen. Fred went to the kitchen yesterday. Mary moved to the cinema this morning. Fred went to the bedroom this morning. Mary went back to the office this afternoon. Mary journeyed to the bedroom this evening. Fred journeyed to the cinema this afternoon.
+question: Where was Fred before the cinema?
+answer:",bedroom,bedroom,3.4233484268188477,1.3152835369110107,1.3152835369110107,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Fred travelled to the kitchen. Mary journeyed to the office yesterday. Yesterday Fred went to the bedroom. Julie went to the kitchen yesterday.
+question: Where was Fred before the kitchen?
+answer:",bedroom,bedroom,3.433572292327881,1.0213732719421387,1.0213732719421387,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Fred travelled to the kitchen. Mary journeyed to the office yesterday. Yesterday Fred went to the bedroom. Julie went to the kitchen yesterday. Julie journeyed to the park this morning. Fred moved to the school this afternoon.
+question: Where was Julie before the park?
+answer:",kitchen,school,3.461547613143921,3.6613008975982666,3.3372087478637695,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Fred travelled to the kitchen. Mary journeyed to the office yesterday. Yesterday Fred went to the bedroom. Julie went to the kitchen yesterday. Julie journeyed to the park this morning. Fred moved to the school this afternoon. Mary travelled to the office this afternoon. This morning Mary travelled to the bedroom.
+question: Where was Mary before the office?
+answer:",bedroom,bedroom,3.441502332687378,1.652588963508606,1.652588963508606,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Fred travelled to the kitchen. Mary journeyed to the office yesterday. Yesterday Fred went to the bedroom. Julie went to the kitchen yesterday. Julie journeyed to the park this morning. Fred moved to the school this afternoon. Mary travelled to the office this afternoon. This morning Mary travelled to the bedroom. Julie moved to the kitchen this afternoon. Bill went back to the office yesterday.
+question: Where was Julie before the kitchen?
+answer:",park,park,3.461474657058716,2.9594483375549316,2.9594483375549316,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Fred travelled to the kitchen. Mary journeyed to the office yesterday. Yesterday Fred went to the bedroom. Julie went to the kitchen yesterday. Julie journeyed to the park this morning. Fred moved to the school this afternoon. Mary travelled to the office this afternoon. This morning Mary travelled to the bedroom. Julie moved to the kitchen this afternoon. Bill went back to the office yesterday. This evening Fred moved to the kitchen. This evening Julie journeyed to the office.
+question: Where was Julie before the kitchen?
+answer:",park,office,3.516915798187256,44.09148025512695,1.166078805923462,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. This morning Mary travelled to the bedroom. Julie journeyed to the office yesterday. Yesterday Mary journeyed to the kitchen.
+question: Where was Mary before the bedroom?
+answer:",kitchen,kitchen,3.4727861881256104,1.1989530324935913,1.1989530324935913,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. This morning Mary travelled to the bedroom. Julie journeyed to the office yesterday. Yesterday Mary journeyed to the kitchen. This morning Fred moved to the school. Fred moved to the park yesterday.
+question: Where was Fred before the school?
+answer:",park,school,3.445995569229126,4.276782512664795,2.3593556880950928,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. This morning Mary travelled to the bedroom. Julie journeyed to the office yesterday. Yesterday Mary journeyed to the kitchen. This morning Fred moved to the school. Fred moved to the park yesterday. This evening Mary went back to the office. This afternoon Mary journeyed to the school.
+question: Where was Mary before the office?
+answer:",school,school,3.480149269104004,2.371037721633911,2.371037721633911,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. This morning Mary travelled to the bedroom. Julie journeyed to the office yesterday. Yesterday Mary journeyed to the kitchen. This morning Fred moved to the school. Fred moved to the park yesterday. This evening Mary went back to the office. This afternoon Mary journeyed to the school. This evening Fred travelled to the cinema. Fred travelled to the office this afternoon.
+question: Where was Fred before the office?
+answer:",school,cinema,3.466552734375,2.6238515377044678,2.3483519554138184,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Julie went to the park this morning. This morning Mary travelled to the bedroom. Julie journeyed to the office yesterday. Yesterday Mary journeyed to the kitchen. This morning Fred moved to the school. Fred moved to the park yesterday. This evening Mary went back to the office. This afternoon Mary journeyed to the school. This evening Fred travelled to the cinema. Fred travelled to the office this afternoon. Yesterday Bill went back to the park. This afternoon Julie went to the office.
+question: Where was Fred before the office?
+answer:",school,school,3.493494987487793,2.476550579071045,2.476550579071045,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Mary journeyed to the office. Mary travelled to the kitchen yesterday. Bill travelled to the school yesterday. Yesterday Fred travelled to the office.
+question: Where was Mary before the office?
+answer:",kitchen,kitchen,3.493917942047119,1.4387166500091553,1.4387166500091553,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Mary journeyed to the office. Mary travelled to the kitchen yesterday. Bill travelled to the school yesterday. Yesterday Fred travelled to the office. This morning Fred journeyed to the school. Julie moved to the cinema yesterday.
+question: Where was Fred before the school?
+answer:",office,office,3.488083839416504,1.4610414505004883,1.4610414505004883,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Mary journeyed to the office. Mary travelled to the kitchen yesterday. Bill travelled to the school yesterday. Yesterday Fred travelled to the office. This morning Fred journeyed to the school. Julie moved to the cinema yesterday. This morning Bill went to the park. This afternoon Fred went back to the kitchen.
+question: Where was Bill before the park?
+answer:",school,school,3.514676570892334,3.1000735759735107,3.1000735759735107,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Mary journeyed to the office. Mary travelled to the kitchen yesterday. Bill travelled to the school yesterday. Yesterday Fred travelled to the office. This morning Fred journeyed to the school. Julie moved to the cinema yesterday. This morning Bill went to the park. This afternoon Fred went back to the kitchen. Mary journeyed to the park this afternoon. This evening Fred moved to the cinema.
+question: Where was Fred before the cinema?
+answer:",kitchen,kitchen,3.529684066772461,1.688770055770874,1.688770055770874,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Mary journeyed to the office. Mary travelled to the kitchen yesterday. Bill travelled to the school yesterday. Yesterday Fred travelled to the office. This morning Fred journeyed to the school. Julie moved to the cinema yesterday. This morning Bill went to the park. This afternoon Fred went back to the kitchen. Mary journeyed to the park this afternoon. This evening Fred moved to the cinema. Julie went back to the school this morning. Mary went to the kitchen this evening.
+question: Where was Fred before the cinema?
+answer:",kitchen,school,3.5009052753448486,3.2065021991729736,2.558485507965088,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Julie journeyed to the school. Yesterday Mary journeyed to the bedroom. Yesterday Julie journeyed to the kitchen. Yesterday Bill went to the park.
+question: Where was Julie before the school?
+answer:",kitchen,school,3.5571305751800537,5.23513126373291,1.8828275203704834,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Julie journeyed to the school. Yesterday Mary journeyed to the bedroom. Yesterday Julie journeyed to the kitchen. Yesterday Bill went to the park. This afternoon Julie went back to the park. Mary went back to the park this morning.
+question: Where was Julie before the park?
+answer:",school,school,3.6059112548828125,1.2021331787109375,1.2021331787109375,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Julie journeyed to the school. Yesterday Mary journeyed to the bedroom. Yesterday Julie journeyed to the kitchen. Yesterday Bill went to the park. This afternoon Julie went back to the park. Mary went back to the park this morning. Mary travelled to the school this afternoon. This evening Julie moved to the school.
+question: Where was Julie before the school?
+answer:",park,park,3.6400020122528076,1.6377631425857544,1.6377631425857544,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Julie journeyed to the school. Yesterday Mary journeyed to the bedroom. Yesterday Julie journeyed to the kitchen. Yesterday Bill went to the park. This afternoon Julie went back to the park. Mary went back to the park this morning. Mary travelled to the school this afternoon. This evening Julie moved to the school. Bill journeyed to the kitchen this morning. This evening Mary went back to the kitchen.
+question: Where was Bill before the kitchen?
+answer:",park,park,3.592256784439087,2.8009724617004395,2.8009724617004395,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: This morning Julie journeyed to the school. Yesterday Mary journeyed to the bedroom. Yesterday Julie journeyed to the kitchen. Yesterday Bill went to the park. This afternoon Julie went back to the park. Mary went back to the park this morning. Mary travelled to the school this afternoon. This evening Julie moved to the school. Bill journeyed to the kitchen this morning. This evening Mary went back to the kitchen. Bill went back to the cinema this afternoon. Fred travelled to the kitchen yesterday.
+question: Where was Bill before the kitchen?
+answer:",park,cinema,3.5421640872955322,49.202449798583984,1.1940566301345825,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill went back to the cinema yesterday. Mary journeyed to the bedroom yesterday. Mary travelled to the kitchen this morning. Yesterday Fred moved to the school.
+question: Where was Mary before the kitchen?
+answer:",bedroom,bedroom,3.435309886932373,1.1572154760360718,1.1572154760360718,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill went back to the cinema yesterday. Mary journeyed to the bedroom yesterday. Mary travelled to the kitchen this morning. Yesterday Fred moved to the school. Julie went to the kitchen this morning. Julie journeyed to the school yesterday.
+question: Where was Julie before the kitchen?
+answer:",school,school,3.4351887702941895,1.6350855827331543,1.6350855827331543,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill went back to the cinema yesterday. Mary journeyed to the bedroom yesterday. Mary travelled to the kitchen this morning. Yesterday Fred moved to the school. Julie went to the kitchen this morning. Julie journeyed to the school yesterday. This morning Bill travelled to the school. Fred went to the office this morning.
+question: Where was Mary before the kitchen?
+answer:",bedroom,bedroom,3.385859489440918,1.1734974384307861,1.1734974384307861,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill went back to the cinema yesterday. Mary journeyed to the bedroom yesterday. Mary travelled to the kitchen this morning. Yesterday Fred moved to the school. Julie went to the kitchen this morning. Julie journeyed to the school yesterday. This morning Bill travelled to the school. Fred went to the office this morning. Fred moved to the office this evening. This afternoon Fred went to the kitchen.
+question: Where was Fred before the office?
+answer:",kitchen,school,3.425079584121704,3.642303228378296,1.9296036958694458,0.7
+"context: Bill went back to the cinema yesterday. Julie went to the school this morning. Fred went to the park yesterday. Yesterday Julie went to the office.
+question: Where was Julie before the school?
+answer: office
+###
+context: Fred moved to the kitchen yesterday. Mary went back to the school yesterday. Mary travelled to the park this morning. Yesterday Julie travelled to the office.
+question: Where was Mary before the park?
+answer: school
+###
+context: Yesterday Fred went back to the office. Fred travelled to the kitchen this morning. Mary travelled to the kitchen yesterday. This morning Mary moved to the office.
+question: Where was Mary before the office?
+answer: kitchen
+###
+context: This morning Fred moved to the school. Julie went back to the cinema yesterday. Mary travelled to the bedroom yesterday. Fred journeyed to the bedroom yesterday.
+question: Where was Fred before the school?
+answer: bedroom
+###
+context: This morning Julie travelled to the office. Yesterday Julie went to the park. This morning Mary travelled to the kitchen. Yesterday Mary travelled to the park.
+question: Where was Julie before the office?
+answer: park
+###
+context: Bill went back to the cinema yesterday. Mary journeyed to the bedroom yesterday. Mary travelled to the kitchen this morning. Yesterday Fred moved to the school. Julie went to the kitchen this morning. Julie journeyed to the school yesterday. This morning Bill travelled to the school. Fred went to the office this morning. Fred moved to the office this evening. This afternoon Fred went to the kitchen. This afternoon Mary travelled to the school. Julie moved to the office this afternoon.
+question: Where was Julie before the office?
+answer:",kitchen,school,3.4368865489959717,5.257287979125977,1.4957598447799683,0.7

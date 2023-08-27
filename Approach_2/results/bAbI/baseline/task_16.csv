@@ -1,0 +1,2301 @@
+prompt,actual_ans,gen_ans,prompt_ppl,accuracy
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a lion. Lily is a rhino. Bernhard is a swan. Lily is white. Bernhard is green. Greg is a rhino. Greg is gray. Julius is white. Brian is a lion.
+question: What color is Brian?
+answer:",white,white,3.125633716583252,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a frog. Bernhard is a lion. Brian is a frog. Bernhard is yellow. Julius is a lion. Julius is white. Greg is a swan. Greg is gray. Brian is white.
+question: What color is Lily?
+answer:",white,white,2.763596296310425,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Lily is a frog. Greg is a lion. Lily is gray. Julius is a swan. Greg is yellow. Brian is green. Bernhard is a swan. Bernhard is gray.
+question: What color is Julius?
+answer:",gray,green,3.079343318939209,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a lion. Julius is white. Greg is a frog. Bernhard is a frog. Bernhard is green. Brian is a swan. Brian is white. Greg is green. Lily is a swan.
+question: What color is Lily?
+answer:",white,green,2.7319118976593018,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a rhino. Bernhard is a swan. Bernhard is yellow. Greg is white. Brian is a swan. Brian is yellow. Lily is a frog. Julius is a rhino. Lily is green.
+question: What color is Julius?
+answer:",white,green,2.6397194862365723,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a frog. Julius is a rhino. Bernhard is yellow. Julius is yellow. Brian is a lion. Brian is white. Lily is a swan. Lily is green. Greg is a rhino.
+question: What color is Greg?
+answer:",yellow,black,2.5981075763702393,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a swan. Greg is a swan. Greg is gray. Lily is a frog. Lily is white. Bernhard is a lion. Julius is a frog. Brian is gray. Bernhard is green.
+question: What color is Julius?
+answer:",white,green,3.0892207622528076,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a rhino. Brian is a frog. Greg is a frog. Brian is white. Greg is white. Bernhard is white. Julius is a lion. Julius is green. Lily is a rhino.
+question: What color is Lily?
+answer:",white,green,2.650968313217163,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a lion. Bernhard is yellow. Lily is a rhino. Brian is a frog. Lily is green. Greg is a frog. Brian is green. Julius is a lion. Julius is gray.
+question: What color is Greg?
+answer:",green,green,3.075153350830078,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a frog. Bernhard is a frog. Julius is a frog. Bernhard is white. Greg is a frog. Brian is yellow. Greg is yellow. Lily is a rhino. Lily is gray.
+question: What color is Julius?
+answer:",yellow,white,2.571570634841919,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a rhino. Lily is a swan. Julius is a frog. Lily is yellow. Julius is white. Bernhard is a frog. Brian is a swan. Brian is yellow. Greg is yellow.
+question: What color is Bernhard?
+answer:",white,green,2.935338020324707,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Julius is a frog. Brian is green. Bernhard is a rhino. Julius is yellow. Greg is a frog. Lily is a rhino. Bernhard is yellow. Lily is yellow.
+question: What color is Greg?
+answer:",yellow,green,2.6840646266937256,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a rhino. Julius is a lion. Brian is a frog. Brian is yellow. Lily is a frog. Bernhard is yellow. Julius is white. Lily is yellow. Greg is a rhino.
+question: What color is Greg?
+answer:",yellow,white,2.676774024963379,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a frog. Julius is a rhino. Julius is gray. Brian is a swan. Brian is gray. Greg is a rhino. Bernhard is a swan. Greg is white. Lily is white.
+question: What color is Bernhard?
+answer:",gray,white,2.641467809677124,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a swan. Julius is a swan. Lily is a rhino. Julius is gray. Lily is green. Bernhard is gray. Greg is a swan. Brian is a swan. Brian is green.
+question: What color is Greg?
+answer:",green,green,3.017399787902832,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a frog. Lily is a lion. Brian is a lion. Brian is green. Bernhard is yellow. Lily is green. Julius is a frog. Greg is a rhino. Greg is yellow.
+question: What color is Julius?
+answer:",yellow,green,2.756373643875122,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a frog. Lily is a rhino. Lily is yellow. Julius is a swan. Greg is white. Brian is a rhino. Brian is yellow. Julius is green. Bernhard is a swan.
+question: What color is Bernhard?
+answer:",green,green,2.875612735748291,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a frog. Julius is a rhino. Lily is yellow. Greg is a frog. Brian is a lion. Greg is yellow. Bernhard is a lion. Julius is white. Bernhard is gray.
+question: What color is Brian?
+answer:",gray,white,2.992387056350708,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a rhino. Brian is a rhino. Bernhard is a rhino. Lily is gray. Greg is a frog. Bernhard is gray. Julius is a frog. Brian is gray. Julius is yellow.
+question: What color is Greg?
+answer:",yellow,gray,3.151272773742676,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a frog. Greg is white. Bernhard is a rhino. Bernhard is white. Lily is a swan. Brian is a frog. Julius is a rhino. Lily is yellow. Julius is yellow.
+question: What color is Brian?
+answer:",white,white,3.085817337036133,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a lion. Julius is a frog. Greg is a swan. Lily is a frog. Lily is green. Brian is a lion. Greg is yellow. Julius is green. Bernhard is yellow.
+question: What color is Brian?
+answer:",yellow,yellow,3.2645626068115234,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a frog. Bernhard is a lion. Brian is a frog. Julius is a frog. Greg is a frog. Brian is white. Greg is white. Bernhard is gray. Lily is white.
+question: What color is Julius?
+answer:",white,gray,2.8635406494140625,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a swan. Brian is a frog. Brian is yellow. Bernhard is a frog. Bernhard is yellow. Lily is green. Julius is a rhino. Julius is gray. Greg is a rhino.
+question: What color is Greg?
+answer:",gray,gray,2.546734571456909,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a rhino. Brian is a lion. Greg is a lion. Bernhard is green. Lily is a frog. Julius is a frog. Julius is white. Greg is gray. Brian is gray.
+question: What color is Lily?
+answer:",white,white,2.6580779552459717,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Julius is a frog. Brian is green. Julius is gray. Greg is a rhino. Bernhard is a lion. Lily is a lion. Lily is green. Bernhard is green.
+question: What color is Greg?
+answer:",green,green,2.8191559314727783,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a lion. Bernhard is yellow. Brian is a lion. Julius is a frog. Julius is white. Brian is gray. Lily is a lion. Greg is a frog. Lily is white.
+question: What color is Greg?
+answer:",white,white,3.232712745666504,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a lion. Lily is a swan. Bernhard is a rhino. Greg is gray. Julius is a lion. Lily is gray. Julius is green. Brian is a rhino. Bernhard is white.
+question: What color is Brian?
+answer:",white,white,3.0984952449798584,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a swan. Lily is white. Julius is a lion. Julius is white. Greg is a swan. Greg is yellow. Brian is a frog. Brian is white. Bernhard is a frog.
+question: What color is Bernhard?
+answer:",white,green,2.87448787689209,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a lion. Julius is a rhino. Lily is a swan. Brian is a lion. Bernhard is a frog. Julius is gray. Bernhard is gray. Lily is white. Brian is green.
+question: What color is Greg?
+answer:",green,white,3.122159242630005,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a rhino. Brian is a lion. Bernhard is a swan. Julius is a lion. Brian is gray. Greg is green. Bernhard is green. Julius is gray. Lily is a swan.
+question: What color is Lily?
+answer:",green,green,2.8050553798675537,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Brian is green. Lily is a frog. Lily is white. Bernhard is a lion. Julius is a swan. Julius is white. Greg is a lion. Bernhard is yellow.
+question: What color is Greg?
+answer:",yellow,yellow,2.966484546661377,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a frog. Brian is a rhino. Greg is a lion. Greg is green. Julius is a rhino. Brian is gray. Lily is a frog. Lily is gray. Bernhard is gray.
+question: What color is Julius?
+answer:",gray,gray,2.727550983428955,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a lion. Bernhard is a lion. Lily is a frog. Lily is gray. Bernhard is white. Julius is a rhino. Julius is yellow. Brian is a frog. Greg is white.
+question: What color is Brian?
+answer:",gray,white,3.2394049167633057,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a swan. Greg is a frog. Julius is a rhino. Julius is white. Greg is green. Bernhard is gray. Lily is a rhino. Brian is a frog. Brian is yellow.
+question: What color is Lily?
+answer:",white,white,2.8567261695861816,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a swan. Julius is a swan. Greg is white. Brian is a rhino. Lily is a frog. Bernhard is a lion. Lily is white. Bernhard is green. Brian is white.
+question: What color is Julius?
+answer:",white,green,3.045785665512085,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a frog. Brian is green. Lily is a frog. Lily is green. Greg is a frog. Greg is green. Bernhard is a frog. Julius is a frog. Julius is white.
+question: What color is Bernhard?
+answer:",white,green,2.8902740478515625,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a frog. Brian is a rhino. Bernhard is gray. Julius is a swan. Julius is yellow. Lily is a lion. Greg is a lion. Greg is yellow. Brian is gray.
+question: What color is Lily?
+answer:",yellow,yellow,2.664179563522339,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a frog. Bernhard is a swan. Brian is a frog. Greg is green. Julius is a rhino. Bernhard is yellow. Julius is gray. Lily is a swan. Brian is green.
+question: What color is Lily?
+answer:",yellow,yellow,2.837439775466919,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a frog. Lily is a lion. Bernhard is a frog. Lily is yellow. Greg is a rhino. Greg is white. Julius is a lion. Brian is yellow. Bernhard is yellow.
+question: What color is Julius?
+answer:",yellow,white,2.8205881118774414,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a swan. Brian is a swan. Bernhard is a lion. Bernhard is white. Lily is a frog. Greg is gray. Julius is a frog. Julius is white. Lily is white.
+question: What color is Brian?
+answer:",gray,white,3.1465444564819336,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a rhino. Brian is a lion. Julius is gray. Lily is a frog. Bernhard is a swan. Bernhard is yellow. Brian is yellow. Greg is a frog. Greg is green.
+question: What color is Lily?
+answer:",green,green,3.0223162174224854,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Brian is yellow. Greg is a frog. Bernhard is a lion. Greg is green. Julius is a lion. Julius is yellow. Lily is a rhino. Lily is yellow.
+question: What color is Bernhard?
+answer:",yellow,green,2.9871199131011963,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a frog. Lily is a swan. Lily is yellow. Brian is green. Greg is a rhino. Bernhard is a rhino. Bernhard is green. Julius is a frog. Greg is green.
+question: What color is Julius?
+answer:",green,green,2.7465713024139404,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a frog. Brian is yellow. Lily is a swan. Julius is a swan. Lily is white. Bernhard is a lion. Greg is a lion. Julius is white. Bernhard is gray.
+question: What color is Greg?
+answer:",gray,gray,2.9918277263641357,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a rhino. Julius is a rhino. Brian is a swan. Bernhard is a lion. Julius is yellow. Brian is white. Bernhard is gray. Lily is yellow. Greg is a lion.
+question: What color is Greg?
+answer:",gray,gray,2.73017954826355,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a lion. Bernhard is a lion. Lily is a frog. Julius is a swan. Julius is yellow. Greg is a rhino. Greg is white. Lily is gray. Brian is yellow.
+question: What color is Bernhard?
+answer:",yellow,white,3.1953797340393066,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a frog. Brian is a frog. Julius is a swan. Julius is gray. Brian is yellow. Bernhard is yellow. Greg is a rhino. Greg is white. Lily is a swan.
+question: What color is Lily?
+answer:",gray,white,2.5486278533935547,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a lion. Greg is a rhino. Brian is a frog. Lily is a swan. Greg is green. Julius is a swan. Brian is white. Bernhard is gray. Julius is yellow.
+question: What color is Lily?
+answer:",yellow,white,3.0889639854431152,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a lion. Greg is a rhino. Brian is white. Lily is a swan. Greg is white. Lily is green. Bernhard is a swan. Julius is a rhino. Julius is gray.
+question: What color is Bernhard?
+answer:",green,green,3.0860273838043213,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Lily is a frog. Lily is gray. Greg is a frog. Greg is gray. Julius is a swan. Bernhard is a rhino. Bernhard is gray. Julius is green.
+question: What color is Brian?
+answer:",gray,gray,2.9460060596466064,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a frog. Bernhard is a swan. Greg is a frog. Julius is a frog. Julius is green. Brian is green. Greg is green. Lily is a frog. Bernhard is green.
+question: What color is Lily?
+answer:",green,green,2.707587957382202,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a rhino. Bernhard is gray. Julius is a lion. Lily is a rhino. Brian is a swan. Brian is yellow. Lily is white. Greg is a lion. Greg is gray.
+question: What color is Julius?
+answer:",gray,gray,3.0557990074157715,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a frog. Julius is yellow. Bernhard is a lion. Greg is a frog. Lily is a swan. Lily is green. Bernhard is white. Greg is gray. Brian is a lion.
+question: What color is Brian?
+answer:",white,white,3.9148340225219727,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a swan. Brian is white. Bernhard is a rhino. Bernhard is yellow. Lily is a rhino. Julius is a frog. Julius is green. Lily is yellow. Greg is a frog.
+question: What color is Greg?
+answer:",green,green,2.6567656993865967,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a swan. Greg is a lion. Bernhard is a rhino. Brian is yellow. Greg is yellow. Bernhard is gray. Lily is a frog. Lily is green. Julius is a lion.
+question: What color is Julius?
+answer:",yellow,gray,2.9529547691345215,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a lion. Bernhard is a lion. Julius is a lion. Brian is a rhino. Bernhard is yellow. Julius is yellow. Greg is yellow. Brian is white. Lily is a rhino.
+question: What color is Lily?
+answer:",white,white,2.4308362007141113,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Lily is a rhino. Lily is white. Brian is white. Julius is a frog. Bernhard is a rhino. Bernhard is gray. Julius is gray. Greg is a rhino.
+question: What color is Greg?
+answer:",gray,gray,2.638956308364868,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a rhino. Lily is a swan. Julius is a frog. Brian is a frog. Lily is white. Brian is gray. Julius is gray. Bernhard is a swan. Greg is gray.
+question: What color is Bernhard?
+answer:",white,white,3.4756052494049072,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Greg is a swan. Bernhard is a lion. Julius is a frog. Greg is gray. Julius is green. Bernhard is white. Brian is green. Lily is a lion.
+question: What color is Lily?
+answer:",white,white,3.1401216983795166,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is gray. Brian is a frog. Bernhard is a rhino. Greg is gray. Brian is gray. Bernhard is green. Lily is a frog.
+question: What color is Lily?
+answer:",gray,green,2.8227360248565674,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a swan. Greg is white. Julius is a rhino. Brian is a rhino. Julius is green. Bernhard is a rhino. Lily is a rhino. Bernhard is yellow. Brian is yellow.
+question: What color is Lily?
+answer:",yellow,yellow,2.5210745334625244,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a swan. Lily is yellow. Bernhard is a lion. Julius is a swan. Julius is yellow. Greg is a frog. Bernhard is white. Greg is gray. Brian is a frog.
+question: What color is Brian?
+answer:",gray,gray,3.0279741287231445,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a rhino. Brian is a rhino. Julius is a lion. Lily is white. Greg is a frog. Brian is white. Julius is white. Bernhard is a frog. Greg is yellow.
+question: What color is Bernhard?
+answer:",yellow,green,2.7712583541870117,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Lily is a swan. Bernhard is a rhino. Lily is yellow. Greg is a lion. Julius is a lion. Greg is yellow. Brian is yellow. Julius is yellow.
+question: What color is Bernhard?
+answer:",yellow,yellow,2.8123741149902344,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a rhino. Brian is a frog. Lily is a frog. Bernhard is a lion. Greg is a lion. Julius is green. Greg is yellow. Lily is yellow. Brian is yellow.
+question: What color is Bernhard?
+answer:",yellow,green,3.149139404296875,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a swan. Greg is a lion. Bernhard is a lion. Lily is green. Bernhard is green. Greg is green. Brian is a rhino. Julius is a swan. Brian is green.
+question: What color is Julius?
+answer:",green,green,2.8393068313598633,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a lion. Lily is a frog. Bernhard is a rhino. Julius is a lion. Greg is a swan. Lily is gray. Greg is green. Bernhard is gray. Brian is gray.
+question: What color is Julius?
+answer:",gray,gray,3.299534797668457,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Brian is yellow. Greg is a frog. Greg is gray. Bernhard is a frog. Julius is a rhino. Bernhard is gray. Lily is a frog. Lily is gray.
+question: What color is Julius?
+answer:",yellow,gray,2.749662399291992,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a lion. Julius is a lion. Brian is white. Bernhard is a lion. Greg is a frog. Greg is gray. Julius is yellow. Lily is a lion. Lily is yellow.
+question: What color is Bernhard?
+answer:",yellow,gray,3.39975643157959,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Julius is a lion. Greg is a frog. Greg is yellow. Lily is a rhino. Julius is white. Bernhard is a lion. Bernhard is white. Brian is white.
+question: What color is Lily?
+answer:",white,white,2.883654832839966,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a lion. Brian is a frog. Lily is a frog. Lily is yellow. Greg is a swan. Brian is yellow. Greg is gray. Julius is white. Bernhard is a swan.
+question: What color is Bernhard?
+answer:",gray,gray,2.984215497970581,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Bernhard is a swan. Julius is a swan. Lily is a lion. Brian is gray. Julius is yellow. Lily is white. Greg is a lion. Bernhard is yellow.
+question: What color is Greg?
+answer:",white,white,3.0379140377044678,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a lion. Lily is a swan. Greg is a frog. Bernhard is a lion. Greg is yellow. Brian is a frog. Lily is yellow. Brian is white. Julius is green.
+question: What color is Bernhard?
+answer:",green,green,3.2450997829437256,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a rhino. Brian is a lion. Lily is a rhino. Bernhard is green. Julius is a lion. Julius is gray. Brian is gray. Greg is a swan. Greg is gray.
+question: What color is Lily?
+answer:",green,green,2.87756085395813,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a swan. Julius is a frog. Bernhard is a frog. Lily is a rhino. Greg is gray. Lily is yellow. Julius is green. Brian is a rhino. Bernhard is green.
+question: What color is Brian?
+answer:",yellow,green,2.78108549118042,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a lion. Brian is green. Lily is a lion. Greg is a lion. Bernhard is a swan. Greg is yellow. Lily is yellow. Julius is a swan. Bernhard is green.
+question: What color is Julius?
+answer:",green,green,2.9124932289123535,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a rhino. Brian is a swan. Lily is a lion. Greg is a rhino. Julius is a lion. Julius is white. Brian is green. Lily is white. Greg is gray.
+question: What color is Bernhard?
+answer:",gray,white,3.1689844131469727,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a rhino. Bernhard is a rhino. Bernhard is yellow. Greg is yellow. Brian is a rhino. Julius is a swan. Julius is yellow. Brian is gray. Lily is a swan.
+question: What color is Lily?
+answer:",yellow,yellow,2.4618406295776367,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a lion. Greg is a frog. Julius is a rhino. Bernhard is a swan. Lily is white. Julius is yellow. Greg is white. Brian is a swan. Brian is yellow.
+question: What color is Bernhard?
+answer:",yellow,white,3.1448066234588623,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a lion. Julius is a frog. Brian is a rhino. Bernhard is a swan. Lily is a swan. Greg is gray. Julius is white. Brian is white. Lily is yellow.
+question: What color is Bernhard?
+answer:",yellow,white,3.4860215187072754,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a rhino. Lily is a rhino. Julius is a lion. Julius is yellow. Greg is a rhino. Lily is white. Bernhard is a rhino. Brian is green. Greg is green.
+question: What color is Bernhard?
+answer:",green,green,2.911860227584839,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a swan. Lily is yellow. Greg is a frog. Brian is a frog. Julius is a lion. Bernhard is a swan. Julius is yellow. Bernhard is yellow. Greg is white.
+question: What color is Brian?
+answer:",white,white,3.179652452468872,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a lion. Brian is a frog. Greg is white. Brian is yellow. Bernhard is a rhino. Lily is a lion. Julius is a frog. Julius is white. Bernhard is yellow.
+question: What color is Lily?
+answer:",white,white,2.639826774597168,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a rhino. Bernhard is a frog. Lily is white. Bernhard is yellow. Brian is a swan. Brian is yellow. Julius is a swan. Greg is a frog. Greg is yellow.
+question: What color is Julius?
+answer:",yellow,yellow,2.7991631031036377,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a frog. Brian is a frog. Greg is a swan. Brian is green. Greg is yellow. Julius is a swan. Bernhard is green. Lily is a frog. Lily is white.
+question: What color is Julius?
+answer:",yellow,green,2.7627146244049072,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a swan. Brian is a lion. Lily is a frog. Brian is yellow. Bernhard is a rhino. Julius is yellow. Bernhard is gray. Lily is gray. Greg is a frog.
+question: What color is Greg?
+answer:",gray,gray,3.120903730392456,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a rhino. Bernhard is a lion. Lily is a swan. Brian is a swan. Lily is yellow. Greg is a rhino. Bernhard is white. Julius is green. Greg is green.
+question: What color is Brian?
+answer:",yellow,white,3.314847469329834,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a frog. Brian is a rhino. Greg is a frog. Lily is a lion. Lily is green. Brian is yellow. Bernhard is a swan. Bernhard is gray. Greg is white.
+question: What color is Julius?
+answer:",white,green,3.2790451049804688,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a lion. Greg is a rhino. Greg is green. Bernhard is a rhino. Lily is gray. Brian is a frog. Bernhard is yellow. Brian is white. Julius is a frog.
+question: What color is Julius?
+answer:",white,green,2.7277891635894775,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a rhino. Lily is a frog. Julius is a swan. Brian is a lion. Greg is green. Brian is gray. Julius is white. Lily is green. Bernhard is a swan.
+question: What color is Bernhard?
+answer:",white,white,3.1443662643432617,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Lily is a frog. Greg is a swan. Julius is a frog. Julius is green. Brian is a rhino. Greg is yellow. Brian is green. Bernhard is a rhino. Bernhard is white.
+question: What color is Lily?
+answer:",green,green,2.443585157394409,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a swan. Julius is a swan. Lily is a rhino. Bernhard is yellow. Brian is a rhino. Greg is a frog. Greg is green. Lily is gray. Julius is yellow.
+question: What color is Brian?
+answer:",gray,gray,3.0261754989624023,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Brian is a frog. Brian is green. Lily is a frog. Bernhard is a rhino. Julius is a frog. Bernhard is white. Greg is a frog. Lily is green. Greg is green.
+question: What color is Julius?
+answer:",green,green,2.6631624698638916,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a swan. Bernhard is a frog. Lily is a swan. Brian is a frog. Bernhard is white. Lily is yellow. Greg is a frog. Greg is white. Brian is white.
+question: What color is Julius?
+answer:",yellow,white,2.991708517074585,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Bernhard is a rhino. Lily is a frog. Julius is a swan. Lily is gray. Greg is a swan. Brian is a rhino. Bernhard is white. Brian is white. Greg is gray.
+question: What color is Julius?
+answer:",gray,gray,2.9516327381134033,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a rhino. Bernhard is a lion. Julius is green. Lily is a rhino. Greg is a frog. Brian is a frog. Bernhard is white. Lily is gray. Greg is gray.
+question: What color is Brian?
+answer:",gray,white,2.936070442199707,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a lion. Bernhard is a frog. Bernhard is green. Brian is a rhino. Julius is yellow. Brian is gray. Greg is a frog. Greg is gray. Lily is a rhino.
+question: What color is Lily?
+answer:",gray,gray,2.8424837589263916,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a rhino. Bernhard is a frog. Greg is white. Lily is a lion. Brian is a lion. Bernhard is green. Julius is a rhino. Brian is white. Lily is white.
+question: What color is Julius?
+answer:",white,white,2.9211180210113525,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Julius is a lion. Lily is a frog. Brian is a frog. Greg is a rhino. Brian is white. Julius is gray. Greg is green. Bernhard is a lion. Bernhard is green.
+question: What color is Lily?
+answer:",white,green,3.0021908283233643,0.56
+"context: Lily is a frog. Bernhard is a frog. Bernhard is green. Brian is a lion. Brian is white. Julius is a swan. Julius is green. Lily is green. Greg is a swan.
+question: What color is Greg?
+answer: green
+###
+context: Bernhard is a frog. Lily is a frog. Lily is gray. Bernhard is gray. Julius is a lion. Greg is a swan. Julius is yellow. Greg is white. Brian is a swan.
+question: What color is Brian?
+answer: white
+###
+context: Julius is a frog. Bernhard is a rhino. Bernhard is white. Lily is a rhino. Lily is green. Julius is gray. Greg is a rhino. Greg is yellow. Brian is a frog.
+question: What color is Brian?
+answer: gray
+###
+context: Lily is a rhino. Brian is a frog. Brian is yellow. Lily is yellow. Greg is a swan. Greg is green. Julius is a frog. Julius is green. Bernhard is a rhino.
+question: What color is Bernhard?
+answer: yellow
+###
+context: Greg is a lion. Julius is a swan. Julius is yellow. Greg is yellow. Brian is a swan. Bernhard is a frog. Brian is white. Lily is a frog. Bernhard is yellow.
+question: What color is Lily?
+answer: yellow
+###
+context: Greg is a frog. Brian is a rhino. Bernhard is a rhino. Julius is a lion. Julius is yellow. Greg is white. Bernhard is gray. Lily is a frog. Brian is gray.
+question: What color is Lily?
+answer:",white,yellow,2.7431817054748535,0.56
