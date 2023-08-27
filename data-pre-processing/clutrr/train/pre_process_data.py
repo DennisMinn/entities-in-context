@@ -9,7 +9,7 @@ Original file is located at
 
 import json
 
-# Read train and valid data
+# Read train and validation data
 train_data = []
 with open('../../../data/clutrr/train.jsonl') as f:
     for line in f:
@@ -1058,7 +1058,6 @@ tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-xl")
 def generate_demonstrations(allowed_demonstrations_length, new_entity, replace_demonstrations_entity=False):
     demonstrations = ""
     import random
-    # allowed_demonstrations_length = 350
     random.seed(24)
     while True:
         i = random.randrange(len(train_data))
@@ -1091,9 +1090,7 @@ def generate_demonstrations(allowed_demonstrations_length, new_entity, replace_d
     return demonstrations
 
 # Generates validation dataset for the in-context learning. The length of each input length will not be greater than allowed_total_length.
-def generate_validation_dataset(filename, allowed_demonstrations_length, allowed_total_length, new_entity="None", replace_demonstrations_entity=False, replace_query_entity=False, baseline=True):
-    # allowed_total_length = 512
-    correct_ans = 0
+def generate_validation_dataset(filename, allowed_demonstrations_length, new_entity="None", replace_demonstrations_entity=False, replace_query_entity=False, baseline=True):
     demonstrations = generate_demonstrations(allowed_demonstrations_length=allowed_demonstrations_length, new_entity=new_entity, replace_demonstrations_entity=replace_demonstrations_entity)
     for i in range(len(valid_data)):
         temp_prompt = demonstrations
@@ -1148,24 +1145,23 @@ selected_names = ['Millie', 'Brigida', 'Alina', 'Rosalia', 'Ethel', 'Elaine',
        'Maryellen', 'Michelle', 'Chrystal', 'Lona', 'Renu']
 
 ALLOWED_DEMONSTRATIONS_LENGTH = 350
-ALLOWED_TOTAL_LENGTH = 512
 # Generates the baseline dataset without entity replacement
 print("Generating datasets 1/4")
-generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_baseline.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, baseline=True)
+generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_baseline.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, baseline=True)
 
 # Generates the dataset with entity replacement only in demonstrations
 print("Generating datasets 2/4")
 for entity in selected_names:
-    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_demonstrations.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_demonstrations_entity=True, baseline=False)
+    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_demonstrations.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, new_entity=entity, replace_demonstrations_entity=True, baseline=False)
 
 # Generates the dataset with entity replacement only in queries
 print("Generating datasets 3/4")
 for entity in selected_names:
-    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_query.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_query_entity=True, baseline=False)
+    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_query.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, new_entity=entity, replace_query_entity=True, baseline=False)
 
 # Generates the dataset with entity replacement in both demonstrations and queries
 print("Generating datasets 4/4")
 for entity in selected_names:
-    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_query_and_demonstrations.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, allowed_total_length=ALLOWED_TOTAL_LENGTH, new_entity=entity, replace_demonstrations_entity=True, replace_query_entity=True, baseline=False)
+    generate_validation_dataset(filename="../../../data/clutrr/pre-processed/train/cluttr_val_aug_query_and_demonstrations.jsonl", allowed_demonstrations_length=ALLOWED_DEMONSTRATIONS_LENGTH, new_entity=entity, replace_demonstrations_entity=True, replace_query_entity=True, baseline=False)
 
 print("Generated pre-processed data!")
