@@ -1,5 +1,4 @@
 .ipynb_checkpoints
-*.ipynb
 *.pkl
 slurm*
 entities_venv
